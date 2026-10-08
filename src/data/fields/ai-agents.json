@@ -1,0 +1,182 @@
+{
+  "slug": "ai-agents",
+  "name": "AI Agent Engineering",
+  "icon": "Bot",
+  "tagline": "Build LLM-powered agents that use tools, memory and planning to finish real work.",
+  "category": "ai-data",
+  "difficulty": "advanced",
+  "demand": "very-high",
+  "overview": {
+    "summary": "AI agent engineers build software where a large language model (LLM) does more than chat: it decides which tools to call (APIs, databases, browsers, code), keeps memory between steps, and works toward a goal with checks and human approval where needed. Think of it as backend engineering where one of the components is a reasoning model, and your job is to make it reliable, safe, observable and cheap enough to run in production.",
+    "whyTrending": [
+      "LinkedIn's Jobs on the Rise 2026 list ranked AI engineer as the fastest-growing role, and companies are moving from chatbots to agents that complete multi-step tasks.",
+      "Open standards like the Model Context Protocol (MCP) made it easy to connect models to tools and data; MCP is now supported across major model providers and was placed under the Linux Foundation's Agentic AI Foundation in late 2025.",
+      "Every major cloud and model vendor now ships an agent SDK (OpenAI Agents SDK, Google ADK, Claude Agent SDK, Microsoft Agent Framework), so demand has spread beyond AI labs to banks, hospitals, SaaS and consulting firms.",
+      "Employers need engineers who can evaluate, secure and monitor agents — skills that most developers have not yet learned, which keeps the talent gap wide."
+    ],
+    "trendSources": [
+      { "label": "TechRepublic — The 10 tech jobs growing fastest in 2026", "url": "https://www.techrepublic.com/article/news-fastest-growing-tech-jobs-2026/" },
+      { "label": "Model Context Protocol — official site", "url": "https://modelcontextprotocol.io/" },
+      { "label": "WEF Future of Jobs Report 2025 (press release)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" }
+    ]
+  },
+  "roles": [
+    { "title": "AI Agent Engineer", "description": "Designs and ships agent workflows: tool definitions, planning loops, memory, guardrails and human-in-the-loop approval steps." },
+    { "title": "AI / LLM Application Engineer", "description": "Integrates LLMs into products with retrieval-augmented generation (RAG), structured outputs and streaming UIs." },
+    { "title": "Agent Platform Engineer", "description": "Builds the internal platform agents run on: MCP servers, sandboxes, auth, rate limiting, cost tracking and observability." },
+    { "title": "AI Evaluation Engineer", "description": "Creates test sets, automated graders and regression suites so teams can measure agent quality before and after each change." },
+    { "title": "Forward-Deployed / Solutions Engineer (AI)", "description": "Works directly with customers to design and deploy agents for their workflows, then feeds lessons back to the product team." },
+    { "title": "Conversational AI Developer", "description": "Builds voice and chat agents for support, sales and operations, connecting them to CRMs, ticketing and telephony." }
+  ],
+  "skills": {
+    "beginner": [
+      "Python fundamentals (functions, classes, async basics, virtual environments)",
+      "Calling an LLM API and handling JSON responses",
+      "Prompt basics: system prompts, few-shot examples, structured output",
+      "REST APIs and HTTP with requests/httpx",
+      "Git and GitHub workflow",
+      "Reading API documentation and rate-limit/cost basics"
+    ],
+    "intermediate": [
+      "Tool / function calling and schema design",
+      "Retrieval-augmented generation (embeddings, chunking, vector search)",
+      "Agent frameworks such as LangGraph, OpenAI Agents SDK, Google ADK or Claude Agent SDK",
+      "Building and consuming MCP servers",
+      "Evaluation: golden datasets, LLM-as-judge, regression tests",
+      "Observability with tracing tools (LangSmith, Langfuse, OpenTelemetry)",
+      "TypeScript for agent UIs and Node-based tooling"
+    ],
+    "advanced": [
+      "Multi-agent orchestration and long-running, durable workflows",
+      "Agent security: prompt injection defence, sandboxing, least-privilege tool access",
+      "Cost and latency optimisation (caching, model routing, batching)",
+      "Fine-tuning or distilling small models for specific agent tasks",
+      "Designing human-in-the-loop review and audit trails",
+      "Production deployment with containers, queues and autoscaling"
+    ]
+  },
+  "stack": {
+    "languages": ["Python", "TypeScript", "SQL", "Bash"],
+    "tools": ["OpenAI / Anthropic / Gemini APIs", "LangGraph & LangChain", "OpenAI Agents SDK", "Model Context Protocol (MCP)", "LlamaIndex", "Vector DBs (pgvector, Pinecone, Qdrant)", "LangSmith / Langfuse", "FastAPI", "Docker", "Redis / Postgres"],
+    "note": "Job listings most often pair Python with at least one agent framework and one vector database. TypeScript shows up whenever the role touches product UI or Node-based MCP servers."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "LLM foundations",
+      "goals": [
+        "Get comfortable with Python, virtual environments and async/await",
+        "Call two different LLM APIs and compare outputs, latency and cost",
+        "Practise structured outputs (JSON schema) and basic prompt patterns",
+        "Build a simple RAG Q&A bot over your own notes or PDFs",
+        "Learn what tokens, context windows and temperature mean in practice"
+      ],
+      "milestone": "A deployed RAG chatbot with a README that explains its design and limits."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Tools, agents & MCP",
+      "goals": [
+        "Implement function calling from scratch without a framework",
+        "Rebuild the same agent with LangGraph or an official agent SDK",
+        "Write your own MCP server that exposes 2–3 tools (e.g. calendar, database, files)",
+        "Add memory: short-term conversation state and long-term vector memory",
+        "Add tracing so you can see every model call and tool call"
+      ],
+      "milestone": "A tool-using agent that completes a 3+ step task end to end, with traces you can show."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Production quality",
+      "goals": [
+        "Create an evaluation set of 30–50 test cases and an automated scorer",
+        "Defend against prompt injection and restrict tool permissions",
+        "Add a human approval step for risky actions",
+        "Containerise the agent and deploy it with logging and cost tracking",
+        "Write a case study: problem, architecture, eval results, trade-offs"
+      ],
+      "milestone": "A portfolio-grade agent with evals, guardrails and a written case study — ready for interviews."
+    }
+  ],
+  "resources": [
+    { "title": "Hugging Face AI Agents Course", "provider": "Hugging Face", "url": "https://huggingface.co/learn/agents-course", "type": "course", "note": "Free, certificate available" },
+    { "title": "LangChain Academy — Introduction to LangGraph", "provider": "LangChain", "url": "https://academy.langchain.com/", "type": "course", "note": "Free" },
+    { "title": "Model Context Protocol documentation", "provider": "MCP", "url": "https://modelcontextprotocol.io/", "type": "docs" },
+    { "title": "Building effective agents", "provider": "Anthropic", "url": "https://www.anthropic.com/engineering/building-effective-agents", "type": "guide" },
+    { "title": "OpenAI Agents SDK docs", "provider": "OpenAI", "url": "https://openai.github.io/openai-agents-python/", "type": "docs" },
+    { "title": "DeepLearning.AI short courses (agents, RAG, evals)", "provider": "DeepLearning.AI", "url": "https://www.deeplearning.ai/short-courses/", "type": "course", "note": "Free short courses" },
+    { "title": "Prompt engineering overview", "provider": "Anthropic Docs", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview", "type": "docs" },
+    { "title": "OpenAI Cookbook", "provider": "OpenAI", "url": "https://cookbook.openai.com/", "type": "guide" },
+    { "title": "OWASP Top 10 for LLM Applications", "provider": "OWASP", "url": "https://genai.owasp.org/llm-top-10/", "type": "guide", "note": "Security essentials for agents" },
+    { "title": "Google Agent Development Kit (ADK) docs", "provider": "Google", "url": "https://google.github.io/adk-docs/", "type": "docs" }
+  ],
+  "projects": [
+    { "title": "Personal docs Q&A bot", "level": "easy", "description": "A RAG chatbot that answers questions about your university notes or a company handbook and cites the source passage.", "skills": ["Embeddings", "Vector search", "Prompting"] },
+    { "title": "Job-hunt assistant agent", "level": "easy", "description": "An agent that reads a job description, compares it to your CV and drafts a tailored cover letter plus a skills-gap list.", "skills": ["Tool calling", "Structured output"] },
+    { "title": "MCP server for a real API", "level": "medium", "description": "Build and publish an MCP server for a public API (e.g. weather, GitHub issues, bus schedules) and use it from an AI client.", "skills": ["MCP", "API design", "TypeScript or Python"] },
+    { "title": "Customer-support agent with evals", "level": "medium", "description": "A support agent that looks up orders in a mock database, issues refunds only after human approval, and ships with a 50-case evaluation suite.", "skills": ["LangGraph", "Human-in-the-loop", "Evaluation"] },
+    { "title": "Multi-agent research pipeline", "level": "hard", "description": "A planner agent splits a research question, worker agents search and summarise in parallel, and a critic agent fact-checks the final report. Include tracing, cost reports and injection defences.", "skills": ["Multi-agent orchestration", "Observability", "Security"] }
+  ],
+  "interview": [
+    { "question": "What is the difference between a chatbot and an AI agent?", "answer": "A chatbot replies to messages. An agent pursues a goal: it plans, calls tools, observes results and loops until the task is done or it needs a human, so it can take actions, not just produce text." },
+    { "question": "How does function/tool calling work?", "answer": "You describe tools with names and JSON schemas. The model returns a structured request to call a tool with arguments; your code runs it, sends the result back, and the model continues with that new information." },
+    { "question": "What is RAG and when would you use it instead of fine-tuning?", "answer": "Retrieval-augmented generation fetches relevant documents at query time and adds them to the prompt. Use it when knowledge changes often or must be cited; fine-tune when you need a consistent style or behaviour, not fresh facts." },
+    { "question": "What is the Model Context Protocol (MCP)?", "answer": "An open protocol that standardises how AI applications connect to tools and data. A server exposes tools, resources and prompts; any MCP-compatible client can use them without custom integration code." },
+    { "question": "How do you evaluate an agent?", "answer": "Build a dataset of realistic tasks with expected outcomes, score final results and intermediate steps (right tool, right arguments), use code checks where possible and LLM-as-judge where needed, and run it on every change to catch regressions." },
+    { "question": "What is prompt injection and how do you defend against it?", "answer": "Malicious instructions hidden in user input or retrieved content that try to hijack the agent. Defences include treating external content as data, least-privilege tools, allow-lists, output validation and human approval for sensitive actions." },
+    { "question": "How would you reduce the cost of an agent in production?", "answer": "Route easy steps to smaller models, cache prompts and results, trim context, cap loop iterations, batch requests where possible and monitor cost per task with tracing." },
+    { "question": "When should you use multiple agents instead of one?", "answer": "Only when tasks are truly separable or need different tools/permissions. Multi-agent systems add latency, cost and failure points, so start with one well-designed agent and split only when evals show a benefit." },
+    { "question": "How do you handle agent memory?", "answer": "Short-term memory is the conversation/state passed each step; long-term memory is stored externally (database or vector store) and retrieved when relevant. Summarise old context to stay within the context window." },
+    { "question": "What would you log for an agent in production?", "answer": "Every model call (input, output, tokens, latency, model version), every tool call with arguments and results, errors, user feedback and final outcome — with sensitive data redacted." }
+  ],
+  "resumeBullets": [
+    "Built a tool-using AI agent with [framework] that automated [task], cutting average handling time from [X] to [Y] minutes for [N] users.",
+    "Designed and published an MCP server exposing [N] tools for [system], adopted by [team/users] to connect AI assistants to internal data.",
+    "Created an evaluation suite of [N] test cases with automated graders, raising task success rate from [X]% to [Y]% across [N] releases.",
+    "Reduced LLM inference cost by [X]% through model routing, prompt caching and context trimming while keeping quality within [Y]% of baseline.",
+    "Implemented prompt-injection defences and human-in-the-loop approval for [N] high-risk actions, passing [security review/audit] with zero critical findings."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 18345,
+      "maxBdt": 100918,
+      "note": "Paylab does not yet publish a separate range for AI engineers in Bangladesh, so this uses the Software Engineer range (10th–90th percentile, gross monthly). Engineers with proven LLM/agent work at product companies and remote-first teams commonly sit at the top of this range or above it.",
+      "sources": [
+        { "label": "Paylab — Software Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/software-engineer" },
+        { "label": "Levels.fyi — Software Engineer pay in Bangladesh", "url": "https://www.levels.fyi/t/software-engineer/locations/bangladesh" }
+      ]
+    },
+    "remote": {
+      "minUsd": 35000,
+      "maxUsd": 90000,
+      "note": "Estimate for Bangladesh-based engineers working remotely for foreign companies. Arc reports a $41,465 average for remote developers in Bangladesh and $69,548 for seniors; specialised AI roles tend to pay above the developer average.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" },
+        { "label": "Levels.fyi — ML/AI software engineer pay", "url": "https://www.levels.fyi/t/software-engineer/focus/ml-ai" }
+      ]
+    },
+    "global": {
+      "medianUsd": 134040,
+      "benchmark": "US median, Software Developers (BLS, 2025)",
+      "growth": "+10% (2025–35, much faster than average)",
+      "note": "BLS has no separate 'AI engineer' category. Specialist AI engineers at tech companies usually earn well above this median; check Levels.fyi for company-level data.",
+      "sources": [
+        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" },
+        { "label": "Levels.fyi — ML/AI software engineer pay", "url": "https://www.levels.fyi/t/software-engineer/focus/ml-ai" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Early but growing: software firms serving foreign clients and local fintech/telecom teams are adding LLM features. Few postings say 'agent engineer' yet — look for 'AI engineer', 'LLM engineer' or 'Python + LLM'.",
+      "remote": "Very high. Startups worldwide hire remote AI engineers who can show working agents and evals; a public portfolio matters more than a degree.",
+      "global": "Very high. AI engineer tops LinkedIn's 2026 fastest-growing jobs list, and the WEF expects AI/ML specialists to be among the fastest-growing roles to 2030."
+    }
+  },
+  "startToday": [
+    "Create a free API key with one LLM provider and set a monthly spending limit",
+    "Run your first API call in Python and print the JSON response",
+    "Read Anthropic's 'Building effective agents' article (about 20 minutes)",
+    "Enrol in the free Hugging Face AI Agents Course",
+    "Create a GitHub repo called 'agents-lab' to log every experiment",
+    "Write down one repetitive task in your life that an agent could automate"
+  ]
+}
