@@ -1,0 +1,181 @@
+{
+  "slug": "full-stack-web",
+  "name": "Full-Stack Web Development",
+  "icon": "CodeXml",
+  "tagline": "Build complete web apps — from the interface users see to the APIs and databases behind it.",
+  "category": "software",
+  "difficulty": "beginner",
+  "demand": "high",
+  "overview": {
+    "summary": "Full-stack developers build both the front end (what users see and click, built with HTML, CSS, JavaScript/TypeScript and frameworks like React) and the back end (servers, APIs, authentication and databases). It is the most common entry path into software jobs and freelancing, and in 2026 it increasingly includes adding AI features — chat interfaces, smart search, summarisation — to ordinary web products.",
+    "whyTrending": [
+      "JavaScript remains the most-used language among developers in the Stack Overflow Developer Survey 2025, and TypeScript usage keeps climbing in job listings.",
+      "Software and application developers appear on the WEF Future of Jobs Report 2025 list of fastest-growing jobs, and BLS projects 10% growth for software developers (2025–35).",
+      "AI coding tools changed the job rather than removing it: employers now want developers who can ship faster with AI, review generated code and build AI-powered features.",
+      "Web development is Bangladesh's most common entry into IT jobs and freelancing, with hundreds of thousands of active freelancers serving international clients."
+    ],
+    "trendSources": [
+      { "label": "Stack Overflow Developer Survey 2025", "url": "https://survey.stackoverflow.co/2025/" },
+      { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" },
+      { "label": "The Financial Express — BASIS top IT/ITES exporters FY25", "url": "https://thefinancialexpress.com.bd/trade/basis-honours-top-10-it-ites-exporters-for-fy25" }
+    ]
+  },
+  "roles": [
+    { "title": "Full-Stack Developer", "description": "Builds features end to end: UI, API, database and deployment." },
+    { "title": "Front-End Developer", "description": "Builds accessible, fast and responsive user interfaces with React, Next.js, Vue or Angular." },
+    { "title": "Back-End Developer", "description": "Designs APIs, business logic, authentication and database schemas with Node.js, Python, Java, Go or PHP." },
+    { "title": "AI Product Engineer", "description": "A full-stack developer who adds LLM features — chat, search, summarisation — to web products." },
+    { "title": "Web Performance & Accessibility Engineer", "description": "Optimises Core Web Vitals and ensures sites meet WCAG accessibility standards." },
+    { "title": "Freelance Web Developer", "description": "Builds websites and web apps for clients via platforms like Upwork or Fiverr, or directly." }
+  ],
+  "skills": {
+    "beginner": [
+      "HTML5 semantics and accessibility basics",
+      "CSS layout: Flexbox, Grid, responsive design",
+      "JavaScript fundamentals: variables, functions, arrays, objects, DOM, fetch",
+      "Git and GitHub",
+      "Browser DevTools",
+      "How the web works: HTTP, DNS, client vs server"
+    ],
+    "intermediate": [
+      "TypeScript",
+      "React and a meta-framework (Next.js)",
+      "Tailwind CSS or another utility/component system",
+      "Node.js with Express, Fastify or Next.js API routes",
+      "SQL databases (PostgreSQL) and an ORM (Prisma or Drizzle)",
+      "Authentication (sessions, JWT, OAuth)",
+      "Testing with Vitest/Jest and Playwright"
+    ],
+    "advanced": [
+      "Server components, caching and rendering strategies (SSR, SSG, ISR)",
+      "System design: scaling, queues, caching with Redis",
+      "Web security: OWASP Top 10, CSP, CSRF, XSS prevention",
+      "Performance optimisation and Core Web Vitals",
+      "CI/CD, Docker and cloud deployment",
+      "Integrating LLM APIs with streaming responses"
+    ]
+  },
+  "stack": {
+    "languages": ["JavaScript", "TypeScript", "HTML", "CSS", "SQL", "Python / PHP / Go (back end)"],
+    "tools": ["React", "Next.js", "Node.js", "Tailwind CSS", "PostgreSQL", "Prisma / Drizzle", "Git & GitHub", "Docker", "Vercel / Netlify", "Vitest / Jest", "Playwright"],
+    "note": "React + TypeScript + Node.js + PostgreSQL is the most common combination in listings. In Bangladesh, PHP/Laravel and MERN stacks are still widely requested by agencies."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Web fundamentals",
+      "goals": [
+        "Learn semantic HTML and modern CSS (Flexbox, Grid)",
+        "Build three static pages: a portfolio, a landing page and a form",
+        "Learn JavaScript fundamentals and DOM manipulation",
+        "Use Git daily and push everything to GitHub",
+        "Deploy a site to GitHub Pages or Netlify"
+      ],
+      "milestone": "A responsive personal portfolio site, live on the internet."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "React and TypeScript",
+      "goals": [
+        "Learn TypeScript basics",
+        "Build React components, state, effects and forms",
+        "Move to Next.js with routing and data fetching",
+        "Style with Tailwind CSS",
+        "Consume a public API and handle loading/error states"
+      ],
+      "milestone": "A multi-page Next.js app using a real API, deployed on Vercel."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Back end and full stack",
+      "goals": [
+        "Build a REST API with Node.js and connect PostgreSQL",
+        "Add user authentication",
+        "Write unit and end-to-end tests",
+        "Add one AI feature using an LLM API",
+        "Ship a full-stack capstone with a polished README"
+      ],
+      "milestone": "A full-stack app with auth, database, tests and an AI feature — your flagship portfolio project."
+    }
+  ],
+  "resources": [
+    { "title": "The Odin Project", "provider": "The Odin Project", "url": "https://www.theodinproject.com/", "type": "course", "note": "Free" },
+    { "title": "freeCodeCamp Responsive Web Design & JavaScript", "provider": "freeCodeCamp", "url": "https://www.freecodecamp.org/learn/", "type": "course", "note": "Free certifications" },
+    { "title": "MDN Web Docs — Learn web development", "provider": "Mozilla", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development", "type": "docs" },
+    { "title": "Full Stack Open", "provider": "University of Helsinki", "url": "https://fullstackopen.com/en/", "type": "course", "note": "Free" },
+    { "title": "React — Learn", "provider": "React", "url": "https://react.dev/learn", "type": "docs" },
+    { "title": "Next.js Learn course", "provider": "Vercel", "url": "https://nextjs.org/learn", "type": "course", "note": "Free" },
+    { "title": "TypeScript Handbook", "provider": "Microsoft", "url": "https://www.typescriptlang.org/docs/handbook/intro.html", "type": "docs" },
+    { "title": "javascript.info", "provider": "javascript.info", "url": "https://javascript.info/", "type": "book", "note": "Free" },
+    { "title": "web.dev Learn (CSS, performance, accessibility)", "provider": "Google", "url": "https://web.dev/learn", "type": "course", "note": "Free" },
+    { "title": "Full-Stack roadmap", "provider": "roadmap.sh", "url": "https://roadmap.sh/full-stack", "type": "guide" }
+  ],
+  "projects": [
+    { "title": "Responsive portfolio site", "level": "easy", "description": "A fast, accessible personal site with projects, CV download and contact form, scoring 90+ on Lighthouse.", "skills": ["HTML", "CSS", "Accessibility"] },
+    { "title": "Weather or prayer-times app", "level": "easy", "description": "A React app that fetches data from a public API, shows loading/error states and saves favourite cities.", "skills": ["React", "APIs", "localStorage"] },
+    { "title": "Bangla–English blog platform", "level": "medium", "description": "A Next.js blog with Markdown posts, Bangla font support, search, dark mode and SEO metadata.", "skills": ["Next.js", "SEO", "i18n"] },
+    { "title": "Small-shop inventory & orders system", "level": "medium", "description": "Full-stack CRUD app with auth, roles (owner/staff), PostgreSQL, invoices as PDF and a sales dashboard.", "skills": ["Auth", "PostgreSQL", "ORM", "Charts"] },
+    { "title": "Real-time collaborative app with AI assistant", "level": "hard", "description": "A team task board with real-time updates (WebSockets), optimistic UI, end-to-end tests and an AI assistant that summarises tasks and drafts updates.", "skills": ["WebSockets", "LLM APIs", "Testing", "System design"] }
+  ],
+  "interview": [
+    { "question": "What happens when you type a URL and press Enter?", "answer": "DNS lookup, TCP/TLS connection, HTTP request, server response, then the browser parses HTML, loads CSS/JS, builds the DOM/CSSOM, lays out and paints the page." },
+    { "question": "Explain the difference between let, const and var.", "answer": "var is function-scoped and hoisted; let and const are block-scoped. const cannot be reassigned (though objects it holds can be mutated). Prefer const, then let." },
+    { "question": "What is the virtual DOM / how does React update the UI?", "answer": "React keeps a lightweight representation of the UI, compares (diffs) it after state changes and applies only the minimal real DOM updates needed." },
+    { "question": "SSR vs CSR vs SSG?", "answer": "Client-side rendering builds the page in the browser; server-side rendering builds HTML per request on the server; static generation builds HTML at build time. SSR/SSG improve SEO and first load." },
+    { "question": "What is CORS?", "answer": "A browser security mechanism that blocks cross-origin requests unless the server explicitly allows the requesting origin via response headers." },
+    { "question": "REST vs GraphQL?", "answer": "REST exposes resources at multiple endpoints with fixed responses; GraphQL exposes one endpoint where clients request exactly the fields they need. GraphQL reduces over-fetching but adds complexity." },
+    { "question": "How do you store passwords securely?", "answer": "Never store plain text. Hash with a slow, salted algorithm like bcrypt or Argon2, and use HTTPS everywhere." },
+    { "question": "What is a database index?", "answer": "A data structure that speeds up lookups on columns at the cost of extra storage and slower writes. Index columns used in frequent WHERE, JOIN and ORDER BY clauses." },
+    { "question": "What is the event loop in JavaScript?", "answer": "The mechanism that lets single-threaded JS handle async work: the call stack runs code, and completed async callbacks wait in task/microtask queues until the stack is empty." },
+    { "question": "How would you improve a slow web page?", "answer": "Measure first (Lighthouse, Web Vitals), then optimise images, reduce/split JS bundles, cache responses, use a CDN, lazy-load below-the-fold content and fix slow API queries." }
+  ],
+  "resumeBullets": [
+    "Built and deployed [app] with Next.js, TypeScript and PostgreSQL, serving [N] monthly users with [X]% uptime.",
+    "Improved Lighthouse performance score from [X] to [Y] by optimising images, code-splitting and caching, increasing conversions by [Z]%.",
+    "Designed REST APIs for [feature] handling [N] requests/day with p95 latency under [X] ms.",
+    "Added an AI-powered [search/summary] feature using [LLM API], reducing support tickets by [X]%.",
+    "Delivered [N] client websites as a freelancer with [rating] average rating and [X]% repeat clients."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 16240,
+      "maxBdt": 61120,
+      "note": "Paylab JavaScript Programmer range (10th–90th percentile, gross monthly); Frontend Developers are listed at BDT 14,112–50,390 and Software Engineers up to BDT 100,918. Senior engineers at top product companies earn well above this — Levels.fyi's Bangladesh software-engineer median total compensation is about BDT 973k per year.",
+      "sources": [
+        { "label": "Paylab — JavaScript Programmer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/javascript-programmer" },
+        { "label": "Levels.fyi — Software Engineer pay in Bangladesh", "url": "https://www.levels.fyi/t/software-engineer/locations/bangladesh" }
+      ]
+    },
+    "remote": {
+      "minUsd": 25000,
+      "maxUsd": 70000,
+      "note": "Arc reports Bangladesh-based remote front-end developers average $38,607 and back-end developers $41,569 per year; senior remote developers average $69,548.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 92650,
+      "benchmark": "US median, Web Developers (BLS, 2025)",
+      "growth": "+4% (2025–35); software developers +10%",
+      "note": "Full-stack engineers at software companies are usually classed as software developers, whose combined BLS category has a much higher $134,040 median. BLS notes AI tools may soften growth for pure web-development roles.",
+      "sources": [
+        { "label": "BLS — Web Developers and Digital Designers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" },
+        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High and the largest number of openings — agencies, startups, offshore firms and in-house teams all hire web developers. Competition at entry level is intense, so a strong portfolio matters.",
+      "remote": "High volume but very competitive. TypeScript, React/Next.js and solid back-end skills plus good English help stand out.",
+      "global": "High. Software development remains the largest tech job category; AI shifts expectations toward productivity and AI feature work rather than reducing demand overall."
+    }
+  },
+  "startToday": [
+    "Install VS Code and Git, and create a GitHub account",
+    "Start The Odin Project's Foundations course",
+    "Build a one-page 'About me' site with plain HTML and CSS",
+    "Deploy it free on GitHub Pages or Netlify",
+    "Bookmark MDN Web Docs as your main reference",
+    "Commit code every day for the next 30 days"
+  ]
+}
