@@ -1,0 +1,180 @@
+{
+  "slug": "devops-platform",
+  "name": "DevOps, Platform & SRE",
+  "icon": "Infinity",
+  "tagline": "Automate how software is built, shipped and kept running — fast and reliably.",
+  "category": "infra-security",
+  "difficulty": "intermediate",
+  "demand": "high",
+  "overview": {
+    "summary": "DevOps engineers, platform engineers and Site Reliability Engineers (SREs) make it easy and safe for developers to ship code. They build CI/CD pipelines, manage containers and Kubernetes, automate infrastructure, set up monitoring and on-call, and respond when production breaks. Platform engineering — building an internal 'golden path' so developers can self-serve environments — is the fastest-growing branch of the field.",
+    "whyTrending": [
+      "Industry hiring reports for 2026 list DevOps/platform engineers among the most in-demand tech roles, with US salary bands commonly around $118k–$174k.",
+      "AI coding assistants mean teams ship more code, faster — which increases the need for strong pipelines, automated testing and reliable deployments.",
+      "Kubernetes and cloud-native tooling (CNCF ecosystem) are now standard in mid-size and large companies, and they need engineers who can run them well.",
+      "In Bangladesh, Paylab lists DevOps engineers and SREs among the best-paid IT roles, and offshore firms increasingly sell DevOps-as-a-service to foreign clients."
+    ],
+    "trendSources": [
+      { "label": "Reveal IT Talent Survey — Top technology roles and skills for 2026", "url": "https://www.revealbi.io/reveal-it-talent-survey-top-technology-roles-and-skills-for-2026" },
+      { "label": "Paylab — IT salaries in Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology" }
+    ]
+  },
+  "roles": [
+    { "title": "DevOps Engineer", "description": "Builds CI/CD pipelines, automates infrastructure and bridges development and operations teams." },
+    { "title": "Site Reliability Engineer (SRE)", "description": "Uses software engineering to keep services reliable: SLOs, monitoring, incident response and capacity planning." },
+    { "title": "Platform Engineer", "description": "Builds an internal developer platform — templates, self-service environments and paved roads for teams." },
+    { "title": "Release / Build Engineer", "description": "Owns build systems, versioning, artifact management and release processes." },
+    { "title": "Kubernetes Administrator", "description": "Operates Kubernetes clusters: upgrades, networking, security, scaling and cost." },
+    { "title": "Observability Engineer", "description": "Designs logging, metrics and tracing systems so teams can understand production behaviour." }
+  ],
+  "skills": {
+    "beginner": [
+      "Linux administration, processes, permissions and networking",
+      "Git branching and pull-request workflows",
+      "Bash scripting",
+      "Docker: images, containers, volumes, Docker Compose",
+      "Basic CI with GitHub Actions or GitLab CI",
+      "YAML and configuration files"
+    ],
+    "intermediate": [
+      "Kubernetes: pods, deployments, services, ingress, Helm",
+      "Infrastructure as code with Terraform",
+      "Configuration management with Ansible",
+      "Monitoring with Prometheus and Grafana",
+      "Cloud fundamentals on AWS, Azure or GCP",
+      "Python or Go for automation",
+      "Secrets management (Vault, cloud secret managers)"
+    ],
+    "advanced": [
+      "GitOps with Argo CD or Flux",
+      "SLOs, error budgets and incident management",
+      "Distributed tracing with OpenTelemetry",
+      "Internal developer platforms (Backstage)",
+      "DevSecOps: supply-chain security, image scanning, policy as code",
+      "Chaos engineering and capacity planning"
+    ]
+  },
+  "stack": {
+    "languages": ["Bash", "Python", "Go", "YAML", "HCL (Terraform)"],
+    "tools": ["Docker", "Kubernetes", "Helm", "Terraform", "Ansible", "GitHub Actions / GitLab CI / Jenkins", "Argo CD", "Prometheus", "Grafana", "OpenTelemetry", "AWS / Azure / GCP"],
+    "note": "Docker + Kubernetes + Terraform + one CI tool + one cloud is the core of most listings. Go is increasingly requested for platform tooling."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Linux, Git and containers",
+      "goals": [
+        "Master everyday Linux commands, systemd and networking tools",
+        "Write Bash scripts to automate small tasks",
+        "Learn Git branching, rebasing and pull requests",
+        "Containerise two apps with Docker and run them with Docker Compose",
+        "Set up GitHub Actions to build and test on every push"
+      ],
+      "milestone": "A repository with a Dockerised app and a working CI pipeline."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Kubernetes and IaC",
+      "goals": [
+        "Run a local cluster with kind or minikube",
+        "Deploy apps with manifests, then with Helm charts",
+        "Provision cloud infrastructure with Terraform",
+        "Add Prometheus and Grafana monitoring with alerts",
+        "Learn Kubernetes networking and ingress"
+      ],
+      "milestone": "An app deployed to Kubernetes via CI, with dashboards and alerts."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Reliability and GitOps",
+      "goals": [
+        "Adopt GitOps with Argo CD",
+        "Define SLOs and an error budget for your app",
+        "Add image scanning and secrets management",
+        "Practise incident response with a simulated outage and write a postmortem",
+        "Prepare for the CKA or KCNA certification"
+      ],
+      "milestone": "A production-style platform repo with GitOps, SLOs and a blameless postmortem write-up."
+    }
+  ],
+  "resources": [
+    { "title": "DevOps Roadmap", "provider": "roadmap.sh", "url": "https://roadmap.sh/devops", "type": "guide" },
+    { "title": "Kubernetes official tutorials", "provider": "Kubernetes", "url": "https://kubernetes.io/docs/tutorials/", "type": "docs" },
+    { "title": "Docker Get Started guide", "provider": "Docker", "url": "https://docs.docker.com/get-started/", "type": "docs" },
+    { "title": "Google SRE books (free online)", "provider": "Google", "url": "https://sre.google/books/", "type": "book", "note": "Free" },
+    { "title": "GitHub Actions documentation", "provider": "GitHub", "url": "https://docs.github.com/en/actions", "type": "docs" },
+    { "title": "Terraform tutorials", "provider": "HashiCorp", "url": "https://developer.hashicorp.com/terraform/tutorials", "type": "docs", "note": "Free" },
+    { "title": "Introduction to Kubernetes (LFS158)", "provider": "Linux Foundation", "url": "https://training.linuxfoundation.org/training/introduction-to-kubernetes/", "type": "course", "note": "Free" },
+    { "title": "DevOps Exercises", "provider": "bregman-arie (GitHub)", "url": "https://github.com/bregman-arie/devops-exercises", "type": "practice", "note": "Free" },
+    { "title": "KodeKloud free labs", "provider": "KodeKloud", "url": "https://kodekloud.com/free-labs", "type": "practice", "note": "Free labs" },
+    { "title": "Prometheus — Getting started", "provider": "Prometheus", "url": "https://prometheus.io/docs/prometheus/latest/getting_started/", "type": "docs" }
+  ],
+  "projects": [
+    { "title": "Dockerised app with CI", "level": "easy", "description": "Containerise a simple web app and add a GitHub Actions workflow that lints, tests and builds the image on every push.", "skills": ["Docker", "GitHub Actions"] },
+    { "title": "Automated server setup with Ansible", "level": "easy", "description": "Write an Ansible playbook that configures a fresh Linux VM with users, firewall, Nginx and your app.", "skills": ["Ansible", "Linux", "Nginx"] },
+    { "title": "Kubernetes deployment with monitoring", "level": "medium", "description": "Deploy a multi-service app to Kubernetes with Helm, plus Prometheus/Grafana dashboards and alert rules.", "skills": ["Kubernetes", "Helm", "Prometheus"] },
+    { "title": "GitOps pipeline with Argo CD", "level": "medium", "description": "Separate app and config repos; merges to main auto-deploy to staging, and production deploys require approval.", "skills": ["GitOps", "Argo CD", "Release management"] },
+    { "title": "Internal developer platform", "level": "hard", "description": "Build a Backstage portal where a developer can create a new service from a template that provisions repo, CI, Kubernetes namespace and monitoring automatically.", "skills": ["Backstage", "Terraform", "Platform engineering"] }
+  ],
+  "interview": [
+    { "question": "What is CI/CD?", "answer": "Continuous Integration automatically builds and tests every code change; Continuous Delivery/Deployment automatically releases tested changes to environments, reducing manual, risky releases." },
+    { "question": "Containers vs virtual machines?", "answer": "VMs virtualise hardware and run a full OS each; containers share the host kernel and package only the app and its dependencies, so they're lighter and start faster." },
+    { "question": "What is a Kubernetes pod and a deployment?", "answer": "A pod is the smallest deployable unit (one or more containers sharing network/storage). A deployment manages replica pods, rolling updates and rollbacks." },
+    { "question": "What is an SLO and an error budget?", "answer": "An SLO is a reliability target (e.g. 99.9% successful requests). The error budget is the allowed failure (0.1%); when it's spent, teams slow feature releases to improve reliability." },
+    { "question": "Blue-green vs canary deployment?", "answer": "Blue-green switches all traffic from old to new environment at once (easy rollback). Canary sends a small share of traffic to the new version first and increases it gradually." },
+    { "question": "What is GitOps?", "answer": "Using Git as the single source of truth for desired infrastructure and app state; an agent (e.g. Argo CD) continuously syncs the cluster to match Git." },
+    { "question": "How would you debug a pod stuck in CrashLoopBackOff?", "answer": "Check kubectl describe and logs (including --previous), verify config/secrets, resource limits, health probes and the container's start command." },
+    { "question": "What are the three pillars of observability?", "answer": "Logs (events), metrics (numeric time series) and traces (request paths across services) — together they explain what is happening and why." },
+    { "question": "What is a blameless postmortem?", "answer": "An incident review focused on system and process causes, not individuals, producing concrete action items to prevent recurrence." },
+    { "question": "How do you manage secrets in pipelines?", "answer": "Never commit them; use a secret manager (Vault, cloud secret stores) or encrypted CI secrets, short-lived credentials (OIDC), least privilege and rotation." }
+  ],
+  "resumeBullets": [
+    "Built CI/CD pipelines with [tool] for [N] services, cutting deployment time from [X] hours to [Y] minutes and increasing release frequency [X]x.",
+    "Migrated [N] services to Kubernetes with Helm and Argo CD, improving resource utilisation by [X]% and enabling zero-downtime deploys.",
+    "Defined SLOs and alerting for [N] critical services, reducing mean time to recovery from [X] to [Y] minutes.",
+    "Automated infrastructure provisioning with Terraform, eliminating [N] hours of manual work per month.",
+    "Introduced container image scanning and secret management, closing [N] high-severity supply-chain findings."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 20777,
+      "maxBdt": 78821,
+      "note": "Paylab DevOps Engineer range (10th–90th percentile, gross monthly). SREs are listed at BDT 20,704–81,883 — among the highest-paid IT roles on Paylab Bangladesh.",
+      "sources": [
+        { "label": "Paylab — DevOps Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/devops-engineer" },
+        { "label": "Paylab — SRE salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/sre-site-reliability-engineer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 30000,
+      "maxUsd": 85000,
+      "note": "Estimate. Arc reports $43,605 average for Bangladesh-based remote DevOps engineers — the highest of the role averages it lists for Bangladesh.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 134040,
+      "benchmark": "US median, Software Developers (BLS, 2025) — DevOps/SRE are usually classed here",
+      "growth": "+10% (2025–35, much faster than average)",
+      "note": "Network and computer systems administrators, a more ops-focused category, have a lower $99,130 median.",
+      "sources": [
+        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" },
+        { "label": "BLS — Network and Computer Systems Administrators", "url": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High. Offshore software companies, fintech and telecom teams hire DevOps engineers; Kubernetes and AWS experience is especially valued.",
+      "remote": "High. DevOps is one of the best-paid remote paths for Bangladeshi engineers, though on-call work may require time-zone flexibility.",
+      "global": "High. Platform engineering and SRE remain core hiring areas as AI increases the volume of code being shipped."
+    }
+  },
+  "startToday": [
+    "Install Docker Desktop (or Docker Engine on Linux) and run 'hello-world'",
+    "Open roadmap.sh/devops and tick off the skills you already have",
+    "Create a GitHub repo and add a simple GitHub Actions workflow",
+    "Practise 30 minutes of Linux commands",
+    "Enrol in the free Linux Foundation 'Introduction to Kubernetes' course",
+    "Pick one app (even a to-do app) to containerise this week"
+  ]
+}
