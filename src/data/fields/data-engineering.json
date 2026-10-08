@@ -1,0 +1,179 @@
+{
+  "slug": "data-engineering",
+  "name": "Data Engineering",
+  "icon": "Database",
+  "tagline": "Build the pipelines and platforms that move, clean and serve data for analytics and AI.",
+  "category": "ai-data",
+  "difficulty": "intermediate",
+  "demand": "very-high",
+  "overview": {
+    "summary": "Data engineers build the 'plumbing' for data: pipelines that collect data from apps, databases and APIs, clean and transform it, and load it into warehouses or lakehouses where analysts and AI systems can use it. They care about reliability (pipelines that don't break at 3 a.m.), data quality, cost and speed. Every AI project depends on good data, which is why data engineering demand has grown alongside AI.",
+    "whyTrending": [
+      "AI and LLM projects need clean, well-governed data — retrieval systems, feature stores and training sets all rely on data pipelines.",
+      "The WEF Future of Jobs Report 2025 ranks big data specialists as the fastest-growing job in percentage terms.",
+      "Open table formats (Apache Iceberg, Delta Lake) and lakehouse platforms (Databricks, Snowflake) are replacing older Hadoop stacks, creating demand for engineers who know the modern tools.",
+      "BLS projects database architects — the closest US category to senior data engineers — to grow faster than average (9%, 2025–35)."
+    ],
+    "trendSources": [
+      { "label": "WEF Future of Jobs Report 2025 (press release)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" },
+      { "label": "BLS — Database Administrators and Architects", "url": "https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm" }
+    ]
+  },
+  "roles": [
+    { "title": "Data Engineer", "description": "Builds batch and streaming pipelines that ingest, transform and load data into warehouses or lakehouses." },
+    { "title": "Analytics Engineer", "description": "Models warehouse data into clean, tested tables with dbt so analysts can trust and reuse them." },
+    { "title": "Big Data / Platform Engineer", "description": "Runs Spark, Kafka and lakehouse infrastructure and makes it reliable and cost-efficient." },
+    { "title": "Streaming Data Engineer", "description": "Builds real-time pipelines with Kafka, Flink or Spark Structured Streaming for fraud, IoT or live dashboards." },
+    { "title": "Data Architect", "description": "Designs the overall data platform: storage, modelling standards, governance and security." },
+    { "title": "AI Data Engineer", "description": "Prepares data for ML and LLM systems: feature pipelines, embeddings, vector stores and training datasets." }
+  ],
+  "skills": {
+    "beginner": [
+      "SQL (joins, aggregations, subqueries)",
+      "Python for scripting and data processing",
+      "Relational databases (PostgreSQL, MySQL)",
+      "Linux command line and Bash",
+      "Data formats: CSV, JSON, Parquet",
+      "Git and basic Docker"
+    ],
+    "intermediate": [
+      "Data modelling: star schema, facts and dimensions",
+      "ETL/ELT pipelines and orchestration with Airflow, Dagster or Prefect",
+      "dbt for transformations and tests",
+      "Cloud warehouses: BigQuery, Snowflake, Redshift",
+      "Apache Spark (PySpark) for large datasets",
+      "Cloud storage and IAM on AWS, GCP or Azure",
+      "Data quality testing"
+    ],
+    "advanced": [
+      "Streaming with Kafka and Flink",
+      "Lakehouse table formats: Apache Iceberg, Delta Lake",
+      "Infrastructure as code (Terraform) for data platforms",
+      "Data governance, lineage and access control",
+      "Cost optimisation and performance tuning",
+      "Vector databases and pipelines for AI/RAG"
+    ]
+  },
+  "stack": {
+    "languages": ["SQL", "Python", "Scala / Java (Spark & Kafka)", "Bash"],
+    "tools": ["Apache Airflow", "dbt", "Apache Spark / Databricks", "Snowflake", "BigQuery", "Kafka", "AWS (S3, Glue, Redshift)", "Docker", "Terraform", "Apache Iceberg", "PostgreSQL"],
+    "note": "SQL + Python + one cloud platform + Airflow/dbt covers most junior and mid-level listings. Spark and Kafka appear in larger-scale roles."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Databases and Python",
+      "goals": [
+        "Solidify SQL including window functions",
+        "Install PostgreSQL locally (or Docker) and design a small schema",
+        "Write Python scripts that pull data from a public API into Postgres",
+        "Learn the Linux command line basics",
+        "Understand OLTP vs OLAP and why warehouses exist"
+      ],
+      "milestone": "A Python script that ingests API data into a database on a schedule (cron)."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Pipelines and the warehouse",
+      "goals": [
+        "Model data with a star schema",
+        "Orchestrate a pipeline with Airflow or Dagster",
+        "Transform data with dbt and add tests",
+        "Load data into BigQuery (free sandbox) or Snowflake (trial)",
+        "Containerise your pipeline with Docker Compose"
+      ],
+      "milestone": "An end-to-end ELT pipeline with orchestration, dbt models and data tests."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Scale and streaming",
+      "goals": [
+        "Process a multi-GB dataset with PySpark",
+        "Build a small streaming pipeline with Kafka (or Redpanda)",
+        "Store data in Parquet / Iceberg and query it",
+        "Provision cloud resources with Terraform",
+        "Join the free Data Engineering Zoomcamp and finish its capstone"
+      ],
+      "milestone": "A capstone project with batch + streaming pipelines and a dashboard on top."
+    }
+  ],
+  "resources": [
+    { "title": "Data Engineering Zoomcamp", "provider": "DataTalks.Club", "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp", "type": "course", "note": "Free" },
+    { "title": "dbt Learn (Fundamentals)", "provider": "dbt Labs", "url": "https://learn.getdbt.com/", "type": "course", "note": "Free" },
+    { "title": "Apache Airflow documentation & tutorials", "provider": "Apache", "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html", "type": "docs" },
+    { "title": "Spark: Quick Start", "provider": "Apache Spark", "url": "https://spark.apache.org/docs/latest/quick-start.html", "type": "docs" },
+    { "title": "PostgreSQL Tutorial", "provider": "PostgreSQL Tutorial", "url": "https://www.postgresqltutorial.com/", "type": "guide", "note": "Free" },
+    { "title": "Kafka 101", "provider": "Confluent Developer", "url": "https://developer.confluent.io/courses/apache-kafka/events/", "type": "course", "note": "Free" },
+    { "title": "BigQuery sandbox", "provider": "Google Cloud", "url": "https://cloud.google.com/bigquery/docs/sandbox", "type": "practice", "note": "Free, no credit card" },
+    { "title": "Data Engineering Wiki", "provider": "dataengineering.wiki", "url": "https://dataengineering.wiki/", "type": "guide", "note": "Community" },
+    { "title": "roadmap.sh — Data Engineer roadmap", "provider": "roadmap.sh", "url": "https://roadmap.sh/data-engineer", "type": "guide" },
+    { "title": "Databricks Academy free learning", "provider": "Databricks", "url": "https://www.databricks.com/learn/training/home", "type": "course", "note": "Free self-paced options" }
+  ],
+  "projects": [
+    { "title": "Weather or currency API ingester", "level": "easy", "description": "Pull daily exchange rates (e.g. BDT/USD) or weather data from a public API into Postgres and chart the trend.", "skills": ["Python", "SQL", "Scheduling"] },
+    { "title": "Star-schema sales warehouse", "level": "easy", "description": "Design a fact/dimension model for a retail dataset and answer business questions with SQL.", "skills": ["Data modelling", "SQL"] },
+    { "title": "Airflow + dbt ELT pipeline", "level": "medium", "description": "Orchestrate extraction from an API, load into BigQuery, transform with tested dbt models and publish a dashboard.", "skills": ["Airflow", "dbt", "BigQuery"] },
+    { "title": "Real-time ride or delivery events stream", "level": "medium", "description": "Simulate ride-sharing events, stream them through Kafka, aggregate in real time and show a live dashboard.", "skills": ["Kafka", "Streaming", "Python"] },
+    { "title": "Lakehouse platform with data quality and lineage", "level": "hard", "description": "Build a Terraform-provisioned lakehouse with Iceberg tables, Spark jobs, data-quality checks, lineage tracking and cost reporting.", "skills": ["Spark", "Iceberg", "Terraform", "Governance"] }
+  ],
+  "interview": [
+    { "question": "ETL vs ELT?", "answer": "ETL transforms data before loading into the warehouse; ELT loads raw data first and transforms inside the warehouse. ELT is common today because cloud warehouses are powerful and keep raw data for reprocessing." },
+    { "question": "What is a star schema?", "answer": "A data model with a central fact table (events/measurements) linked to dimension tables (who, what, where, when), designed for fast, simple analytical queries." },
+    { "question": "What makes a pipeline idempotent and why does it matter?", "answer": "Running it multiple times produces the same result (e.g. using upserts or overwriting partitions). It makes retries and backfills safe." },
+    { "question": "Batch vs streaming processing?", "answer": "Batch processes data in chunks on a schedule (simpler, cheaper). Streaming processes events continuously with low latency (fraud detection, live metrics) but is more complex." },
+    { "question": "Why use Parquet instead of CSV?", "answer": "Parquet is columnar, compressed and typed, so analytical queries read only needed columns and run much faster and cheaper." },
+    { "question": "What is partitioning?", "answer": "Splitting a table by a key such as date so queries scan only relevant partitions, reducing cost and time." },
+    { "question": "How do you ensure data quality?", "answer": "Add tests for nulls, uniqueness, ranges and referential integrity (dbt tests, Great Expectations), monitor freshness and volume, and alert on failures." },
+    { "question": "What is a slowly changing dimension (SCD Type 2)?", "answer": "A way to keep history of dimension changes by adding a new row with valid-from/valid-to dates instead of overwriting the old value." },
+    { "question": "What does Airflow do?", "answer": "It schedules and orchestrates workflows defined as DAGs of tasks, handling dependencies, retries, backfills and monitoring." },
+    { "question": "How would you handle late-arriving data in streaming?", "answer": "Use event-time processing with watermarks that define how long to wait for late events, and design downstream tables to accept corrections." }
+  ],
+  "resumeBullets": [
+    "Built [N] production pipelines in [Airflow/Dagster] ingesting [X] GB/day from [sources] with [99.X]% on-time delivery.",
+    "Migrated legacy reports to a [Snowflake/BigQuery] + dbt stack, reducing query cost by [X]% and report latency from [X] hours to [Y] minutes.",
+    "Implemented [N] automated data-quality tests that caught [N] incidents before reaching dashboards.",
+    "Designed a streaming pipeline with Kafka processing [N] events/sec for real-time [fraud/ops] monitoring.",
+    "Modelled [domain] data into a star schema used by [N] analysts, cutting average query time by [X]%."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 16417,
+      "maxBdt": 64881,
+      "note": "Paylab has no separate data-engineer category for Bangladesh, so this uses its Backend Developer range (10th–90th percentile, gross monthly). Data engineers with Spark/cloud experience at offshore centres and telecoms often earn more.",
+      "sources": [
+        { "label": "Paylab — Backend Developer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/backend-developer" },
+        { "label": "Levels.fyi — Software Engineer pay in Bangladesh", "url": "https://www.levels.fyi/t/software-engineer/locations/bangladesh" }
+      ]
+    },
+    "remote": {
+      "minUsd": 30000,
+      "maxUsd": 80000,
+      "note": "Estimate. Arc reports $41,569 average for Bangladesh-based remote back-end developers and $69,548 for seniors; cloud data platform skills command a premium.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 139500,
+      "benchmark": "US median, Database Architects (BLS, 2025)",
+      "growth": "+9% (2025–35, faster than average)",
+      "note": "BLS has no 'data engineer' title; database architects are the closest match for senior data engineers. Database administrators earn a lower $104,620 median with flat growth.",
+      "sources": [
+        { "label": "BLS — Database Administrators and Architects", "url": "https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High at telecoms, banks, MFS and offshore software firms building data platforms for foreign clients. Postings often ask for SQL, Python and Spark or a cloud warehouse.",
+      "remote": "High. Many remote contracts are pipeline builds or warehouse migrations — well suited to freelancers with a strong portfolio.",
+      "global": "Very high. Data engineering underpins every AI initiative and is consistently among the most-posted data roles."
+    }
+  },
+  "startToday": [
+    "Install PostgreSQL (or run it in Docker) and create your first table",
+    "Star the DataTalks.Club Data Engineering Zoomcamp repo and read the syllabus",
+    "Write a Python script that fetches JSON from any free public API",
+    "Open a BigQuery sandbox account (no credit card needed)",
+    "Read the roadmap.sh Data Engineer roadmap and mark what you already know",
+    "Plan your first pipeline project using data you care about"
+  ]
+}
