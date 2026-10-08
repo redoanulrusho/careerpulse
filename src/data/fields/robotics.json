@@ -1,0 +1,180 @@
+{
+  "slug": "robotics",
+  "name": "Robotics & Automation",
+  "icon": "Cog",
+  "tagline": "Build machines that sense, think and act — from factory arms to delivery robots and humanoids.",
+  "category": "emerging",
+  "difficulty": "advanced",
+  "demand": "growing",
+  "overview": {
+    "summary": "Robotics engineers design, program and test robots: industrial arms in factories, autonomous mobile robots in warehouses, drones, agricultural robots, surgical systems and, increasingly, humanoids. The field combines mechanical design, electronics, control theory and software — especially perception (computer vision), motion planning and, more and more, AI models that let robots learn skills. Industrial automation (PLCs, robotic cells) is the most common job path; AI-driven 'physical AI' is the most hyped.",
+    "whyTrending": [
+      "'Physical AI' became a major investment theme in 2025–26: foundation models for robots (e.g. NVIDIA Isaac GR00T, Google's Gemini Robotics) and well-funded humanoid start-ups are hiring robotics software engineers.",
+      "Labour shortages and reshoring push manufacturers and warehouses to automate, keeping demand high for automation and controls engineers.",
+      "BLS projects mechanical engineers — the occupation that includes many robotics engineers — to grow 11% from 2025 to 2035, much faster than average.",
+      "In Bangladesh, the garment (RMG) and manufacturing sectors are adopting automation to stay competitive, and university robotics teams have built a strong talent pipeline through international competitions."
+    ],
+    "trendSources": [
+      { "label": "BLS — Mechanical Engineers (includes robotic engineers)", "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm" },
+      { "label": "NVIDIA Isaac robotics platform", "url": "https://developer.nvidia.com/isaac" },
+      { "label": "IFR — World Robotics reports", "url": "https://ifr.org/worldrobotics/" }
+    ]
+  },
+  "roles": [
+    { "title": "Robotics Software Engineer", "description": "Writes the software for robot perception, planning and control, usually with ROS 2, C++ and Python." },
+    { "title": "Automation / Controls Engineer", "description": "Programs PLCs, industrial robots and production lines in factories and warehouses." },
+    { "title": "Perception / Computer Vision Engineer", "description": "Builds the vision and sensor-fusion systems (cameras, LiDAR, IMU) that let robots understand their surroundings." },
+    { "title": "Motion Planning & Controls Engineer", "description": "Designs algorithms that make robots move safely and precisely — trajectories, kinematics, feedback control." },
+    { "title": "Robot Learning Engineer", "description": "Trains robots with reinforcement learning, imitation learning and simulation-to-real transfer." },
+    { "title": "Robotics Test / Field Engineer", "description": "Integrates, tests and maintains robots at customer sites, diagnosing hardware and software issues." }
+  ],
+  "skills": {
+    "beginner": [
+      "Python and basic C++",
+      "Electronics basics: circuits, sensors, motors, microcontrollers (Arduino)",
+      "Linear algebra, trigonometry and basic physics",
+      "Linux command line",
+      "Reading datasheets and wiring diagrams",
+      "CAD basics (Fusion 360 or SolidWorks)"
+    ],
+    "intermediate": [
+      "ROS 2: nodes, topics, services, launch files",
+      "Kinematics: forward/inverse kinematics, coordinate frames",
+      "PID control and feedback systems",
+      "Simulation with Gazebo or NVIDIA Isaac Sim",
+      "Computer vision with OpenCV",
+      "SLAM and navigation (Nav2)",
+      "PLC programming basics (ladder logic) for industrial roles"
+    ],
+    "advanced": [
+      "Motion planning (MoveIt, sampling-based planners, optimisation)",
+      "State estimation and sensor fusion (Kalman filters)",
+      "Reinforcement and imitation learning for manipulation",
+      "Real-time systems and embedded control",
+      "Vision-language-action models and robot foundation models",
+      "Functional safety and industrial standards"
+    ]
+  },
+  "stack": {
+    "languages": ["C++", "Python", "MATLAB", "C (embedded)", "Ladder Logic / Structured Text (PLCs)"],
+    "tools": ["ROS 2", "Gazebo", "NVIDIA Isaac Sim", "MoveIt", "OpenCV", "PyTorch", "Arduino / ESP32 / Raspberry Pi", "SolidWorks / Fusion 360", "Siemens TIA Portal / Rockwell Studio 5000", "Docker"],
+    "note": "C++ + Python + ROS 2 is the core of robotics software listings. Industrial automation roles instead emphasise PLC platforms (Siemens, Rockwell) and industrial robot brands (ABB, FANUC, KUKA)."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Electronics and programming",
+      "goals": [
+        "Build simple Arduino/ESP32 projects: LEDs, sensors, motors",
+        "Strengthen Python and learn C++ basics",
+        "Review linear algebra and trigonometry for coordinate frames",
+        "Learn Linux basics (ROS runs on Ubuntu)",
+        "Build a line-following or obstacle-avoiding robot car"
+      ],
+      "milestone": "A working small robot car with sensor-based behaviour and a demo video."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "ROS 2 and simulation",
+      "goals": [
+        "Complete the official ROS 2 beginner tutorials",
+        "Simulate a mobile robot in Gazebo",
+        "Implement PID control for speed or heading",
+        "Use OpenCV to detect objects or follow a coloured target",
+        "Run Nav2 navigation with a simulated map"
+      ],
+      "milestone": "A simulated robot that maps a room and navigates to goals autonomously."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Manipulation and AI",
+      "goals": [
+        "Simulate a robot arm with MoveIt and plan pick-and-place",
+        "Learn forward/inverse kinematics in depth",
+        "Try a reinforcement learning task in Isaac Lab or Gymnasium",
+        "Move one project from simulation to real hardware",
+        "Join a robotics competition team or open-source ROS project"
+      ],
+      "milestone": "A pick-and-place demo (sim or real) and a portfolio page with videos and code."
+    }
+  ],
+  "resources": [
+    { "title": "ROS 2 Tutorials", "provider": "Open Robotics", "url": "https://docs.ros.org/en/jazzy/Tutorials.html", "type": "docs" },
+    { "title": "Modern Robotics (Northwestern)", "provider": "Coursera", "url": "https://www.coursera.org/specializations/modernrobotics", "type": "course", "note": "Free to audit" },
+    { "title": "Modern Robotics textbook (free PDF)", "provider": "Lynch & Park", "url": "https://hades.mech.northwestern.edu/index.php/Modern_Robotics", "type": "book", "note": "Free" },
+    { "title": "MIT OCW — Underactuated Robotics", "provider": "MIT (Russ Tedrake)", "url": "https://underactuated.mit.edu/", "type": "book", "note": "Free" },
+    { "title": "Robotic Manipulation", "provider": "MIT (Russ Tedrake)", "url": "https://manipulation.csail.mit.edu/", "type": "book", "note": "Free" },
+    { "title": "MoveIt 2 tutorials", "provider": "PickNik / MoveIt", "url": "https://moveit.picknik.ai/main/index.html", "type": "docs" },
+    { "title": "NVIDIA Isaac Sim documentation", "provider": "NVIDIA", "url": "https://docs.isaacsim.omniverse.nvidia.com/latest/index.html", "type": "docs" },
+    { "title": "OpenCV tutorials", "provider": "OpenCV", "url": "https://docs.opencv.org/4.x/d9/df8/tutorial_root.html", "type": "docs" },
+    { "title": "Arduino — Getting started", "provider": "Arduino", "url": "https://docs.arduino.cc/learn/", "type": "docs" },
+    { "title": "Hugging Face LeRobot", "provider": "Hugging Face", "url": "https://github.com/huggingface/lerobot", "type": "practice", "note": "Open-source robot learning" }
+  ],
+  "projects": [
+    { "title": "Obstacle-avoiding robot car", "level": "easy", "description": "Arduino or ESP32 car with ultrasonic sensors that avoids obstacles and can be controlled by phone over Bluetooth.", "skills": ["Microcontrollers", "Sensors", "Motor control"] },
+    { "title": "PID balancing or line-following robot", "level": "easy", "description": "Tune a PID controller for smooth line following or self-balancing and plot the error over time.", "skills": ["PID control", "Tuning", "Data logging"] },
+    { "title": "ROS 2 autonomous navigation", "level": "medium", "description": "Build a simulated (then real, if possible) mobile robot that runs SLAM, builds a map and navigates with Nav2.", "skills": ["ROS 2", "SLAM", "Nav2"] },
+    { "title": "Vision-based sorting arm", "level": "medium", "description": "A robot arm (sim or low-cost real arm) that detects coloured objects with OpenCV and sorts them with MoveIt.", "skills": ["Computer vision", "MoveIt", "Kinematics"] },
+    { "title": "Learned manipulation policy", "level": "hard", "description": "Train a pick-and-place policy with imitation or reinforcement learning in simulation (Isaac Lab / LeRobot) and evaluate sim-to-real transfer.", "skills": ["Robot learning", "Simulation", "PyTorch"] }
+  ],
+  "interview": [
+    { "question": "What is ROS 2 and why use it?", "answer": "A set of libraries and tools for robot software with a publish–subscribe communication system (nodes, topics, services, actions). It provides drivers, visualisation, simulation integration and reusable packages." },
+    { "question": "Explain a PID controller.", "answer": "It computes a control signal from the error between target and actual value: Proportional reacts to current error, Integral removes steady-state error, Derivative dampens fast changes." },
+    { "question": "Forward vs inverse kinematics?", "answer": "Forward kinematics computes the end-effector pose from joint angles; inverse kinematics finds joint angles that achieve a desired pose — often with multiple or no solutions." },
+    { "question": "What is SLAM?", "answer": "Simultaneous Localisation and Mapping: building a map of an unknown environment while estimating the robot's position in it, using sensors like LiDAR or cameras." },
+    { "question": "What is a Kalman filter used for?", "answer": "Estimating a system's state (e.g. position, velocity) by combining a motion model with noisy sensor measurements, weighting each by its uncertainty." },
+    { "question": "What is the sim-to-real gap?", "answer": "Differences between simulation and reality (physics, sensor noise, lighting) that make policies trained in sim fail on real robots. Domain randomisation and real-world fine-tuning help." },
+    { "question": "How do you make a robot safe around people?", "answer": "Risk assessment, speed and force limits, safety-rated sensors and stops, collaborative-robot modes, redundancy and following standards like ISO 10218 / ISO/TS 15066." },
+    { "question": "What is a PLC?", "answer": "A Programmable Logic Controller: a rugged industrial computer that reads sensors and controls machines in real time, programmed in ladder logic or structured text." },
+    { "question": "How would you debug a robot that drifts off its path?", "answer": "Check sensor calibration and odometry, compare commanded vs actual wheel speeds, inspect localisation estimates, tune the controller and test components in isolation." },
+    { "question": "What are degrees of freedom?", "answer": "The number of independent ways a robot can move. A typical industrial arm has 6 DOF, enough to reach any position and orientation within its workspace." }
+  ],
+  "resumeBullets": [
+    "Developed ROS 2 navigation for [robot] achieving [X]% successful autonomous runs across [N] test environments.",
+    "Designed and tuned PID/[MPC] controllers that reduced tracking error by [X]% on [system].",
+    "Built a vision pipeline with OpenCV/[model] that detected [objects] at [X]% precision in real time on [hardware].",
+    "Automated [process] on a production line with [PLC/robot], increasing throughput by [X]% and reducing defects by [Y]%.",
+    "Led [university team] to [placement] at [competition], owning [subsystem]."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 14743,
+      "maxBdt": 51701,
+      "note": "Paylab Microcontroller Programmer range (10th–90th percentile, gross monthly) — the closest published category. Automation engineers at large factories and multinational suppliers may earn more; robotics R&D roles are still scarce locally.",
+      "sources": [
+        { "label": "Paylab — Microcontroller Programmer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/microcontroller-programmer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 20000,
+      "maxUsd": 70000,
+      "note": "Estimate. Most robotics jobs are on-site because they involve hardware; remote opportunities exist in simulation, perception, ROS software and robot-learning roles.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 104110,
+      "benchmark": "US median, Mechanical Engineers incl. robotic engineers (BLS, 2025)",
+      "growth": "+11% (2025–35, much faster than average)",
+      "note": "Robotics software engineers at tech and autonomy companies often earn closer to software-developer pay ($134,040 BLS median for the combined category).",
+      "sources": [
+        { "label": "BLS — Mechanical Engineers", "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm" },
+        { "label": "BLS — Electrical and Electronics Engineers", "url": "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Growing slowly. Factory automation (RMG, pharma, food processing), electronics manufacturers and a few robotics start-ups hire; competition-team experience helps.",
+      "remote": "Limited because of hardware needs, but simulation, perception and ROS software contracts exist.",
+      "global": "Growing strongly in automation, warehouses and AI-driven robotics; humanoid and physical-AI start-ups are well funded but concentrated in the US, China, Europe and Japan."
+    }
+  },
+  "startToday": [
+    "Buy or borrow a basic Arduino/ESP32 starter kit",
+    "Make an LED blink and read a sensor value",
+    "Install Ubuntu (or WSL) and start the ROS 2 beginner tutorials",
+    "Watch the first lecture of the Modern Robotics course",
+    "Join your university's robotics club or an online ROS community",
+    "Sketch a small robot you want to build in the next 90 days"
+  ]
+}
