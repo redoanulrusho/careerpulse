@@ -17,7 +17,7 @@
     "trendSources": [
       { "label": "Android XR — developer site", "url": "https://developer.android.com/develop/xr" },
       { "label": "Apple visionOS — developer site", "url": "https://developer.apple.com/visionos/" },
-      { "label": "Meta Horizon developer docs", "url": "https://developers.meta.com/horizon/" }
+      { "label": "Meta Horizon developer docs", "url": "https://developers.meta.com/vr/" }
     ]
   },
   "roles": [
@@ -102,7 +102,7 @@
     { "title": "Unity XR Interaction Toolkit docs", "provider": "Unity", "url": "https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html", "type": "docs" },
     { "title": "AR Foundation docs", "provider": "Unity", "url": "https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.0/manual/index.html", "type": "docs" },
     { "title": "Unreal Engine learning library", "provider": "Epic Games", "url": "https://dev.epicgames.com/community/unreal-engine/learning", "type": "course", "note": "Free" },
-    { "title": "Meta Horizon developer docs", "provider": "Meta", "url": "https://developers.meta.com/horizon/", "type": "docs" },
+    { "title": "Meta Horizon developer docs", "provider": "Meta", "url": "https://developers.meta.com/vr/", "type": "docs" },
     { "title": "visionOS pathway", "provider": "Apple", "url": "https://developer.apple.com/visionos/", "type": "docs" },
     { "title": "Android XR developer guide", "provider": "Google", "url": "https://developer.android.com/develop/xr", "type": "docs" },
     { "title": "Three.js manual & WebXR examples", "provider": "Three.js", "url": "https://threejs.org/manual/", "type": "docs" },

@@ -105,7 +105,7 @@
     { "title": "Terraform tutorials", "provider": "HashiCorp", "url": "https://developer.hashicorp.com/terraform/tutorials", "type": "docs", "note": "Free" },
     { "title": "AWS Well-Architected Framework", "provider": "AWS", "url": "https://aws.amazon.com/architecture/well-architected/", "type": "guide" },
     { "title": "freeCodeCamp — AWS Certified Cloud Practitioner course", "provider": "freeCodeCamp (YouTube)", "url": "https://www.youtube.com/watch?v=NhDYbskXRgc", "type": "video", "note": "Free" },
-    { "title": "Linux Journey", "provider": "Linux Journey", "url": "https://linuxjourney.com/", "type": "course", "note": "Free" },
+    { "title": "The Linux Command Line (free book)", "provider": "William Shotts", "url": "https://linuxcommand.org/tlcl.php", "type": "book", "note": "Free PDF" },
     { "title": "roadmap.sh — DevOps & cloud roadmaps", "provider": "roadmap.sh", "url": "https://roadmap.sh/aws", "type": "guide" },
     { "title": "AWS Free Tier", "provider": "AWS", "url": "https://aws.amazon.com/free/", "type": "practice", "note": "Set a billing alarm first" }
   ],
@@ -171,7 +171,7 @@
     "Create a free-tier cloud account and immediately set a $5 billing alarm",
     "Read the Cloud Resume Challenge page and pick your cloud provider",
     "Start AWS Cloud Practitioner Essentials or Microsoft's AZ-900 path",
-    "Complete the first lessons of Linux Journey",
+    "Read the first chapters of The Linux Command Line (free book)",
     "Install the cloud CLI and Terraform on your computer",
     "Write down one app you would like to deploy to the cloud by day 60"
   ]
