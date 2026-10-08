@@ -1,0 +1,181 @@
+{
+  "slug": "green-tech",
+  "name": "Green Tech & Climate Tech",
+  "icon": "Leaf",
+  "tagline": "Use software, data and engineering to cut emissions and adapt to a changing climate.",
+  "category": "emerging",
+  "difficulty": "intermediate",
+  "demand": "growing",
+  "overview": {
+    "summary": "Green tech (or climate tech) covers technology that reduces emissions or helps people adapt to climate change: renewable energy and smart grids, battery and EV systems, carbon accounting software, climate and flood modelling, precision agriculture, and sustainable (energy-efficient) software itself. Tech workers contribute through data science (forecasting solar output, measuring emissions), software engineering (energy platforms, ESG reporting tools), IoT (smart meters, sensors) and sustainability analysis. For Bangladesh — one of the countries most exposed to climate risk — these skills are both a career path and a way to make real local impact.",
+    "whyTrending": [
+      "LinkedIn's Global Green Skills Report 2025 found green hiring grew almost twice as fast as the supply of workers with green skills (2021–2025), and the technology sector saw the fastest growth in green hires.",
+      "AI is driving a surge in data-centre electricity demand — the IEA projects data-centre electricity use to more than double by 2030 — creating demand for energy-efficient computing and clean-energy integration.",
+      "Mandatory climate disclosure rules (such as the EU's CSRD and ISSB standards) require companies — including Bangladeshi garment exporters selling to Europe — to measure and report emissions.",
+      "Bangladesh has a large off-grid solar sector, ongoing renewable-energy targets and major climate-adaptation programmes, all of which need data, IoT and software skills."
+    ],
+    "trendSources": [
+      { "label": "LinkedIn Economic Graph — Global Green Skills Report", "url": "https://economicgraph.linkedin.com/research/global-green-skills-report" },
+      { "label": "IEA — Energy and AI report", "url": "https://www.iea.org/reports/energy-and-ai" },
+      { "label": "WEF Future of Jobs Report 2025 (press release)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" }
+    ]
+  },
+  "roles": [
+    { "title": "Climate / Energy Data Scientist", "description": "Forecasts energy demand and renewable output, models climate risk and analyses emissions data." },
+    { "title": "Sustainability / ESG Analyst", "description": "Measures and reports a company's carbon footprint (Scope 1, 2 and 3) and tracks reduction targets." },
+    { "title": "Energy Software Engineer", "description": "Builds platforms for smart grids, EV charging, battery management, solar monitoring and energy trading." },
+    { "title": "Carbon Accounting Software Developer", "description": "Builds tools that collect activity data, apply emission factors and produce audit-ready reports." },
+    { "title": "Green Software / Sustainable IT Engineer", "description": "Reduces the energy and carbon footprint of software, cloud workloads and data centres." },
+    { "title": "Climate GIS & Remote Sensing Analyst", "description": "Uses satellite data and GIS to map floods, land use, crops and climate risks." }
+  ],
+  "skills": {
+    "beginner": [
+      "Climate and energy basics: emissions, renewables, grids, carbon accounting scopes",
+      "Excel / Google Sheets for data analysis",
+      "Python basics with pandas",
+      "Data visualisation",
+      "Understanding the GHG Protocol",
+      "Clear reporting and communication"
+    ],
+    "intermediate": [
+      "Time-series forecasting (energy demand, solar/wind output)",
+      "GIS with QGIS and Python (GeoPandas)",
+      "Remote sensing with Google Earth Engine",
+      "IoT data pipelines from sensors and smart meters",
+      "Carbon accounting methods and emission factors",
+      "SQL and dashboards (Power BI / Tableau)",
+      "Green software principles (Software Carbon Intensity)"
+    ],
+    "advanced": [
+      "Energy systems modelling and optimisation",
+      "Machine learning for climate (weather, flood and crop models)",
+      "Battery and EV systems software",
+      "ESG reporting frameworks (ISSB, CSRD, CDP)",
+      "Carbon-aware cloud computing and data-centre efficiency",
+      "Life-cycle assessment (LCA)"
+    ]
+  },
+  "stack": {
+    "languages": ["Python", "SQL", "R", "JavaScript / TypeScript", "C/C++ (embedded energy devices)"],
+    "tools": ["pandas / xarray", "Google Earth Engine", "QGIS / GeoPandas", "PyPSA (energy modelling)", "Power BI / Tableau", "Excel", "AWS / Azure sustainability tools", "Cloud Carbon Footprint", "IoT platforms (MQTT, InfluxDB)", "Carbon accounting platforms"],
+    "note": "Most climate-tech data roles want Python + SQL + a domain (energy, agriculture, finance). ESG analyst roles weigh Excel, reporting frameworks and communication more than coding."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Climate and data basics",
+      "goals": [
+        "Learn climate and energy fundamentals with a free course",
+        "Understand Scope 1, 2 and 3 emissions (GHG Protocol)",
+        "Learn Python and pandas basics",
+        "Analyse one open energy or emissions dataset (e.g. Our World in Data)",
+        "Follow climate-tech job boards to see real skill requirements"
+      ],
+      "milestone": "A short analysis of Bangladesh's (or your country's) energy mix and emissions trends."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Applied climate data",
+      "goals": [
+        "Calculate a simple carbon footprint for a business or household",
+        "Forecast solar output or electricity demand with a time-series model",
+        "Learn QGIS or Google Earth Engine basics and map flood or land-use data",
+        "Complete the Green Software Practitioner course",
+        "Build a dashboard of your results"
+      ],
+      "milestone": "A carbon calculator or forecasting project with a dashboard."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Specialise and connect",
+      "goals": [
+        "Pick a track: energy software, climate data, ESG analysis or green software",
+        "Build a capstone project with real-world data",
+        "Read ESG reporting frameworks relevant to your track",
+        "Join Climate Change AI or Work on Climate communities",
+        "Volunteer for an NGO or start-up working on climate in your region"
+      ],
+      "milestone": "A capstone project and a network connection in the climate-tech community."
+    }
+  ],
+  "resources": [
+    { "title": "Green Software Practitioner course", "provider": "Green Software Foundation", "url": "https://learn.greensoftware.foundation/", "type": "course", "note": "Free" },
+    { "title": "Climate Change AI — summer school & resources", "provider": "Climate Change AI", "url": "https://www.climatechange.ai/", "type": "guide", "note": "Free" },
+    { "title": "Google Earth Engine tutorials", "provider": "Google", "url": "https://developers.google.com/earth-engine/tutorials", "type": "docs", "note": "Free for non-commercial use" },
+    { "title": "GHG Protocol standards & guidance", "provider": "GHG Protocol", "url": "https://ghgprotocol.org/", "type": "docs" },
+    { "title": "Our World in Data — Energy & CO₂", "provider": "Our World in Data", "url": "https://ourworldindata.org/energy", "type": "guide", "note": "Open data" },
+    { "title": "IEA — Energy and AI report", "provider": "International Energy Agency", "url": "https://www.iea.org/reports/energy-and-ai", "type": "guide" },
+    { "title": "QGIS Training Manual", "provider": "QGIS", "url": "https://docs.qgis.org/latest/en/docs/training_manual/", "type": "docs", "note": "Free" },
+    { "title": "PyPSA energy system modelling docs", "provider": "PyPSA", "url": "https://docs.pypsa.org/", "type": "docs", "note": "Open source" },
+    { "title": "Climatebase — climate jobs & fellowships", "provider": "Climatebase", "url": "https://climatebase.org/", "type": "practice" },
+    { "title": "Terra.do / Work on Climate community", "provider": "Work on Climate", "url": "https://workonclimate.org/", "type": "practice", "note": "Free community" }
+  ],
+  "projects": [
+    { "title": "Household carbon footprint calculator", "level": "easy", "description": "A web or spreadsheet calculator using local electricity and fuel emission factors, with tips to reduce emissions.", "skills": ["Emission factors", "Spreadsheets/JS", "UX"] },
+    { "title": "Bangladesh energy-mix dashboard", "level": "easy", "description": "Visualise how Bangladesh's electricity generation and emissions changed over 20 years using Our World in Data.", "skills": ["pandas", "Visualisation", "Storytelling"] },
+    { "title": "Solar output forecaster", "level": "medium", "description": "Forecast rooftop solar generation for a city using weather and irradiance data and evaluate the forecast error.", "skills": ["Time series", "Weather data", "ML"] },
+    { "title": "Flood-extent mapper", "level": "medium", "description": "Use Sentinel-1 radar data in Google Earth Engine to map monsoon flood extent and estimate affected areas.", "skills": ["Remote sensing", "Earth Engine", "GIS"] },
+    { "title": "Scope 1–3 emissions platform for a garment factory", "level": "hard", "description": "A multi-user web app that collects energy, fuel, transport and supplier data, applies emission factors, and produces CSRD/ISSB-aligned reports with audit trails.", "skills": ["Full-stack", "Carbon accounting", "Reporting"] }
+  ],
+  "interview": [
+    { "question": "What are Scope 1, 2 and 3 emissions?", "answer": "Scope 1: direct emissions from owned sources (fuel burned on site). Scope 2: indirect emissions from purchased electricity/heat. Scope 3: all other value-chain emissions, such as suppliers, transport and product use." },
+    { "question": "What is an emission factor?", "answer": "A coefficient that converts activity data (e.g. kWh, litres of diesel) into greenhouse-gas emissions (kg CO₂e)." },
+    { "question": "What is CO₂e?", "answer": "Carbon dioxide equivalent: a way to express different greenhouse gases in terms of the warming impact of CO₂ over a set period." },
+    { "question": "Why is forecasting important for renewable energy?", "answer": "Solar and wind output vary with weather. Accurate forecasts help grid operators balance supply and demand, reduce backup fossil generation and plan storage." },
+    { "question": "How can software be made greener?", "answer": "Use less compute (efficient code, right-sized infrastructure), run flexible workloads when and where electricity is cleaner (carbon-aware computing), and reduce data transfer and storage." },
+    { "question": "What is a life-cycle assessment?", "answer": "A method to measure the environmental impact of a product across its whole life — raw materials, manufacturing, transport, use and disposal." },
+    { "question": "What is the difference between mitigation and adaptation?", "answer": "Mitigation reduces emissions to limit climate change; adaptation reduces harm from climate impacts already happening, like floods and heatwaves." },
+    { "question": "How would you validate a company's emissions data?", "answer": "Check data completeness and sources, use consistent emission factors, reconcile with invoices/meter readings, flag outliers, and document assumptions for auditors." },
+    { "question": "What is a smart grid?", "answer": "An electricity network that uses sensors, communication and automation to balance supply and demand, integrate renewables and respond to faults quickly." },
+    { "question": "How can satellite data help climate work?", "answer": "It provides consistent, large-area measurements of floods, deforestation, crop health, urban heat and emissions sources, especially where ground data is limited." }
+  ],
+  "resumeBullets": [
+    "Built a carbon accounting tool that calculated Scope 1–3 emissions for [N] sites, cutting reporting time by [X]%.",
+    "Developed a solar generation forecast model with [X]% MAPE, improving dispatch planning for [N] MW of capacity.",
+    "Mapped flood extent for [region] using Sentinel-1 data in Earth Engine, supporting relief planning for [N] households.",
+    "Reduced cloud compute emissions by [X]% through rightsizing and carbon-aware scheduling of [N] batch jobs.",
+    "Prepared [CSRD/ISSB/CDP] disclosures covering [N] facilities, achieving [score/compliance outcome]."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 15797,
+      "maxBdt": 63252,
+      "note": "Paylab has no green-tech category, so this uses its IT Consultant range (10th–90th percentile, gross monthly) as a proxy. Sustainability and ESG roles at large RMG exporters, international NGOs and development agencies may pay more.",
+      "sources": [
+        { "label": "Paylab — IT Consultant salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/it-consultant" }
+      ]
+    },
+    "remote": {
+      "minUsd": 20000,
+      "maxUsd": 70000,
+      "note": "Estimate. Climate-tech start-ups and NGOs hire remote data and software talent; data scientists earn near Arc's $42,875 Bangladesh remote average, senior engineers more.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" },
+        { "label": "Climatebase — climate jobs", "url": "https://climatebase.org/" }
+      ]
+    },
+    "global": {
+      "medianUsd": 107110,
+      "benchmark": "US median, Environmental Engineers (BLS, 2025)",
+      "growth": "+6% (2025–35, faster than average)",
+      "note": "Climate-tech software and data roles usually pay closer to software-developer and data-scientist medians ($134,040 and $120,230).",
+      "sources": [
+        { "label": "BLS — Environmental Engineers", "url": "https://www.bls.gov/ooh/architecture-and-engineering/environmental-engineers.htm" },
+        { "label": "LinkedIn — Global Green Skills Report", "url": "https://economicgraph.linkedin.com/research/global-green-skills-report" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Growing. RMG exporters need emissions reporting for European buyers; solar companies, NGOs and development projects hire data, GIS and IoT talent.",
+      "remote": "Moderate. Mission-driven start-ups hire globally; a climate-focused portfolio helps a lot.",
+      "global": "Growing steadily. Green hiring outpaces the supply of green-skilled workers, according to LinkedIn."
+    }
+  },
+  "startToday": [
+    "Read the GHG Protocol's short explanation of Scope 1, 2 and 3",
+    "Explore Bangladesh's energy data on Our World in Data",
+    "Start the free Green Software Practitioner course",
+    "Sign up for Google Earth Engine (non-commercial use)",
+    "Join the Climate Change AI newsletter or community",
+    "List three climate problems in your city that data or software could help with"
+  ]
+}
