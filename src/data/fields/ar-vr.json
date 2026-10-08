@@ -1,0 +1,178 @@
+{
+  "slug": "ar-vr",
+  "name": "AR/VR & Spatial Computing",
+  "icon": "Glasses",
+  "tagline": "Create immersive 3D experiences for headsets, smart glasses and phones.",
+  "category": "emerging",
+  "difficulty": "intermediate",
+  "demand": "growing",
+  "overview": {
+    "summary": "AR (augmented reality) places digital content on top of the real world — through phone cameras or smart glasses. VR (virtual reality) puts users inside a fully digital world through a headset. 'Spatial computing' is the umbrella term for apps that understand 3D space, hands, eyes and voice. Developers in this field build training simulations, games, product visualisers, medical and architecture tools, and increasingly AI-powered assistants on smart glasses. The core skills are real-time 3D development (Unity, Unreal), 3D maths and interaction design.",
+    "whyTrending": [
+      "Big platforms are competing on spatial devices: Apple Vision Pro (visionOS), Meta Quest headsets and Ray-Ban Meta smart glasses, and Google's Android XR platform with Samsung's Galaxy XR headset (launched October 2025).",
+      "AI assistants on camera-equipped smart glasses are a new product category that needs developers who combine computer vision, AI and spatial UX.",
+      "Enterprises use XR for training, remote assistance and digital twins in manufacturing, healthcare and construction, which is steadier than consumer gaming demand.",
+      "The skills transfer well: Unity and Unreal developers can move between games, XR, simulation and digital-twin work — useful protection in a still-maturing market."
+    ],
+    "trendSources": [
+      { "label": "Android XR — developer site", "url": "https://developer.android.com/develop/xr" },
+      { "label": "Apple visionOS — developer site", "url": "https://developer.apple.com/visionos/" },
+      { "label": "Meta Horizon developer docs", "url": "https://developers.meta.com/horizon/" }
+    ]
+  },
+  "roles": [
+    { "title": "XR / Unity Developer", "description": "Builds AR/VR apps and games in Unity with C#, handling interaction, physics and performance on headsets." },
+    { "title": "Unreal Engine Developer", "description": "Creates high-fidelity XR, simulation and visualisation experiences in Unreal with C++ and Blueprints." },
+    { "title": "visionOS / Spatial App Developer", "description": "Builds apps for Apple Vision Pro with Swift, SwiftUI and RealityKit." },
+    { "title": "WebXR Developer", "description": "Builds browser-based AR/VR experiences with Three.js, Babylon.js or A-Frame — no app install required." },
+    { "title": "3D Technical Artist", "description": "Bridges art and code: optimises 3D models, shaders, lighting and pipelines for real-time performance." },
+    { "title": "XR Interaction / UX Designer", "description": "Designs comfortable, intuitive spatial interactions — hand tracking, gaze, menus and onboarding." }
+  ],
+  "skills": {
+    "beginner": [
+      "C# (for Unity) or C++ basics (for Unreal)",
+      "Unity or Unreal editor basics: scenes, objects, components",
+      "3D fundamentals: coordinates, transforms, meshes, materials, lighting",
+      "Vector maths: positions, directions, dot and cross products",
+      "Importing and optimising 3D assets",
+      "Git (with Git LFS for large assets)"
+    ],
+    "intermediate": [
+      "XR Interaction Toolkit / OpenXR",
+      "Hand tracking, controllers and locomotion",
+      "AR Foundation (ARKit/ARCore): plane detection, anchors, image tracking",
+      "Physics, animation and UI in 3D",
+      "Performance profiling: frame rate, draw calls, LOD",
+      "WebXR with Three.js"
+    ],
+    "advanced": [
+      "Shaders and rendering optimisation for mobile/standalone headsets",
+      "Multiplayer and shared spatial experiences",
+      "Computer vision and AI integration (object recognition, scene understanding)",
+      "visionOS with RealityKit and SwiftUI",
+      "Spatial UX: comfort, accessibility and motion-sickness prevention",
+      "Digital twins and enterprise integration"
+    ]
+  },
+  "stack": {
+    "languages": ["C#", "C++", "Swift", "JavaScript / TypeScript", "HLSL / shader languages"],
+    "tools": ["Unity", "Unreal Engine", "OpenXR", "AR Foundation (ARKit / ARCore)", "Meta XR SDK", "RealityKit / Reality Composer Pro", "Three.js / WebXR", "Blender", "Android XR SDK", "Git LFS"],
+    "note": "Unity + C# appears in the majority of XR listings; Unreal is common for high-end simulation and automotive/architecture visualisation."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "3D and engine basics",
+      "goals": [
+        "Install Unity (free Personal licence) and finish the Unity Essentials pathway",
+        "Learn C# basics through small scripts",
+        "Understand transforms, cameras, lighting and materials",
+        "Build a small 3D game (e.g. roll-a-ball)",
+        "Learn basic Blender to make and export simple models"
+      ],
+      "milestone": "A small playable 3D scene with your own scripts and assets."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "AR and VR fundamentals",
+      "goals": [
+        "Build a phone AR app with AR Foundation (place objects on surfaces)",
+        "Set up the XR Interaction Toolkit and build a VR room with grab interactions",
+        "Test in the XR Device Simulator if you don't have a headset",
+        "Add UI panels and comfortable locomotion",
+        "Profile performance and hit target frame rates"
+      ],
+      "milestone": "One AR phone app and one VR prototype, each with a demo video."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Polish and specialise",
+      "goals": [
+        "Build a WebXR demo with Three.js that anyone can try in a browser",
+        "Add an AI feature (e.g. voice commands or object recognition)",
+        "Learn spatial UX guidelines from Apple, Meta and Google",
+        "Publish a demo on itch.io, the Meta Horizon store (App Lab successor) or the web",
+        "Join an XR game jam or hackathon"
+      ],
+      "milestone": "A polished portfolio with three XR projects and published demos."
+    }
+  ],
+  "resources": [
+    { "title": "Unity Learn — Essentials & VR Development pathways", "provider": "Unity", "url": "https://learn.unity.com/", "type": "course", "note": "Free" },
+    { "title": "Unity XR Interaction Toolkit docs", "provider": "Unity", "url": "https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/manual/index.html", "type": "docs" },
+    { "title": "AR Foundation docs", "provider": "Unity", "url": "https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.0/manual/index.html", "type": "docs" },
+    { "title": "Unreal Engine learning library", "provider": "Epic Games", "url": "https://dev.epicgames.com/community/unreal-engine/learning", "type": "course", "note": "Free" },
+    { "title": "Meta Horizon developer docs", "provider": "Meta", "url": "https://developers.meta.com/horizon/", "type": "docs" },
+    { "title": "visionOS pathway", "provider": "Apple", "url": "https://developer.apple.com/visionos/", "type": "docs" },
+    { "title": "Android XR developer guide", "provider": "Google", "url": "https://developer.android.com/develop/xr", "type": "docs" },
+    { "title": "Three.js manual & WebXR examples", "provider": "Three.js", "url": "https://threejs.org/manual/", "type": "docs" },
+    { "title": "Blender — Getting started", "provider": "Blender", "url": "https://www.blender.org/support/tutorials/", "type": "video", "note": "Free" },
+    { "title": "OpenXR overview", "provider": "Khronos Group", "url": "https://www.khronos.org/openxr/", "type": "docs" }
+  ],
+  "projects": [
+    { "title": "AR furniture or product placer", "level": "easy", "description": "A phone AR app that places true-scale 3D furniture or products on the floor — useful for local e-commerce shops.", "skills": ["AR Foundation", "Plane detection", "3D assets"] },
+    { "title": "WebXR solar-system explorer", "level": "easy", "description": "A browser-based VR/AR scene of the solar system with facts on each planet, built with Three.js.", "skills": ["Three.js", "WebXR", "3D maths"] },
+    { "title": "VR training simulator", "level": "medium", "description": "A VR scenario teaching fire-safety or factory-machine procedures with step tracking and a score at the end.", "skills": ["XR Interaction Toolkit", "Interaction design", "Scoring"] },
+    { "title": "AR heritage tour", "level": "medium", "description": "Image-tracking AR that brings historical sites or museum exhibits (e.g. Bangladeshi heritage sites) to life with 3D reconstructions and narration.", "skills": ["Image tracking", "Audio", "Content design"] },
+    { "title": "Multiplayer collaborative XR workspace with AI assistant", "level": "hard", "description": "A shared VR room where multiple users manipulate 3D models together, with voice-driven AI assistance and performance tuned for standalone headsets.", "skills": ["Networking", "AI integration", "Optimisation"] }
+  ],
+  "interview": [
+    { "question": "AR vs VR vs MR?", "answer": "AR overlays digital content on the real world; VR replaces the world with a digital one; MR (mixed reality) blends both so digital objects interact with the real environment." },
+    { "question": "Why is frame rate so important in VR?", "answer": "Low or unstable frame rates and latency cause discomfort and motion sickness. Standalone headsets typically target 72–90+ FPS, so every millisecond of frame time matters." },
+    { "question": "What is OpenXR?", "answer": "A royalty-free standard from Khronos that lets XR apps run across many headsets and platforms with one API." },
+    { "question": "How does AR plane detection work?", "answer": "The device tracks visual feature points and motion (visual-inertial odometry) to estimate its pose and detect flat surfaces where content can be anchored." },
+    { "question": "How do you reduce draw calls?", "answer": "Batch static objects, use texture atlases, share materials, use GPU instancing, LODs and occlusion culling." },
+    { "question": "What causes motion sickness in VR and how do you avoid it?", "answer": "Mismatch between visual motion and the inner ear. Use teleport or snap-turn options, avoid forced camera movement, keep a stable horizon and high frame rates." },
+    { "question": "Explain the dot product in a game/XR context.", "answer": "It measures how aligned two vectors are — e.g. checking if an object is in front of the user or how directly they're looking at a target." },
+    { "question": "What is a quaternion and why use it?", "answer": "A four-number representation of rotation that avoids gimbal lock and interpolates smoothly, so engines use it internally for orientation." },
+    { "question": "How do you design UI for spatial apps?", "answer": "Place UI at comfortable distance and angles, use large targets, support hands/gaze/controllers, keep text legible, and avoid locking UI rigidly to the head." },
+    { "question": "How would you test an XR app without a headset?", "answer": "Use device simulators (XR Device Simulator, visionOS simulator, Android XR emulator), then validate on real hardware before release because comfort and performance differ." }
+  ],
+  "resumeBullets": [
+    "Developed a VR training simulator in Unity for [process], reducing trainee onboarding time by [X]% across [N] users.",
+    "Built an AR product visualiser with AR Foundation that increased [conversion/engagement] by [X]% for [client].",
+    "Optimised rendering for [headset], raising average frame rate from [X] to [Y] FPS by reducing draw calls [Z]%.",
+    "Shipped [N] XR apps to [store/platform] with [rating] average rating and [N] downloads.",
+    "Integrated [AI/vision feature] into a spatial app, enabling [capability] with [X] ms latency."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 16755,
+      "maxBdt": 56886,
+      "note": "Paylab Game Developer range (10th–90th percentile, gross monthly) — the closest category, since most XR work in Bangladesh happens in game and simulation studios.",
+      "sources": [
+        { "label": "Paylab — Game Developer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/game-developer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 20000,
+      "maxUsd": 70000,
+      "note": "Estimate. Remote XR work is common through studios, agencies and freelance contracts for enterprise training and marketing experiences; Arc's Bangladesh remote app-developer average is $38,685.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 134040,
+      "benchmark": "US median, Software Developers, QA Analysts & Testers (BLS, 2025)",
+      "growth": "+10% (2025–35); XR hiring is more cyclical",
+      "note": "BLS has no XR-specific category; XR developers are usually classed as software developers. Consumer XR hiring fluctuates with big-tech investment.",
+      "sources": [
+        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Small but present: game studios and agencies build AR/VR for foreign clients, education and marketing. Unity skills open the most doors.",
+      "remote": "Moderate. Enterprise training, simulation and AR marketing projects hire remote Unity developers.",
+      "global": "Growing but uneven — strong in enterprise training, defence/simulation and smart glasses; consumer VR is more volatile."
+    }
+  },
+  "startToday": [
+    "Install Unity Hub and the latest Unity LTS version",
+    "Start the free Unity Essentials pathway on Unity Learn",
+    "Try a WebXR demo on threejs.org with your phone",
+    "Download Blender and follow a beginner 'donut' or low-poly tutorial",
+    "Check whether your phone supports ARCore or ARKit",
+    "Pick one real-world problem an AR or VR app could solve"
+  ]
+}
