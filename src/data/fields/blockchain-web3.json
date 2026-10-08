@@ -15,17 +15,45 @@
       "Many Web3 teams are fully remote and global, which makes the field accessible to skilled developers in Bangladesh despite local restrictions on cryptocurrency."
     ],
     "trendSources": [
-      { "label": "ethereum.org — Developer resources", "url": "https://ethereum.org/en/developers/" },
-      { "label": "WEF Future of Jobs Report 2025 (fintech engineers among fastest-growing)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" }
+      {
+        "label": "ethereum.org — Developer resources",
+        "url": "https://ethereum.org/en/developers/"
+      },
+      {
+        "label": "WEF Future of Jobs Report 2025 (fintech engineers among fastest-growing)",
+        "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/"
+      },
+      {
+        "label": "The Financial Express — Bangladesh Bank warns against cryptocurrency (2022)",
+        "url": "https://thefinancialexpress.com.bd/trade/central-bank-warns-businesses-against-accepting-export-proceeds-in-cryptocurrency-1663344253"
+      }
     ]
   },
   "roles": [
-    { "title": "Smart Contract Developer", "description": "Writes, tests and deploys smart contracts in Solidity (EVM) or Rust (Solana and others)." },
-    { "title": "Smart Contract Auditor / Security Researcher", "description": "Reviews contracts for vulnerabilities, writes audit reports and competes in audit contests or bug bounties." },
-    { "title": "Web3 Full-Stack Developer", "description": "Builds dApp front ends and back ends that connect to wallets, contracts and indexers." },
-    { "title": "Blockchain Protocol / Core Engineer", "description": "Works on node clients, consensus, Layer-2 scaling and cryptography — highly specialised systems work." },
-    { "title": "Blockchain Data Analyst", "description": "Analyses on-chain data with SQL tools like Dune to track usage, risk and fraud." },
-    { "title": "Enterprise Blockchain / Tokenisation Engineer", "description": "Builds permissioned ledgers, custody and tokenisation systems for banks and fintechs." }
+    {
+      "title": "Smart Contract Developer",
+      "description": "Writes, tests and deploys smart contracts in Solidity (EVM) or Rust (Solana and others)."
+    },
+    {
+      "title": "Smart Contract Auditor / Security Researcher",
+      "description": "Reviews contracts for vulnerabilities, writes audit reports and competes in audit contests or bug bounties."
+    },
+    {
+      "title": "Web3 Full-Stack Developer",
+      "description": "Builds dApp front ends and back ends that connect to wallets, contracts and indexers."
+    },
+    {
+      "title": "Blockchain Protocol / Core Engineer",
+      "description": "Works on node clients, consensus, Layer-2 scaling and cryptography — highly specialised systems work."
+    },
+    {
+      "title": "Blockchain Data Analyst",
+      "description": "Analyses on-chain data with SQL tools like Dune to track usage, risk and fraud."
+    },
+    {
+      "title": "Enterprise Blockchain / Tokenisation Engineer",
+      "description": "Builds permissioned ledgers, custody and tokenisation systems for banks and fintechs."
+    }
   ],
   "skills": {
     "beginner": [
@@ -55,8 +83,27 @@
     ]
   },
   "stack": {
-    "languages": ["Solidity", "TypeScript / JavaScript", "Rust", "Go", "Python", "SQL (Dune)"],
-    "tools": ["Foundry", "Hardhat", "OpenZeppelin", "ethers.js / viem", "wagmi", "MetaMask", "Alchemy / Infura", "The Graph", "Dune", "Slither", "Anchor (Solana)"],
+    "languages": [
+      "Solidity",
+      "TypeScript / JavaScript",
+      "Rust",
+      "Go",
+      "Python",
+      "SQL (Dune)"
+    ],
+    "tools": [
+      "Foundry",
+      "Hardhat",
+      "OpenZeppelin",
+      "ethers.js / viem",
+      "wagmi",
+      "MetaMask",
+      "Alchemy / Infura",
+      "The Graph",
+      "Dune",
+      "Slither",
+      "Anchor (Solana)"
+    ],
     "note": "Solidity + TypeScript + Foundry covers most EVM listings. Rust is required for Solana and many protocol-level roles. Security-focused roles pay a premium."
   },
   "roadmap": [
@@ -98,35 +145,165 @@
     }
   ],
   "resources": [
-    { "title": "ethereum.org Developer docs", "provider": "Ethereum Foundation", "url": "https://ethereum.org/en/developers/docs/", "type": "docs" },
-    { "title": "Cyfrin Updraft", "provider": "Cyfrin", "url": "https://updraft.cyfrin.io/", "type": "course", "note": "Free" },
-    { "title": "Solidity documentation", "provider": "Solidity", "url": "https://docs.soliditylang.org/", "type": "docs" },
-    { "title": "CryptoZombies", "provider": "Loom", "url": "https://cryptozombies.io/", "type": "practice", "note": "Free" },
-    { "title": "Foundry Book", "provider": "Foundry", "url": "https://book.getfoundry.sh/", "type": "docs" },
-    { "title": "Ethernaut security challenges", "provider": "OpenZeppelin", "url": "https://ethernaut.openzeppelin.com/", "type": "practice", "note": "Free" },
-    { "title": "OpenZeppelin Contracts docs", "provider": "OpenZeppelin", "url": "https://docs.openzeppelin.com/contracts/", "type": "docs" },
-    { "title": "Solana developer docs", "provider": "Solana", "url": "https://solana.com/docs", "type": "docs" },
-    { "title": "Bitcoin and Cryptocurrency Technologies (Princeton)", "provider": "Coursera", "url": "https://www.coursera.org/learn/cryptocurrency", "type": "course", "note": "Free to audit" },
-    { "title": "Speedrun Ethereum", "provider": "BuidlGuidl", "url": "https://speedrunethereum.com/", "type": "practice", "note": "Free" }
+    {
+      "title": "ethereum.org Developer docs",
+      "provider": "Ethereum Foundation",
+      "url": "https://ethereum.org/en/developers/docs/",
+      "type": "docs"
+    },
+    {
+      "title": "Cyfrin Updraft",
+      "provider": "Cyfrin",
+      "url": "https://updraft.cyfrin.io/",
+      "type": "course",
+      "note": "Free"
+    },
+    {
+      "title": "Solidity documentation",
+      "provider": "Solidity",
+      "url": "https://docs.soliditylang.org/",
+      "type": "docs"
+    },
+    {
+      "title": "CryptoZombies",
+      "provider": "Loom",
+      "url": "https://cryptozombies.io/",
+      "type": "practice",
+      "note": "Free"
+    },
+    {
+      "title": "Foundry Book",
+      "provider": "Foundry",
+      "url": "https://book.getfoundry.sh/",
+      "type": "docs"
+    },
+    {
+      "title": "Ethernaut security challenges",
+      "provider": "OpenZeppelin",
+      "url": "https://ethernaut.openzeppelin.com/",
+      "type": "practice",
+      "note": "Free"
+    },
+    {
+      "title": "OpenZeppelin Contracts docs",
+      "provider": "OpenZeppelin",
+      "url": "https://docs.openzeppelin.com/contracts/",
+      "type": "docs"
+    },
+    {
+      "title": "Solana developer docs",
+      "provider": "Solana",
+      "url": "https://solana.com/docs",
+      "type": "docs"
+    },
+    {
+      "title": "Bitcoin and Cryptocurrency Technologies (Princeton)",
+      "provider": "Coursera",
+      "url": "https://www.coursera.org/learn/cryptocurrency",
+      "type": "course",
+      "note": "Free to audit"
+    },
+    {
+      "title": "Speedrun Ethereum",
+      "provider": "BuidlGuidl",
+      "url": "https://speedrunethereum.com/",
+      "type": "practice",
+      "note": "Free"
+    }
   ],
   "projects": [
-    { "title": "Testnet token and faucet", "level": "easy", "description": "Deploy an ERC-20 token on a testnet with a simple faucet page that lets friends claim tokens.", "skills": ["Solidity", "ERC-20", "Remix"] },
-    { "title": "NFT certificate issuer", "level": "easy", "description": "Issue verifiable course-completion certificates as NFTs on a testnet, with a page to verify them.", "skills": ["ERC-721", "Metadata", "Front end"] },
-    { "title": "Escrow dApp for freelancers", "level": "medium", "description": "A smart-contract escrow that releases payment when both parties approve, with dispute timeouts and full Foundry tests.", "skills": ["Contract design", "Testing", "viem/wagmi"] },
-    { "title": "On-chain analytics dashboard", "level": "medium", "description": "Build a Dune dashboard tracking a protocol's usage, top users and stablecoin flows, with a written analysis.", "skills": ["SQL", "On-chain data", "Analysis"] },
-    { "title": "Mini lending protocol with audit report", "level": "hard", "description": "Build a simplified lending pool with price-oracle integration, invariant/fuzz tests and a self-written audit report covering known attack vectors.", "skills": ["DeFi", "Fuzzing", "Security"] }
+    {
+      "title": "Testnet token and faucet",
+      "level": "easy",
+      "description": "Deploy an ERC-20 token on a testnet with a simple faucet page that lets friends claim tokens.",
+      "skills": [
+        "Solidity",
+        "ERC-20",
+        "Remix"
+      ]
+    },
+    {
+      "title": "NFT certificate issuer",
+      "level": "easy",
+      "description": "Issue verifiable course-completion certificates as NFTs on a testnet, with a page to verify them.",
+      "skills": [
+        "ERC-721",
+        "Metadata",
+        "Front end"
+      ]
+    },
+    {
+      "title": "Escrow dApp for freelancers",
+      "level": "medium",
+      "description": "A smart-contract escrow that releases payment when both parties approve, with dispute timeouts and full Foundry tests.",
+      "skills": [
+        "Contract design",
+        "Testing",
+        "viem/wagmi"
+      ]
+    },
+    {
+      "title": "On-chain analytics dashboard",
+      "level": "medium",
+      "description": "Build a Dune dashboard tracking a protocol's usage, top users and stablecoin flows, with a written analysis.",
+      "skills": [
+        "SQL",
+        "On-chain data",
+        "Analysis"
+      ]
+    },
+    {
+      "title": "Mini lending protocol with audit report",
+      "level": "hard",
+      "description": "Build a simplified lending pool with price-oracle integration, invariant/fuzz tests and a self-written audit report covering known attack vectors.",
+      "skills": [
+        "DeFi",
+        "Fuzzing",
+        "Security"
+      ]
+    }
   ],
   "interview": [
-    { "question": "What is a smart contract?", "answer": "A program stored on a blockchain that runs exactly as written when called by transactions; its code and state are public and changes cost gas." },
-    { "question": "What is gas?", "answer": "The unit measuring computation and storage on EVM chains. Users pay gas fees so the network is compensated and spam is limited; efficient code costs less." },
-    { "question": "Explain a reentrancy attack.", "answer": "An external call lets a malicious contract call back into the original function before state is updated, draining funds. Prevent it with checks-effects-interactions and reentrancy guards." },
-    { "question": "Proof of Work vs Proof of Stake?", "answer": "PoW secures the chain with computing power (mining); PoS uses staked tokens as collateral, using far less energy. Ethereum switched to PoS in 2022." },
-    { "question": "What is a Layer-2?", "answer": "A network that executes transactions off the main chain and posts proofs or data back to it (e.g. rollups), giving cheaper, faster transactions with Layer-1 security." },
-    { "question": "Why are smart contracts hard to upgrade?", "answer": "Deployed code is immutable. Upgrades need patterns like proxies, which add complexity and trust risks, so getting security right before deployment is critical." },
-    { "question": "What is an oracle?", "answer": "A service that brings off-chain data (e.g. prices) on-chain. Oracle manipulation is a common DeFi attack, so robust, decentralised oracles matter." },
-    { "question": "What is the difference between ERC-20 and ERC-721?", "answer": "ERC-20 defines fungible tokens (each unit identical); ERC-721 defines non-fungible tokens where each token ID is unique." },
-    { "question": "How do you test smart contracts?", "answer": "Unit tests, fuzz and invariant tests (e.g. Foundry), static analysis (Slither), forked-mainnet tests, and independent audits before launch." },
-    { "question": "What is a stablecoin?", "answer": "A token designed to keep a stable value, usually pegged to a currency like the US dollar and backed by reserves or collateral." }
+    {
+      "question": "What is a smart contract?",
+      "answer": "A program stored on a blockchain that runs exactly as written when called by transactions; its code and state are public and changes cost gas."
+    },
+    {
+      "question": "What is gas?",
+      "answer": "The unit measuring computation and storage on EVM chains. Users pay gas fees so the network is compensated and spam is limited; efficient code costs less."
+    },
+    {
+      "question": "Explain a reentrancy attack.",
+      "answer": "An external call lets a malicious contract call back into the original function before state is updated, draining funds. Prevent it with checks-effects-interactions and reentrancy guards."
+    },
+    {
+      "question": "Proof of Work vs Proof of Stake?",
+      "answer": "PoW secures the chain with computing power (mining); PoS uses staked tokens as collateral, using far less energy. Ethereum switched to PoS in 2022."
+    },
+    {
+      "question": "What is a Layer-2?",
+      "answer": "A network that executes transactions off the main chain and posts proofs or data back to it (e.g. rollups), giving cheaper, faster transactions with Layer-1 security."
+    },
+    {
+      "question": "Why are smart contracts hard to upgrade?",
+      "answer": "Deployed code is immutable. Upgrades need patterns like proxies, which add complexity and trust risks, so getting security right before deployment is critical."
+    },
+    {
+      "question": "What is an oracle?",
+      "answer": "A service that brings off-chain data (e.g. prices) on-chain. Oracle manipulation is a common DeFi attack, so robust, decentralised oracles matter."
+    },
+    {
+      "question": "What is the difference between ERC-20 and ERC-721?",
+      "answer": "ERC-20 defines fungible tokens (each unit identical); ERC-721 defines non-fungible tokens where each token ID is unique."
+    },
+    {
+      "question": "How do you test smart contracts?",
+      "answer": "Unit tests, fuzz and invariant tests (e.g. Foundry), static analysis (Slither), forked-mainnet tests, and independent audits before launch."
+    },
+    {
+      "question": "What is a stablecoin?",
+      "answer": "A token designed to keep a stable value, usually pegged to a currency like the US dollar and backed by reserves or collateral."
+    }
   ],
   "resumeBullets": [
     "Developed and deployed [N] smart contracts in Solidity securing [value/users] with zero critical vulnerabilities found in audit.",
@@ -141,7 +318,10 @@
       "maxBdt": 100918,
       "note": "No Bangladesh-specific blockchain salary data exists, so this uses Paylab's Software Engineer range (10th–90th percentile, gross monthly). Local blockchain jobs are few because Bangladesh Bank does not recognise cryptocurrency; most Bangladeshi blockchain developers work remotely for foreign teams.",
       "sources": [
-        { "label": "Paylab — Software Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/software-engineer" }
+        {
+          "label": "Paylab — Software Engineer salary, Bangladesh",
+          "url": "https://www.paylab.com/bd/salaryinfo/information-technology/software-engineer"
+        }
       ]
     },
     "remote": {
@@ -149,7 +329,10 @@
       "maxUsd": 100000,
       "note": "Estimate. Web3 teams are often remote-first and pay globally, but compensation varies with market cycles and may include tokens. Proven auditors can earn far more through audit contests and bounties.",
       "sources": [
-        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+        {
+          "label": "Arc — Remote software engineer salaries in Bangladesh",
+          "url": "https://arc.dev/salaries/software-engineers-in-bangladesh"
+        }
       ]
     },
     "global": {
@@ -158,7 +341,10 @@
       "growth": "+10% (2025–35); blockchain hiring is cyclical",
       "note": "BLS has no blockchain-specific category. Blockchain pay varies widely by market conditions and seniority.",
       "sources": [
-        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" }
+        {
+          "label": "BLS — Software Developers, QA Analysts and Testers",
+          "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+        }
       ]
     },
     "demandNotes": {
