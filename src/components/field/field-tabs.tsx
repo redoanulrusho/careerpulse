@@ -53,12 +53,15 @@ export function FieldTabs({ panels }: { panels: TabPanel[] }) {
 
   return (
     <div>
-      <div className="sticky top-14 z-30 -mx-4 border-b border-line bg-bg/90 px-4 backdrop-blur-md sm:-mx-6 sm:px-6" data-print-hide>
+      <div
+        className="border-line bg-bg/90 sticky top-14 z-30 -mx-4 border-b px-4 backdrop-blur-md sm:-mx-6 sm:px-6"
+        data-print-hide
+      >
         <div
           role="tablist"
           aria-label="Field sections"
           onKeyDown={onKeyDown}
-          className="no-scrollbar flex gap-1 overflow-x-auto py-2"
+          className="no-scrollbar flex gap-1 overflow-x-auto [mask-image:linear-gradient(to_right,black_85%,transparent)] py-2 lg:flex-wrap lg:overflow-visible lg:[mask-image:none]"
         >
           {panels.map((p) => {
             const selected = p.id === active;

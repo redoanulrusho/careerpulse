@@ -14,12 +14,14 @@ export default function ComparePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <h1 className="text-3xl font-semibold tracking-tight">Compare career fields</h1>
-      <p className="mt-2 max-w-2xl text-muted">
+      <p className="text-muted mt-2 max-w-2xl">
         Put two or three fields side by side to see how salary, demand, difficulty, skills and tools stack up. The best
         value in each row is highlighted.
       </p>
       <div className="mt-8">
-        <Suspense fallback={<div className="h-40 animate-pulse rounded-2xl bg-surface-2" aria-label="Loading comparison" />}>
+        <Suspense
+          fallback={<div className="bg-surface-2 h-40 animate-pulse rounded-2xl" aria-label="Loading comparison" />}
+        >
           <CompareView all={all} />
         </Suspense>
       </div>

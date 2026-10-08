@@ -70,9 +70,7 @@ export function sortFields(list: FieldSummary[], sort: SortKey): FieldSummary[] 
     case "salary":
       return copy.sort((a, b) => b.medianUsd - a.medianUsd);
     case "demand":
-      return copy.sort(
-        (a, b) => DEMAND_RANK[b.demand] - DEMAND_RANK[a.demand] || b.medianUsd - a.medianUsd,
-      );
+      return copy.sort((a, b) => DEMAND_RANK[b.demand] - DEMAND_RANK[a.demand] || b.medianUsd - a.medianUsd);
     case "easiest":
       return copy.sort(
         (a, b) =>

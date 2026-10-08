@@ -25,7 +25,7 @@ export function CopyButton({ text, label = "Copy" }: { text: string; label?: str
     <button
       type="button"
       onClick={copy}
-      className="inline-flex shrink-0 items-center gap-1 rounded-md border border-line px-2 py-1 text-xs text-muted transition hover:border-accent hover:text-accent"
+      className="border-line text-muted hover:border-accent hover:text-accent inline-flex shrink-0 items-center gap-1 rounded-md border px-2 py-1 text-xs transition"
       aria-label={copied ? "Copied" : label}
     >
       {copied ? <Check className="size-3.5" aria-hidden="true" /> : <Copy className="size-3.5" aria-hidden="true" />}

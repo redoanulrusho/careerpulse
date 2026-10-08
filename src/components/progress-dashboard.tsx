@@ -21,7 +21,7 @@ export function ProgressDashboard({ rows }: { rows: ProgressRow[] }) {
   const hydrated = useHydrated();
 
   if (!hydrated) {
-    return <div className="h-48 animate-pulse rounded-2xl bg-surface-2" aria-label="Loading your progress" />;
+    return <div className="bg-surface-2 h-48 animate-pulse rounded-2xl" aria-label="Loading your progress" />;
   }
 
   const withStats = rows
@@ -32,16 +32,16 @@ export function ProgressDashboard({ rows }: { rows: ProgressRow[] }) {
 
   if (started.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-line p-10 text-center">
-        <ListChecks className="mx-auto size-8 text-muted" aria-hidden="true" />
+      <div className="border-line rounded-2xl border border-dashed p-10 text-center">
+        <ListChecks className="text-muted mx-auto size-8" aria-hidden="true" />
         <p className="mt-3 font-medium">You haven&apos;t ticked anything yet</p>
-        <p className="mx-auto mt-1 max-w-md text-sm text-muted">
+        <p className="text-muted mx-auto mt-1 max-w-md text-sm">
           Open any career field and tick items in Skills, the 30/60/90 roadmap or the Start today checklist. Your
           progress is saved privately in this browser.
         </p>
         <Link
           href="/#explore"
-          className="mt-5 inline-flex items-center gap-1 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-fg"
+          className="bg-accent text-accent-fg mt-5 inline-flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium"
         >
           Explore careers <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
@@ -62,13 +62,13 @@ export function ProgressDashboard({ rows }: { rows: ProgressRow[] }) {
           <li key={r.slug}>
             <Link
               href={`/fields/${r.slug}#roadmap`}
-              className="flex items-center gap-4 rounded-2xl border border-line bg-surface p-4 transition hover:border-accent"
+              className="border-line bg-surface hover:border-accent flex items-center gap-4 rounded-2xl border p-4 transition"
             >
               <FieldIcon name={r.icon} category={r.category} />
               <div className="min-w-0 flex-1">
                 <div className="flex items-baseline justify-between gap-3">
                   <p className="truncate font-medium">{r.name}</p>
-                  <p className="text-sm tabular-nums text-muted">
+                  <p className="text-muted text-sm tabular-nums">
                     {r.stats.done}/{r.stats.total} · {r.stats.percent}%
                   </p>
                 </div>
@@ -86,7 +86,7 @@ export function ProgressDashboard({ rows }: { rows: ProgressRow[] }) {
         onClick={() => {
           if (window.confirm("Reset progress for every field? This cannot be undone.")) resetAll();
         }}
-        className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm text-muted hover:bg-surface-2 hover:text-fg"
+        className="text-muted hover:bg-surface-2 hover:text-fg inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm"
       >
         <Trash2 className="size-4" aria-hidden="true" /> Reset all progress
       </button>
@@ -96,8 +96,8 @@ export function ProgressDashboard({ rows }: { rows: ProgressRow[] }) {
 
 function Stat({ label, value }: { label: string; value: number | string }) {
   return (
-    <div className="rounded-2xl border border-line bg-surface p-4">
-      <p className="text-xs text-muted">{label}</p>
+    <div className="border-line bg-surface rounded-2xl border p-4">
+      <p className="text-muted text-xs">{label}</p>
       <p className="mt-1 text-2xl font-semibold tabular-nums">{value}</p>
     </div>
   );

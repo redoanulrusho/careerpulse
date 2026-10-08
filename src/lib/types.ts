@@ -113,10 +113,7 @@ export interface Field {
 }
 
 /** Lightweight summary used by cards, search and compare. */
-export type FieldSummary = Pick<
-  Field,
-  "slug" | "name" | "icon" | "tagline" | "category" | "difficulty" | "demand"
-> & {
+export type FieldSummary = Pick<Field, "slug" | "name" | "icon" | "tagline" | "category" | "difficulty" | "demand"> & {
   medianUsd: number;
   bdRange: [number, number];
   remoteRange: [number, number];

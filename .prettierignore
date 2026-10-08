@@ -1,0 +1,5 @@
+src/data/fields/*.json
+package-lock.json
+.next
+node_modules
+docs

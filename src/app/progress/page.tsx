@@ -23,7 +23,7 @@ export default function ProgressPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
       <h1 className="text-3xl font-semibold tracking-tight">My progress</h1>
-      <p className="mt-2 text-muted">
+      <p className="text-muted mt-2">
         Everything you&apos;ve ticked across all fields. Stored only in this browser — clearing site data resets it.
       </p>
       <div className="mt-8">

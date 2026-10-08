@@ -15,11 +15,9 @@ export function checklistId(slug: string, section: ChecklistSection, text: strin
 export function getChecklistIds(field: Field): Record<ChecklistSection, string[]> {
   return {
     start: field.startToday.map((t) => checklistId(field.slug, "start", t)),
-    roadmap: field.roadmap.flatMap((phase) =>
-      phase.goals.map((g) => checklistId(field.slug, "roadmap", g)),
-    ),
-    skills: [...field.skills.beginner, ...field.skills.intermediate, ...field.skills.advanced].map(
-      (s) => checklistId(field.slug, "skills", s),
+    roadmap: field.roadmap.flatMap((phase) => phase.goals.map((g) => checklistId(field.slug, "roadmap", g))),
+    skills: [...field.skills.beginner, ...field.skills.intermediate, ...field.skills.advanced].map((s) =>
+      checklistId(field.slug, "skills", s),
     ),
   };
 }

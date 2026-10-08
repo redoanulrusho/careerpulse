@@ -11,14 +11,12 @@ export function CompareNavLink() {
   return (
     <Link
       href={compareHref([...slugs])}
-      className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-muted transition hover:bg-surface-2 hover:text-fg"
+      className="text-muted hover:bg-surface-2 hover:text-fg inline-flex items-center gap-1.5 rounded-lg px-3 py-2 transition"
     >
       <GitCompareArrows className="size-4" aria-hidden="true" />
       <span>Compare</span>
       {slugs.length > 0 && (
-        <span className="rounded-full bg-accent px-1.5 text-xs font-semibold text-accent-fg">
-          {slugs.length}
-        </span>
+        <span className="bg-accent text-accent-fg rounded-full px-1.5 text-xs font-semibold">{slugs.length}</span>
       )}
     </Link>
   );

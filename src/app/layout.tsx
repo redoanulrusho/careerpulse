@@ -23,7 +23,14 @@ export const metadata: Metadata = {
   },
   description:
     "Explore 20 in-demand tech careers for 2026 with 30/60/90-day roadmaps, free resources, projects, interview questions and salary data for Bangladesh, remote and global markets.",
-  keywords: ["tech careers", "career roadmap", "Bangladesh tech jobs", "AI engineer", "cybersecurity", "learning roadmap"],
+  keywords: [
+    "tech careers",
+    "career roadmap",
+    "Bangladesh tech jobs",
+    "AI engineer",
+    "cybersecurity",
+    "learning roadmap",
+  ],
   openGraph: {
     title: "CareerPulse — Roadmaps for 20 trending tech careers",
     description: "Roadmaps, free resources, projects, interview prep and salary data for 20 trending tech fields.",
@@ -52,7 +59,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-3 focus:py-2 focus:text-accent-fg"
+          className="focus:bg-accent focus:text-accent-fg sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:px-3 focus:py-2"
         >
           Skip to content
         </a>

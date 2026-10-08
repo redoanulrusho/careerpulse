@@ -71,7 +71,7 @@ export default async function FieldPage({ params }: PageProps<"/fields/[slug]">)
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
-      <nav aria-label="Breadcrumb" className="pt-6 text-sm text-muted">
+      <nav aria-label="Breadcrumb" className="text-muted pt-6 text-sm">
         <ol className="flex items-center gap-1">
           <li>
             <Link href="/" className="hover:text-fg">
@@ -89,7 +89,7 @@ export default async function FieldPage({ params }: PageProps<"/fields/[slug]">)
           <li aria-hidden="true">
             <ChevronRight className="size-3.5" />
           </li>
-          <li aria-current="page" className="truncate text-fg">
+          <li aria-current="page" className="text-fg truncate">
             {field.name}
           </li>
         </ol>
@@ -103,7 +103,7 @@ export default async function FieldPage({ params }: PageProps<"/fields/[slug]">)
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{field.name}</h1>
             </div>
           </div>
-          <p className="mt-4 max-w-2xl text-lg text-muted">{field.tagline}</p>
+          <p className="text-muted mt-4 max-w-2xl text-lg">{field.tagline}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <CategoryBadge value={field.category} />
             <DifficultyBadge value={field.difficulty} />
@@ -115,26 +115,30 @@ export default async function FieldPage({ params }: PageProps<"/fields/[slug]">)
 
       <FieldTabs panels={panels} />
 
-      <nav aria-label="More careers" className="mt-14 grid gap-3 border-t border-line pt-6 sm:grid-cols-2" data-print-hide>
+      <nav
+        aria-label="More careers"
+        className="border-line mt-14 grid gap-3 border-t pt-6 sm:grid-cols-2"
+        data-print-hide
+      >
         <Link
           href={`/fields/${prev.slug}`}
-          className="group flex items-center gap-3 rounded-2xl border border-line bg-surface p-4 transition hover:border-accent"
+          className="group border-line bg-surface hover:border-accent flex items-center gap-3 rounded-2xl border p-4 transition"
         >
-          <ArrowLeft className="size-4 text-muted group-hover:text-accent" aria-hidden="true" />
+          <ArrowLeft className="text-muted group-hover:text-accent size-4" aria-hidden="true" />
           <span>
-            <span className="block text-xs text-muted">Previous field</span>
+            <span className="text-muted block text-xs">Previous field</span>
             <span className="font-medium">{prev.name}</span>
           </span>
         </Link>
         <Link
           href={`/fields/${next.slug}`}
-          className="group flex items-center justify-end gap-3 rounded-2xl border border-line bg-surface p-4 text-right transition hover:border-accent"
+          className="group border-line bg-surface hover:border-accent flex items-center justify-end gap-3 rounded-2xl border p-4 text-right transition"
         >
           <span>
-            <span className="block text-xs text-muted">Next field</span>
+            <span className="text-muted block text-xs">Next field</span>
             <span className="font-medium">{next.name}</span>
           </span>
-          <ArrowRight className="size-4 text-muted group-hover:text-accent" aria-hidden="true" />
+          <ArrowRight className="text-muted group-hover:text-accent size-4" aria-hidden="true" />
         </Link>
       </nav>
     </div>

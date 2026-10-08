@@ -10,7 +10,7 @@ import { useCompareTray } from "@/hooks/use-compare-tray";
 import { DEMAND_RANK, DIFFICULTY_RANK } from "@/lib/constants";
 import { MAX_COMPARE, MIN_COMPARE, bestIndex, parseCompareParam } from "@/lib/compare";
 import type { CompareData } from "@/lib/compare-data";
-import { formatBdtCompact, formatUsd, formatUsdCompact } from "@/lib/format";
+import { formatBdtRange, formatUsd, formatUsdCompact } from "@/lib/format";
 
 const SUGGESTED = ["ai-agents", "cybersecurity", "data-science"];
 
@@ -24,9 +24,7 @@ export function CompareView({ all }: { all: CompareData[] }) {
   const fromUrl = parseCompareParam(searchParams.get("fields"), validSlugs);
   // URL wins; otherwise fall back to what the user collected in the tray.
   const selected = fromUrl.length > 0 ? fromUrl : traySlugs.filter((s) => validSlugs.includes(s));
-  const picked = selected
-    .map((s) => all.find((f) => f.slug === s))
-    .filter((f): f is CompareData => Boolean(f));
+  const picked = selected.map((s) => all.find((f) => f.slug === s)).filter((f): f is CompareData => Boolean(f));
 
   // Keep the header tray in sync with what is being compared.
   const selectedKey = selected.join(",");
@@ -46,7 +44,10 @@ export function CompareView({ all }: { all: CompareData[] }) {
     setSelection([...new Set(next)].filter(Boolean));
   };
 
-  const slotCount = Math.min(MAX_COMPARE, Math.max(MIN_COMPARE, selected.length + (selected.length < MAX_COMPARE ? 1 : 0)));
+  const slotCount = Math.min(
+    MAX_COMPARE,
+    Math.max(MIN_COMPARE, selected.length + (selected.length < MAX_COMPARE ? 1 : 0)),
+  );
 
   return (
     <div>
@@ -55,7 +56,7 @@ export function CompareView({ all }: { all: CompareData[] }) {
           const value = selected[i] ?? "";
           return (
             <label key={i} className="block">
-              <span className="mb-1 block text-xs font-medium text-muted">
+              <span className="text-muted mb-1 block text-xs font-medium">
                 Field {i + 1}
                 {i >= MIN_COMPARE ? " (optional)" : ""}
               </span>
@@ -63,7 +64,7 @@ export function CompareView({ all }: { all: CompareData[] }) {
                 <select
                   value={value}
                   onChange={(e) => setSlot(i, e.target.value)}
-                  className="h-11 w-full rounded-xl border border-line bg-surface px-3 text-sm outline-none focus:border-accent"
+                  className="border-line bg-surface focus:border-accent h-11 w-full rounded-xl border px-3 text-sm outline-none"
                 >
                   <option value="">{value ? "Remove this field" : "Choose a field…"}</option>
                   {all.map((f) => (
@@ -77,7 +78,7 @@ export function CompareView({ all }: { all: CompareData[] }) {
                     type="button"
                     onClick={() => setSlot(i, "")}
                     aria-label={`Remove ${picked[i]?.name ?? "field"}`}
-                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl border border-line text-muted hover:text-fg"
+                    className="border-line text-muted hover:text-fg inline-flex size-11 shrink-0 items-center justify-center rounded-xl border"
                   >
                     <X className="size-4" aria-hidden="true" />
                   </button>
@@ -89,14 +90,14 @@ export function CompareView({ all }: { all: CompareData[] }) {
       </div>
 
       {picked.length < MIN_COMPARE ? (
-        <div className="mt-8 rounded-2xl border border-dashed border-line p-8 text-center">
-          <Plus className="mx-auto size-8 text-muted" aria-hidden="true" />
+        <div className="border-line mt-8 rounded-2xl border border-dashed p-8 text-center">
+          <Plus className="text-muted mx-auto size-8" aria-hidden="true" />
           <p className="mt-3 font-medium">Pick at least two fields to compare</p>
-          <p className="mt-1 text-sm text-muted">Use the selectors above, or try a popular comparison:</p>
+          <p className="text-muted mt-1 text-sm">Use the selectors above, or try a popular comparison:</p>
           <button
             type="button"
             onClick={() => setSelection(SUGGESTED)}
-            className="mt-4 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-fg"
+            className="bg-accent text-accent-fg mt-4 rounded-lg px-4 py-2 text-sm font-medium"
           >
             AI Agents vs Cybersecurity vs Data Science
           </button>
@@ -116,14 +117,28 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
   const easiest = bestIndex(picked.map((f) => -DIFFICULTY_RANK[f.difficulty]));
 
   const rows: { label: string; render: (f: CompareData, i: number) => ReactNode }[] = [
-    { label: "Difficulty", render: (f, i) => <Best on={i === easiest} label="Easiest"><DifficultyBadge value={f.difficulty} /></Best> },
-    { label: "Demand", render: (f, i) => <Best on={i === bestDemand} label="Highest"><DemandBadge value={f.demand} /></Best> },
+    {
+      label: "Difficulty",
+      render: (f, i) => (
+        <Best on={i === easiest} label="Easiest">
+          <DifficultyBadge value={f.difficulty} />
+        </Best>
+      ),
+    },
+    {
+      label: "Demand",
+      render: (f, i) => (
+        <Best on={i === bestDemand} label="Highest">
+          <DemandBadge value={f.demand} />
+        </Best>
+      ),
+    },
     {
       label: "Global salary benchmark",
       render: (f, i) => (
         <Best on={i === bestSalary} label="Highest">
           <span className="text-lg font-semibold tabular-nums">{formatUsd(f.medianUsd)}</span>
-          <span className="block text-xs text-muted">{f.benchmark}</span>
+          <span className="text-muted block text-xs">{f.benchmark}</span>
         </Best>
       ),
     },
@@ -132,9 +147,7 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
       label: "Bangladesh (per month)",
       render: (f, i) => (
         <Best on={i === bestBd} label="Highest top end">
-          <span className="font-semibold tabular-nums">
-            {formatBdtCompact(f.bdMin)}–{formatBdtCompact(f.bdMax)}
-          </span>
+          <span className="font-semibold tabular-nums">{formatBdtRange([f.bdMin, f.bdMax])}</span>
         </Best>
       ),
     },
@@ -148,8 +161,11 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
         </Best>
       ),
     },
-    { label: "Demand in Bangladesh", render: (f) => <p className="text-sm leading-relaxed text-muted">{f.demandBangladesh}</p> },
-    { label: "Remote demand", render: (f) => <p className="text-sm leading-relaxed text-muted">{f.demandRemote}</p> },
+    {
+      label: "Demand in Bangladesh",
+      render: (f) => <p className="text-muted text-sm leading-relaxed">{f.demandBangladesh}</p>,
+    },
+    { label: "Remote demand", render: (f) => <p className="text-muted text-sm leading-relaxed">{f.demandRemote}</p> },
     { label: "Top languages", render: (f) => <Tags items={f.languages} /> },
     { label: "Key tools", render: (f) => <Tags items={f.tools} /> },
     { label: "Job roles", render: (f) => <List items={f.roles} /> },
@@ -159,12 +175,12 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
   ];
 
   return (
-    <div className="mt-8 overflow-x-auto rounded-2xl border border-line bg-surface">
+    <div className="border-line bg-surface mt-8 overflow-x-auto rounded-2xl border">
       <table className="w-full min-w-[720px] border-collapse text-left">
         <caption className="sr-only">Side-by-side comparison of {picked.map((f) => f.name).join(", ")}</caption>
         <thead>
-          <tr className="border-b border-line">
-            <th scope="col" className="w-44 p-4 text-xs font-medium uppercase tracking-wide text-muted">
+          <tr className="border-line border-b">
+            <th scope="col" className="text-muted w-44 p-4 text-xs font-medium tracking-wide uppercase">
               Field
             </th>
             {picked.map((f) => (
@@ -172,8 +188,8 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
                 <div className="flex items-start gap-3">
                   <FieldIcon name={f.icon} category={f.category} size="sm" />
                   <div>
-                    <p className="font-semibold leading-snug">{f.name}</p>
-                    <p className="mt-1 text-xs font-normal text-muted">{f.tagline}</p>
+                    <p className="leading-snug font-semibold">{f.name}</p>
+                    <p className="text-muted mt-1 text-xs font-normal">{f.tagline}</p>
                   </div>
                 </div>
               </th>
@@ -182,8 +198,8 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
         </thead>
         <tbody>
           {rows.map((row) => (
-            <tr key={row.label} className="border-b border-line last:border-0 even:bg-surface-2/50">
-              <th scope="row" className="p-4 align-top text-sm font-medium text-muted">
+            <tr key={row.label} className="border-line even:bg-surface-2/50 border-b last:border-0">
+              <th scope="row" className="text-muted p-4 align-top text-sm font-medium">
                 {row.label}
               </th>
               {picked.map((f, i) => (
@@ -199,7 +215,7 @@ function CompareTable({ picked }: { picked: CompareData[] }) {
               <td key={f.slug} className="p-4">
                 <Link
                   href={`/fields/${f.slug}`}
-                  className="inline-flex items-center gap-1 rounded-lg bg-accent px-3 py-2 text-sm font-medium text-accent-fg hover:opacity-90"
+                  className="bg-accent text-accent-fg inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium hover:opacity-90"
                 >
                   View roadmap <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
@@ -217,7 +233,7 @@ function Best({ on, label, children }: { on: boolean; label: string; children: R
     <div>
       {children}
       {on && (
-        <span className="mt-1.5 flex w-fit items-center gap-1 rounded-full bg-good-soft px-2 py-0.5 text-xs font-medium text-good">
+        <span className="bg-good-soft text-good mt-1.5 flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium">
           <Crown className="size-3" aria-hidden="true" /> {label}
         </span>
       )}
@@ -229,7 +245,7 @@ function Tags({ items }: { items: string[] }) {
   return (
     <div className="flex flex-wrap gap-1.5">
       {items.map((t) => (
-        <span key={t} className="rounded-md bg-surface-2 px-2 py-0.5 text-xs">
+        <span key={t} className="bg-surface-2 rounded-md px-2 py-0.5 text-xs">
           {t}
         </span>
       ))}
@@ -242,11 +258,10 @@ function List({ items }: { items: string[] }) {
     <ul className="space-y-1 text-sm">
       {items.map((t) => (
         <li key={t} className="flex gap-2">
-          <span className="mt-2 size-1 shrink-0 rounded-full bg-muted" aria-hidden="true" />
+          <span className="bg-muted mt-2 size-1 shrink-0 rounded-full" aria-hidden="true" />
           {t}
         </li>
       ))}
     </ul>
   );
 }
-

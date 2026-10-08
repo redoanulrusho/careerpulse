@@ -17,19 +17,20 @@ export function formatUsdCompact(value: number): string {
   return `$${value}`;
 }
 
-/** 18345 → "৳18,345" */
+/** 18345 → "Tk 18,345" ("Tk" renders in every font, unlike the ৳ glyph). */
 export function formatBdt(value: number): string {
-  return `৳${groupedInt.format(value)}`;
+  return `Tk ${groupedInt.format(value)}`;
 }
 
-/** 18345 → "৳18k", 100918 → "৳101k" */
+/** 18345 → "18k", 100918 → "101k" (no currency prefix; use formatBdtRange for labels). */
 export function formatBdtCompact(value: number): string {
-  if (value >= 1000) return `৳${Math.round(value / 1000)}k`;
-  return `৳${value}`;
+  if (value >= 1000) return `${Math.round(value / 1000)}k`;
+  return `${value}`;
 }
 
+/** [18345, 100918] → "Tk 18k–101k" */
 export function formatBdtRange([min, max]: [number, number]): string {
-  return `${formatBdtCompact(min)}–${formatBdtCompact(max)}`;
+  return `Tk ${formatBdtCompact(min)}–${formatBdtCompact(max)}`;
 }
 
 export function formatUsdRange([min, max]: [number, number]): string {

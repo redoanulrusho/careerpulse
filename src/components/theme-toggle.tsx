@@ -2,12 +2,7 @@
 
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useCallback, useEffect, useSyncExternalStore } from "react";
-import {
-  THEME_STORAGE_KEY,
-  nextPreference,
-  resolveTheme,
-  type ThemePreference,
-} from "@/lib/theme";
+import { THEME_STORAGE_KEY, nextPreference, resolveTheme, type ThemePreference } from "@/lib/theme";
 
 const listeners = new Set<() => void>();
 
@@ -60,7 +55,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={cycle}
-      className="inline-flex size-9 items-center justify-center rounded-lg border border-line bg-surface text-muted transition hover:text-fg"
+      className="border-line bg-surface text-muted hover:text-fg inline-flex size-9 items-center justify-center rounded-lg border transition"
       aria-label={`${LABEL[pref]} (click to change)`}
       title={`${LABEL[pref]} — click to change`}
     >

@@ -59,26 +59,31 @@ export function FieldExplorer({
           <h2 id="explore-heading" className="text-2xl font-semibold tracking-tight">
             Explore 20 career fields
           </h2>
-          <p className="mt-1 text-sm text-muted">Search by job title, skill, language or tool — e.g. “Python”, “Figma”, “Kubernetes”.</p>
+          <p className="text-muted mt-1 text-sm">
+            Search by job title, skill, language or tool — e.g. “Python”, “Figma”, “Kubernetes”.
+          </p>
         </div>
       </div>
 
-      <div className="mt-5 rounded-2xl border border-line bg-surface p-4 shadow-card">
+      <div className="border-line bg-surface shadow-card mt-5 rounded-2xl border p-4">
         <label className="relative block">
           <span className="sr-only">Search career fields</span>
-          <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted" aria-hidden="true" />
+          <Search
+            className="text-muted pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2"
+            aria-hidden="true"
+          />
           <input
             type="search"
             value={filters.query}
             onChange={(e) => update("query", e.target.value)}
             placeholder="Search fields, roles, skills or tools…"
-            className="h-11 w-full rounded-xl border border-line bg-bg pl-10 pr-3 text-sm outline-none transition placeholder:text-muted focus:border-accent"
+            className="border-line bg-bg placeholder:text-muted focus:border-accent h-11 w-full rounded-xl border pr-3 pl-10 text-sm transition outline-none"
           />
         </label>
 
         <div className="mt-3 grid grid-cols-2 gap-2 md:grid-cols-5">
           <label className="block">
-            <span className="mb-1 block text-xs font-medium text-muted">Difficulty</span>
+            <span className="text-muted mb-1 block text-xs font-medium">Difficulty</span>
             <select
               className={selectClass}
               value={filters.difficulty}
@@ -93,7 +98,7 @@ export function FieldExplorer({
             </select>
           </label>
           <label className="block">
-            <span className="mb-1 block text-xs font-medium text-muted">Demand</span>
+            <span className="text-muted mb-1 block text-xs font-medium">Demand</span>
             <select
               className={selectClass}
               value={filters.demand}
@@ -108,7 +113,7 @@ export function FieldExplorer({
             </select>
           </label>
           <label className="block">
-            <span className="mb-1 block text-xs font-medium text-muted">Salary (US median)</span>
+            <span className="text-muted mb-1 block text-xs font-medium">Salary (US median)</span>
             <select
               className={selectClass}
               value={filters.minSalary}
@@ -122,7 +127,7 @@ export function FieldExplorer({
             </select>
           </label>
           <label className="block">
-            <span className="mb-1 block text-xs font-medium text-muted">Category</span>
+            <span className="text-muted mb-1 block text-xs font-medium">Category</span>
             <select
               className={selectClass}
               value={filters.category}
@@ -137,7 +142,7 @@ export function FieldExplorer({
             </select>
           </label>
           <label className="col-span-2 block md:col-span-1">
-            <span className="mb-1 block text-xs font-medium text-muted">Sort by</span>
+            <span className="text-muted mb-1 block text-xs font-medium">Sort by</span>
             <select
               className={selectClass}
               value={filters.sort}
@@ -154,13 +159,13 @@ export function FieldExplorer({
 
         <div className="mt-3 flex items-center justify-between text-sm">
           <p className="text-muted" aria-live="polite">
-            Showing <span className="font-semibold text-fg">{results.length}</span> of {summaries.length} fields
+            Showing <span className="text-fg font-semibold">{results.length}</span> of {summaries.length} fields
           </p>
           {active > 0 && (
             <button
               type="button"
               onClick={() => setFilters(DEFAULT_FILTERS)}
-              className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-muted hover:bg-surface-2 hover:text-fg"
+              className="text-muted hover:bg-surface-2 hover:text-fg inline-flex items-center gap-1 rounded-lg px-2 py-1"
             >
               <RotateCcw className="size-3.5" aria-hidden="true" /> Reset filters ({active})
             </button>
@@ -181,14 +186,14 @@ export function FieldExplorer({
           ))}
         </div>
       ) : (
-        <div className="mt-6 flex flex-col items-center rounded-2xl border border-dashed border-line px-6 py-14 text-center">
-          <SearchX className="size-8 text-muted" aria-hidden="true" />
+        <div className="border-line mt-6 flex flex-col items-center rounded-2xl border border-dashed px-6 py-14 text-center">
+          <SearchX className="text-muted size-8" aria-hidden="true" />
           <p className="mt-3 font-medium">No fields match these filters</p>
-          <p className="mt-1 text-sm text-muted">Try a broader search or reset the filters.</p>
+          <p className="text-muted mt-1 text-sm">Try a broader search or reset the filters.</p>
           <button
             type="button"
             onClick={() => setFilters(DEFAULT_FILTERS)}
-            className="mt-4 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-fg"
+            className="bg-accent text-accent-fg mt-4 rounded-lg px-4 py-2 text-sm font-medium"
           >
             Reset filters
           </button>

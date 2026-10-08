@@ -11,15 +11,13 @@ export function CompareTray({ summaries }: { summaries: FieldSummary[] }) {
   const { slugs, toggle, clear } = useCompareTray();
   if (slugs.length === 0) return null;
 
-  const picked = slugs
-    .map((s) => summaries.find((f) => f.slug === s))
-    .filter((f): f is FieldSummary => Boolean(f));
+  const picked = slugs.map((s) => summaries.find((f) => f.slug === s)).filter((f): f is FieldSummary => Boolean(f));
   const ready = picked.length >= MIN_COMPARE;
 
   return (
     <div
       data-print-hide
-      className="fixed inset-x-0 bottom-4 z-40 mx-auto w-[calc(100%-2rem)] max-w-3xl rounded-2xl border border-line bg-surface/95 p-3 shadow-card backdrop-blur"
+      className="border-line bg-surface/95 shadow-card fixed inset-x-0 bottom-4 z-40 mx-auto w-[calc(100%-2rem)] max-w-3xl rounded-2xl border p-3 backdrop-blur"
       role="region"
       aria-label="Fields selected for comparison"
     >
@@ -30,13 +28,13 @@ export function CompareTray({ summaries }: { summaries: FieldSummary[] }) {
         {picked.map((f) => (
           <span
             key={f.slug}
-            className="inline-flex items-center gap-1 rounded-full bg-accent-soft py-1 pl-3 pr-1 text-xs font-medium text-accent"
+            className="bg-accent-soft text-accent inline-flex items-center gap-1 rounded-full py-1 pr-1 pl-3 text-xs font-medium"
           >
             {f.name}
             <button
               type="button"
               onClick={() => toggle(f.slug)}
-              className="rounded-full p-0.5 hover:bg-accent/15"
+              className="hover:bg-accent/15 rounded-full p-0.5"
               aria-label={`Remove ${f.name} from comparison`}
             >
               <X className="size-3.5" aria-hidden="true" />
@@ -44,18 +42,18 @@ export function CompareTray({ summaries }: { summaries: FieldSummary[] }) {
           </span>
         ))}
         <div className="ml-auto flex items-center gap-2">
-          <button type="button" onClick={clear} className="rounded-lg px-2 py-1.5 text-xs text-muted hover:text-fg">
+          <button type="button" onClick={clear} className="text-muted hover:text-fg rounded-lg px-2 py-1.5 text-xs">
             Clear
           </button>
           {ready ? (
             <Link
               href={compareHref(picked.map((f) => f.slug))}
-              className="inline-flex items-center gap-1 rounded-lg bg-accent px-3 py-1.5 text-sm font-medium text-accent-fg hover:opacity-90"
+              className="bg-accent text-accent-fg inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-sm font-medium hover:opacity-90"
             >
               Compare now <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           ) : (
-            <span className="text-xs text-muted">Pick at least {MIN_COMPARE}</span>
+            <span className="text-muted text-xs">Pick at least {MIN_COMPARE}</span>
           )}
         </div>
       </div>

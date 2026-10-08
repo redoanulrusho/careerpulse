@@ -4,6 +4,7 @@ import { getField } from "@/lib/fields";
 import {
   formatBdt,
   formatBdtCompact,
+  formatBdtRange,
   formatUsd,
   formatUsdCompact,
   hostname,
@@ -25,8 +26,9 @@ describe("format", () => {
     expect(formatUsd(134040)).toBe("$134,040");
     expect(formatUsdCompact(134040)).toBe("$134k");
     expect(formatUsdCompact(950)).toBe("$950");
-    expect(formatBdt(18345)).toBe("৳18,345");
-    expect(formatBdtCompact(100918)).toBe("৳101k");
+    expect(formatBdt(18345)).toBe("Tk 18,345");
+    expect(formatBdtCompact(100918)).toBe("101k");
+    expect(formatBdtRange([18345, 100918])).toBe("Tk 18k–101k");
   });
 
   it("slugifies text", () => {

@@ -15,17 +15,17 @@ export function FieldProgress({ slug, name, ids }: { slug: string; name: string;
   const inCompare = slugs.includes(slug);
 
   return (
-    <div className="rounded-2xl border border-line bg-surface p-4 shadow-card">
+    <div className="border-line bg-surface shadow-card rounded-2xl border p-4">
       <div className="flex items-baseline justify-between gap-3">
         <p className="text-sm font-medium">Your progress</p>
-        <p className="text-sm tabular-nums text-muted">
+        <p className="text-muted text-sm tabular-nums">
           {hydrated ? `${stats.done}/${stats.total} · ${stats.percent}%` : `0/${stats.total}`}
         </p>
       </div>
       <div className="mt-2">
         <ProgressBar percent={hydrated ? stats.percent : 0} label={`${name} progress`} />
       </div>
-      <p className="mt-2 text-xs text-muted">Tick items in Skills, Roadmap and Start today. Saved in this browser.</p>
+      <p className="text-muted mt-2 text-xs">Tick items in Skills, Roadmap and Start today. Saved in this browser.</p>
       <div className="mt-3 flex flex-wrap gap-2" data-print-hide>
         <button
           type="button"
@@ -35,7 +35,11 @@ export function FieldProgress({ slug, name, ids }: { slug: string; name: string;
             inCompare ? "border-accent bg-accent text-accent-fg" : "border-line hover:border-accent hover:text-accent"
           }`}
         >
-          {inCompare ? <Check className="size-3.5" aria-hidden="true" /> : <GitCompareArrows className="size-3.5" aria-hidden="true" />}
+          {inCompare ? (
+            <Check className="size-3.5" aria-hidden="true" />
+          ) : (
+            <GitCompareArrows className="size-3.5" aria-hidden="true" />
+          )}
           {inCompare ? "In compare list" : "Add to compare"}
         </button>
         {hydrated && stats.done > 0 && (
@@ -44,7 +48,7 @@ export function FieldProgress({ slug, name, ids }: { slug: string; name: string;
             onClick={() => {
               if (window.confirm(`Reset all progress for ${name}?`)) resetField(slug);
             }}
-            className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs text-muted hover:bg-surface-2 hover:text-fg"
+            className="text-muted hover:bg-surface-2 hover:text-fg inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs"
           >
             <RotateCcw className="size-3.5" aria-hidden="true" /> Reset
           </button>

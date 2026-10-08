@@ -21,16 +21,16 @@ export function FieldCard({
   onToggleCompare: (slug: string) => void;
 }) {
   return (
-    <article className="group relative flex flex-col rounded-2xl border border-line bg-surface p-5 shadow-card transition hover:-translate-y-0.5 hover:border-accent/50">
+    <article className="group border-line bg-surface shadow-card hover:border-accent/50 relative flex flex-col rounded-2xl border p-5 transition hover:-translate-y-0.5">
       <div className="flex items-start gap-3">
         <FieldIcon name={field.icon} category={field.category} />
         <div className="min-w-0 flex-1">
-          <h3 className="font-semibold leading-snug">
+          <h3 className="leading-snug font-semibold">
             <Link href={`/fields/${field.slug}`} className="after:absolute after:inset-0 after:rounded-2xl">
               {field.name}
             </Link>
           </h3>
-          <p className="mt-1 line-clamp-2 text-sm text-muted">{field.tagline}</p>
+          <p className="text-muted mt-1 line-clamp-2 text-sm">{field.tagline}</p>
         </div>
       </div>
 
@@ -40,17 +40,17 @@ export function FieldCard({
       </div>
 
       <dl className="mt-4 grid grid-cols-3 gap-2 text-xs">
-        <div className="rounded-lg bg-surface-2 px-2 py-2">
+        <div className="bg-surface-2 rounded-lg px-2 py-2">
           <dt className="text-muted">BD / month</dt>
           <dd className="mt-0.5 font-semibold tabular-nums">{formatBdtRange(field.bdRange)}</dd>
         </div>
-        <div className="rounded-lg bg-surface-2 px-2 py-2">
+        <div className="bg-surface-2 rounded-lg px-2 py-2">
           <dt className="text-muted">Remote / yr</dt>
           <dd className="mt-0.5 font-semibold tabular-nums">
             {formatUsdCompact(field.remoteRange[0])}–{formatUsdCompact(field.remoteRange[1])}
           </dd>
         </div>
-        <div className="rounded-lg bg-surface-2 px-2 py-2">
+        <div className="bg-surface-2 rounded-lg px-2 py-2">
           <dt className="text-muted">US median</dt>
           <dd className="mt-0.5 font-semibold tabular-nums">{formatUsdCompact(field.medianUsd)}</dd>
         </div>
@@ -60,11 +60,11 @@ export function FieldCard({
         <div className="flex-1">
           {progress !== null && progress > 0 ? (
             <div className="space-y-1">
-              <p className="text-xs text-muted">{progress}% of checklist done</p>
+              <p className="text-muted text-xs">{progress}% of checklist done</p>
               <ProgressBar percent={progress} label={`${field.name} progress`} size="sm" />
             </div>
           ) : (
-            <p className="text-xs text-muted">Not started yet</p>
+            <p className="text-muted text-xs">Not started yet</p>
           )}
         </div>
         <button

@@ -37,5 +37,5 @@ export function DemandBadge({ value }: { value: Demand }) {
 }
 
 export function CategoryBadge({ value }: { value: Category }) {
-  return <span className={`${base} border border-line text-muted`}>{CATEGORY_LABEL[value]}</span>;
+  return <span className={`${base} border-line text-muted border`}>{CATEGORY_LABEL[value]}</span>;
 }
