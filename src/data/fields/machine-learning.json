@@ -1,0 +1,180 @@
+{
+  "slug": "machine-learning",
+  "name": "Machine Learning Engineering",
+  "icon": "BrainCircuit",
+  "tagline": "Train, deploy and maintain the models that power predictions, recommendations and AI products.",
+  "category": "ai-data",
+  "difficulty": "advanced",
+  "demand": "very-high",
+  "overview": {
+    "summary": "Machine learning (ML) engineers turn data into models that make predictions — fraud scores, product recommendations, demand forecasts, image recognition, speech and language models — and then put those models into production so they run reliably at scale. The job sits between data science (experimenting with models) and software engineering (shipping robust systems), and increasingly includes MLOps: versioning, monitoring and retraining models over time.",
+    "whyTrending": [
+      "The WEF Future of Jobs Report 2025 lists AI and machine learning specialists among the three fastest-growing jobs to 2030.",
+      "Companies that adopted generative AI now need engineers who can fine-tune, evaluate and serve models efficiently, not just call an API.",
+      "The US Bureau of Labor Statistics projects computer and information research scientists — the category that includes many ML researchers — to grow 22% from 2025 to 2035.",
+      "Cheaper GPUs in the cloud and open-weight models (Llama, Qwen, Gemma, Mistral) let smaller companies train and host their own models, widening demand beyond Big Tech."
+    ],
+    "trendSources": [
+      { "label": "WEF Future of Jobs Report 2025 (press release)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" },
+      { "label": "BLS — Computer and Information Research Scientists", "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm" }
+    ]
+  },
+  "roles": [
+    { "title": "Machine Learning Engineer", "description": "Builds training pipelines, trains and tunes models, and deploys them behind APIs or batch jobs." },
+    { "title": "MLOps Engineer", "description": "Automates the model lifecycle: experiment tracking, model registry, CI/CD for models, monitoring and drift detection." },
+    { "title": "Applied Scientist / Research Engineer", "description": "Adapts state-of-the-art research to company problems and runs rigorous experiments to prove the gains." },
+    { "title": "Computer Vision Engineer", "description": "Builds models for images and video — detection, segmentation, OCR, quality inspection." },
+    { "title": "NLP / LLM Engineer", "description": "Fine-tunes and evaluates language models for classification, extraction, search and generation tasks." },
+    { "title": "Recommendation Systems Engineer", "description": "Designs ranking and recommendation models for feeds, e-commerce and ads, with online A/B testing." }
+  ],
+  "skills": {
+    "beginner": [
+      "Python, NumPy and pandas",
+      "Linear algebra, probability and statistics basics",
+      "Supervised vs unsupervised learning",
+      "scikit-learn: regression, classification, train/test split, cross-validation",
+      "Evaluation metrics: accuracy, precision, recall, F1, ROC-AUC, RMSE",
+      "Jupyter notebooks and Git"
+    ],
+    "intermediate": [
+      "Deep learning with PyTorch (tensors, autograd, training loops)",
+      "Feature engineering and handling imbalanced data",
+      "CNNs, transformers and transfer learning",
+      "Experiment tracking with MLflow or Weights & Biases",
+      "Serving models with FastAPI and Docker",
+      "SQL and working with data warehouses",
+      "Hugging Face Transformers and Datasets"
+    ],
+    "advanced": [
+      "Distributed training on multiple GPUs",
+      "Parameter-efficient fine-tuning (LoRA/QLoRA) and model quantisation",
+      "Model monitoring, data drift and automated retraining",
+      "Inference optimisation (ONNX, TensorRT, vLLM, batching)",
+      "Kubernetes-based ML platforms (Kubeflow, Ray, SageMaker, Vertex AI)",
+      "Designing offline and online (A/B) evaluation"
+    ]
+  },
+  "stack": {
+    "languages": ["Python", "SQL", "C++ (performance work)", "Bash"],
+    "tools": ["PyTorch", "scikit-learn", "Hugging Face", "TensorFlow/Keras", "MLflow", "Weights & Biases", "Docker", "Kubernetes", "AWS SageMaker / Google Vertex AI / Azure ML", "Ray", "vLLM", "Spark"],
+    "note": "PyTorch dominates new postings; TensorFlow still appears in older production stacks. Cloud ML platform experience (SageMaker, Vertex AI or Azure ML) is a frequent 'nice to have'."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Classic ML foundations",
+      "goals": [
+        "Refresh Python, NumPy, pandas and Matplotlib",
+        "Review the maths you need: vectors, matrices, gradients, probability",
+        "Train regression and classification models with scikit-learn",
+        "Learn cross-validation and choose the right metric for a problem",
+        "Enter one beginner Kaggle competition and submit a baseline"
+      ],
+      "milestone": "A clean notebook that beats a simple baseline on a real dataset, with a clear write-up of metrics."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Deep learning",
+      "goals": [
+        "Write a PyTorch training loop from scratch",
+        "Train a CNN for image classification and a transformer for text",
+        "Use transfer learning with a pretrained Hugging Face model",
+        "Track experiments with MLflow or Weights & Biases",
+        "Learn about overfitting, regularisation and learning-rate schedules"
+      ],
+      "milestone": "A fine-tuned model published on the Hugging Face Hub with a model card."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Ship it (MLOps)",
+      "goals": [
+        "Wrap a model in a FastAPI service and containerise it with Docker",
+        "Set up CI that runs tests and a quick evaluation on every push",
+        "Deploy to a cloud service (Hugging Face Spaces, Render, or a free cloud tier)",
+        "Add basic monitoring: latency, error rate and input-drift checks",
+        "Write an end-to-end case study with architecture diagram"
+      ],
+      "milestone": "An end-to-end ML system — data → training → API → monitoring — that an interviewer can try live."
+    }
+  ],
+  "resources": [
+    { "title": "Machine Learning Specialization", "provider": "DeepLearning.AI / Coursera", "url": "https://www.coursera.org/specializations/machine-learning-introduction", "type": "course", "note": "Free to audit" },
+    { "title": "Practical Deep Learning for Coders", "provider": "fast.ai", "url": "https://course.fast.ai/", "type": "course", "note": "Free" },
+    { "title": "Machine Learning Crash Course", "provider": "Google", "url": "https://developers.google.com/machine-learning/crash-course", "type": "course", "note": "Free" },
+    { "title": "PyTorch Tutorials", "provider": "PyTorch", "url": "https://pytorch.org/tutorials/", "type": "docs" },
+    { "title": "Hugging Face LLM Course", "provider": "Hugging Face", "url": "https://huggingface.co/learn/llm-course", "type": "course", "note": "Free" },
+    { "title": "scikit-learn User Guide", "provider": "scikit-learn", "url": "https://scikit-learn.org/stable/user_guide.html", "type": "docs" },
+    { "title": "Made With ML (MLOps)", "provider": "Goku Mohandas", "url": "https://madewithml.com/", "type": "course", "note": "Free" },
+    { "title": "MLOps Zoomcamp", "provider": "DataTalks.Club", "url": "https://github.com/DataTalksClub/mlops-zoomcamp", "type": "course", "note": "Free" },
+    { "title": "Dive into Deep Learning (book)", "provider": "d2l.ai", "url": "https://d2l.ai/", "type": "book", "note": "Free online" },
+    { "title": "Kaggle Learn micro-courses", "provider": "Kaggle", "url": "https://www.kaggle.com/learn", "type": "practice", "note": "Free" }
+  ],
+  "projects": [
+    { "title": "House-price or rent predictor", "level": "easy", "description": "Predict Dhaka (or any city) rent prices from listing data; compare linear regression, random forest and gradient boosting.", "skills": ["scikit-learn", "Feature engineering", "Regression metrics"] },
+    { "title": "Bangla text sentiment classifier", "level": "easy", "description": "Fine-tune a multilingual transformer to classify Bangla product reviews or news headlines and publish it on Hugging Face.", "skills": ["Transformers", "Transfer learning", "NLP"] },
+    { "title": "Crop disease image classifier", "level": "medium", "description": "Train a CNN on a public plant-disease dataset and serve it via a mobile-friendly web demo.", "skills": ["PyTorch", "Computer vision", "Deployment"] },
+    { "title": "Real-time fraud detection API", "level": "medium", "description": "Train a model on an imbalanced transactions dataset, expose a scoring API and log predictions for monitoring.", "skills": ["Imbalanced learning", "FastAPI", "Monitoring"] },
+    { "title": "End-to-end MLOps pipeline", "level": "hard", "description": "Automate data validation, training, evaluation gates, model registry and canary deployment on Kubernetes, with drift alerts that trigger retraining.", "skills": ["MLflow", "Kubernetes", "CI/CD", "Drift detection"] }
+  ],
+  "interview": [
+    { "question": "Explain the bias–variance trade-off.", "answer": "Bias is error from overly simple assumptions (underfitting); variance is error from sensitivity to the training data (overfitting). Increasing model complexity lowers bias but raises variance, so you aim for the balance that minimises validation error." },
+    { "question": "How do you handle an imbalanced dataset?", "answer": "Use metrics like precision/recall or PR-AUC instead of accuracy, try class weights, resampling (over/under-sampling, SMOTE), adjust the decision threshold, and collect more minority-class data if possible." },
+    { "question": "What is regularisation?", "answer": "Techniques that discourage overly complex models to reduce overfitting — e.g. L1/L2 penalties, dropout, early stopping and data augmentation." },
+    { "question": "Precision vs recall — when do you prefer each?", "answer": "Precision matters when false positives are costly (spam filters). Recall matters when missing a positive is costly (fraud, disease screening). F1 balances both." },
+    { "question": "What is data leakage?", "answer": "When information that would not be available at prediction time sneaks into training — e.g. using future data or target-derived features — leading to great offline scores and poor real-world performance." },
+    { "question": "How does a transformer work at a high level?", "answer": "It uses self-attention so each token can weigh every other token in the sequence, stacked with feed-forward layers and positional information, enabling parallel training and long-range context." },
+    { "question": "What is transfer learning?", "answer": "Starting from a model pretrained on a large dataset and fine-tuning it on your smaller task, which saves data and compute and often improves accuracy." },
+    { "question": "How do you monitor a model in production?", "answer": "Track input data distributions for drift, prediction distributions, latency and errors, and — when labels arrive — real accuracy. Alert on thresholds and trigger retraining or rollback." },
+    { "question": "What is LoRA?", "answer": "Low-Rank Adaptation freezes the base model and trains small low-rank matrices added to certain layers, making fine-tuning large models far cheaper in memory and storage." },
+    { "question": "Batch vs online inference?", "answer": "Batch scores many records on a schedule (cheap, high latency, e.g. nightly recommendations). Online serves single requests in real time (low latency, needs scalable APIs, e.g. fraud checks at payment)." }
+  ],
+  "resumeBullets": [
+    "Trained and deployed a [model type] that improved [metric] from [X] to [Y], driving [business outcome, e.g. 12% fewer false fraud alerts].",
+    "Built an automated MLOps pipeline with [MLflow/Kubeflow] that cut model release time from [X] days to [Y] hours.",
+    "Fine-tuned a [base model] with LoRA on [N] domain examples, reaching [X]% accuracy while reducing serving cost by [Y]%.",
+    "Implemented drift monitoring for [N] production models, catching [N] data-quality incidents before they affected users.",
+    "Optimised inference with [ONNX/quantisation/batching], lowering p95 latency from [X] ms to [Y] ms at [N] requests per second."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 17193,
+      "maxBdt": 62823,
+      "note": "Paylab range for Data Scientist (closest published category; 10th–90th percentile, gross monthly). ML engineers at product firms and offshore R&D centres in Dhaka often earn more — Levels.fyi shows a Bangladesh software-engineer median of about BDT 973k per year in total compensation.",
+      "sources": [
+        { "label": "Paylab — Data Scientist salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/data-scientist" },
+        { "label": "Levels.fyi — Software Engineer pay in Bangladesh", "url": "https://www.levels.fyi/t/software-engineer/locations/bangladesh" }
+      ]
+    },
+    "remote": {
+      "minUsd": 35000,
+      "maxUsd": 85000,
+      "note": "Estimate. Arc reports $42,875 average for Bangladesh-based remote data scientists and $69,548 for senior remote developers; production ML/MLOps experience pushes offers toward the top.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 140300,
+      "benchmark": "US median, Computer & Information Research Scientists (BLS, 2025)",
+      "growth": "+22% (2025–35, much faster than average)",
+      "note": "Applied ML engineers in industry are often classified as software developers ($134,040 median); research-heavy roles align with this category.",
+      "sources": [
+        { "label": "BLS — Computer and Information Research Scientists", "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm" },
+        { "label": "Levels.fyi — ML/AI software engineer pay", "url": "https://www.levels.fyi/t/software-engineer/focus/ml-ai" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Moderate and rising. Fintech (fraud, credit scoring), telecom (churn), e-commerce and offshore R&D teams hire ML engineers; competition is high for few senior seats, so strong portfolios stand out.",
+      "remote": "High for candidates with deployed models and MLOps skills; pure notebook experience is less valued than shipped systems.",
+      "global": "Very high. ML specialists are among the WEF's fastest-growing jobs, and research-scientist roles are projected to grow 22% in the US."
+    }
+  },
+  "startToday": [
+    "Install Python (or open Google Colab) and run your first pandas notebook",
+    "Create a Kaggle account and fork the Titanic starter notebook",
+    "Start lesson 1 of fast.ai's Practical Deep Learning course",
+    "Bookmark the scikit-learn user guide and read the 'Getting started' page",
+    "Pick one dataset from your country or interest area for your first project",
+    "Schedule 1 hour a day in your calendar for the next 30 days"
+  ]
+}
