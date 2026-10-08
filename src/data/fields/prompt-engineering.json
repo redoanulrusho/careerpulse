@@ -1,0 +1,177 @@
+{
+  "slug": "prompt-engineering",
+  "name": "Prompt & Context Engineering",
+  "icon": "Sparkles",
+  "tagline": "Design the instructions, examples and context that make AI models reliable at real tasks.",
+  "category": "ai-data",
+  "difficulty": "beginner",
+  "demand": "growing",
+  "overview": {
+    "summary": "Prompt engineering is the skill of getting consistent, high-quality results from AI models by writing clear instructions, giving good examples, and supplying the right context (documents, data, tool results). In 2025 the industry started calling the broader version 'context engineering': deciding exactly what information a model sees at each step. Honest note: standalone 'Prompt Engineer' job titles are becoming rarer — the skill is now expected inside many roles (AI engineer, content, support operations, product, marketing, data). That makes it one of the most useful entry points into AI work, especially for non-programmers.",
+    "whyTrending": [
+      "LinkedIn reported in its Jobs on the Rise 2026 coverage that most hiring leaders now prefer candidates who are skilled with AI tools over more experienced peers without those skills.",
+      "Companies deploying AI assistants and agents need people who can write system prompts, build evaluation sets and fix failure cases — often called AI trainers, AI content specialists or LLM evaluators.",
+      "The work shifted from clever one-line prompts to engineering the full context: retrieval, memory, tool descriptions and examples — a skill that transfers to AI engineering.",
+      "It has the lowest barrier to entry of any AI field: you can start with a free chat tool and a spreadsheet of test cases."
+    ],
+    "trendSources": [
+      { "label": "Startup Daily — Fastest growing jobs in 2026 (LinkedIn data)", "url": "https://www.startupdaily.net/advice/workplace/fastest-growing-jobs-in-2026-ais-new-roles-and-a-booming-sector/" },
+      { "label": "Anthropic — Effective context engineering for AI agents", "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" }
+    ]
+  },
+  "roles": [
+    { "title": "Prompt / Context Engineer", "description": "Writes and maintains system prompts, tool descriptions and retrieval setups for AI features, and tests them against evaluation sets." },
+    { "title": "AI Trainer / LLM Evaluator", "description": "Creates high-quality examples, rates model outputs and writes rubrics that are used to evaluate or fine-tune models." },
+    { "title": "Conversational Designer", "description": "Designs the personality, flows and fallback behaviour of chatbots and voice assistants." },
+    { "title": "AI Content & Automation Specialist", "description": "Uses AI tools and no-code automation (Zapier, Make, n8n) to speed up marketing, support or operations workflows." },
+    { "title": "AI Solutions Consultant", "description": "Helps businesses identify AI use cases, prototype prompts and train staff to use AI tools safely." }
+  ],
+  "skills": {
+    "beginner": [
+      "Writing clear, specific instructions with role, task, constraints and format",
+      "Few-shot prompting (giving examples)",
+      "Asking for structured output (lists, tables, JSON)",
+      "Breaking big tasks into smaller steps (prompt chaining)",
+      "Spotting hallucinations and verifying facts",
+      "Using major AI assistants (ChatGPT, Claude, Gemini, Copilot)"
+    ],
+    "intermediate": [
+      "Building evaluation sets and scoring rubrics in a spreadsheet",
+      "Retrieval-augmented generation (RAG) concepts",
+      "Prompt templates with variables",
+      "No-code automation: Zapier, Make or n8n with AI steps",
+      "Basic Python to call model APIs and run batch tests",
+      "Prompt-injection awareness and safe prompting"
+    ],
+    "advanced": [
+      "Context engineering for agents: tool descriptions, memory and context compaction",
+      "Automated evaluation with LLM-as-judge and regression testing",
+      "Designing data for fine-tuning and preference tuning",
+      "Cost/latency trade-offs across models and prompt caching",
+      "Multimodal prompting (images, audio, documents)",
+      "Writing internal AI usage guidelines and training programmes"
+    ]
+  },
+  "stack": {
+    "languages": ["English (and local languages) — clear writing", "Python (basic)", "JSON", "Markdown"],
+    "tools": ["ChatGPT / Claude / Gemini", "OpenAI & Anthropic Playgrounds", "Google AI Studio", "n8n / Zapier / Make", "Promptfoo", "LangSmith / Langfuse", "Google Sheets / Excel", "Notion"],
+    "note": "Most listings ask for strong writing plus evidence of evaluation work. Basic Python or an automation tool turns this from a 'skill' into a role you can be hired for."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Prompt fundamentals",
+      "goals": [
+        "Complete a free prompt-engineering guide and practise each technique",
+        "Use two different AI assistants daily and compare their strengths",
+        "Build a personal prompt library in Notion or a doc",
+        "Practise structured outputs: tables, checklists, JSON",
+        "Learn the common failure modes: hallucination, ignoring constraints, verbosity"
+      ],
+      "milestone": "A public prompt library of 20 tested prompts with before/after examples."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Evaluate and automate",
+      "goals": [
+        "Create a 30-case evaluation spreadsheet for one task (e.g. email classification)",
+        "Measure how prompt changes affect accuracy",
+        "Learn enough Python to call an API in a loop over your test cases",
+        "Automate one real workflow with n8n, Zapier or Make",
+        "Try Promptfoo for automated prompt testing"
+      ],
+      "milestone": "A short report showing how you improved a prompt from X% to Y% on your test set."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Context engineering",
+      "goals": [
+        "Build a simple RAG assistant over a set of documents",
+        "Write tool descriptions for an agent and test how wording changes behaviour",
+        "Learn prompt-injection risks and add defences",
+        "Freelance or volunteer: build an AI workflow for a small business or club",
+        "Publish a case study on LinkedIn or a blog"
+      ],
+      "milestone": "One real-world AI workflow in use by someone else, with measurable time saved."
+    }
+  ],
+  "resources": [
+    { "title": "Prompt Engineering Guide", "provider": "DAIR.AI", "url": "https://www.promptingguide.ai/", "type": "guide", "note": "Free" },
+    { "title": "Prompt engineering overview", "provider": "Anthropic Docs", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview", "type": "docs" },
+    { "title": "Prompt engineering guide", "provider": "OpenAI", "url": "https://platform.openai.com/docs/guides/prompt-engineering", "type": "docs" },
+    { "title": "Interactive prompt engineering tutorial", "provider": "Anthropic (GitHub)", "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial", "type": "course", "note": "Free notebooks" },
+    { "title": "ChatGPT Prompt Engineering for Developers", "provider": "DeepLearning.AI", "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/", "type": "course", "note": "Free" },
+    { "title": "Learn Prompting", "provider": "Learn Prompting", "url": "https://learnprompting.org/docs/introduction", "type": "course", "note": "Free docs" },
+    { "title": "Effective context engineering for AI agents", "provider": "Anthropic", "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents", "type": "guide" },
+    { "title": "Promptfoo — test your prompts", "provider": "Promptfoo", "url": "https://www.promptfoo.dev/docs/intro/", "type": "docs", "note": "Open source" },
+    { "title": "Gemini API prompting strategies", "provider": "Google", "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies", "type": "docs" },
+    { "title": "n8n AI workflow tutorials", "provider": "n8n", "url": "https://docs.n8n.io/advanced-ai/", "type": "docs" }
+  ],
+  "projects": [
+    { "title": "Prompt library with before/after tests", "level": "easy", "description": "Publish 20 prompts for study, job search or business tasks, each with a weak version, an improved version and sample outputs.", "skills": ["Prompt design", "Documentation"] },
+    { "title": "Bangla–English customer-reply assistant", "level": "easy", "description": "Design a system prompt that drafts polite customer replies in Bangla or English with a fixed tone and format, tested on 20 real-style messages.", "skills": ["System prompts", "Tone control", "Evaluation"] },
+    { "title": "Email triage evaluation study", "level": "medium", "description": "Build a 50-case labelled dataset, test three prompts and two models, and report accuracy, cost and failure analysis.", "skills": ["Evaluation design", "Python", "Analysis"] },
+    { "title": "No-code AI automation for a small business", "level": "medium", "description": "Use n8n or Make to read incoming orders/emails, extract fields with AI, and log them to a Google Sheet with human review.", "skills": ["Automation", "Structured extraction"] },
+    { "title": "RAG assistant with automated prompt regression tests", "level": "hard", "description": "Build a document Q&A assistant and a Promptfoo test suite that runs on every prompt change to catch regressions and injection attempts.", "skills": ["RAG", "Promptfoo", "CI", "Security"] }
+  ],
+  "interview": [
+    { "question": "What makes a good prompt?", "answer": "Clear goal, relevant context, explicit constraints, the desired output format and — when useful — examples. It should be specific enough that a smart new colleague could follow it." },
+    { "question": "What is few-shot prompting?", "answer": "Including a few input–output examples in the prompt so the model copies the pattern, format and style." },
+    { "question": "What is context engineering?", "answer": "Deciding everything the model sees at each step — instructions, retrieved documents, tool results, memory and examples — and keeping it relevant and compact so the model performs reliably." },
+    { "question": "How do you know if a prompt change is an improvement?", "answer": "Test it on a fixed evaluation set with clear scoring before and after, rather than judging from one or two examples." },
+    { "question": "How do you reduce hallucinations?", "answer": "Ground the model with retrieved sources, ask it to cite them, allow it to say 'I don't know', lower temperature for factual tasks and verify outputs." },
+    { "question": "What is prompt chaining?", "answer": "Splitting a complex task into a sequence of smaller prompts where each output feeds the next, which improves reliability and makes debugging easier." },
+    { "question": "What is prompt injection?", "answer": "An attack where text in user input or retrieved documents tries to override your instructions. Mitigate by separating data from instructions, limiting tool permissions and validating outputs." },
+    { "question": "When would you choose fine-tuning over prompting?", "answer": "When you need a consistent style or format at scale, have many good examples, and prompting alone is too long, costly or inconsistent." },
+    { "question": "What does temperature control?", "answer": "Randomness of the output. Low values give focused, repeatable answers; higher values give more varied, creative ones." },
+    { "question": "How would you train a non-technical team to use AI safely?", "answer": "Short hands-on sessions with real tasks, a shared prompt library, clear rules on confidential data, and a habit of verifying outputs before use." }
+  ],
+  "resumeBullets": [
+    "Designed and tested [N] production prompts for [use case], raising task accuracy from [X]% to [Y]% on a [N]-case evaluation set.",
+    "Automated [workflow] with [n8n/Zapier] and AI extraction, saving the team [X] hours per week.",
+    "Built a prompt regression suite with Promptfoo that blocked [N] quality regressions before release.",
+    "Created an internal prompt library and trained [N] colleagues, increasing AI tool adoption from [X]% to [Y]%.",
+    "Wrote rubrics and labelled [N] model outputs as an AI evaluator, improving inter-rater agreement to [X]%."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 14359,
+      "maxBdt": 52329,
+      "note": "Dedicated prompt-engineering titles are rare in Bangladesh, so this uses Paylab's Python Programmer range (10th–90th percentile, gross monthly) as a proxy for entry AI-automation roles. Many people earn from this skill through freelancing rather than salaried jobs.",
+      "sources": [
+        { "label": "Paylab — Python Programmer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/python-programmer" },
+        { "label": "The Financial Express — BASIS top IT/ITES exporters FY25", "url": "https://thefinancialexpress.com.bd/trade/basis-honours-top-10-it-ites-exporters-for-fy25" }
+      ]
+    },
+    "remote": {
+      "minUsd": 15000,
+      "maxUsd": 60000,
+      "note": "Estimate. Remote AI-trainer and evaluator contracts are often paid hourly; automation and AI-consulting freelancers with case studies earn toward the upper end. Arc's Bangladesh remote developer average is $41,465.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 99520,
+      "benchmark": "US median, Web Developers & Digital Designers (BLS, 2025) — closest proxy",
+      "growth": "+5% (2025–35); prompt skills are spreading into many roles",
+      "note": "No official category exists for prompt engineers. Pay depends heavily on the host role: AI engineers earn far more, while evaluator/trainer contracts earn less.",
+      "sources": [
+        { "label": "BLS — Web Developers and Digital Designers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Growing as a freelancing and agency skill (content, support, automation). Few full-time 'prompt engineer' posts — combine it with marketing, support, data or development.",
+      "remote": "Steady demand for AI trainers, evaluators and automation builders; strongest when paired with a domain (law, medicine, finance, coding) or a language such as Bangla.",
+      "global": "Skill demand is very high but the standalone title is shrinking; employers fold it into AI engineering, product and operations roles."
+    }
+  },
+  "startToday": [
+    "Read the first three sections of the free Prompt Engineering Guide (promptingguide.ai)",
+    "Pick one weekly task (emails, notes, reports) and write a reusable prompt for it",
+    "Start a 'prompt library' document with what worked and what failed",
+    "Create a 10-row spreadsheet of test inputs for your prompt",
+    "Try the same prompt on two different AI assistants and compare results",
+    "Sign up for a free n8n cloud trial or self-host it to explore AI automations"
+  ]
+}
