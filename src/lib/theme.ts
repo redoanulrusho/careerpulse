@@ -13,6 +13,11 @@ export function resolveTheme(pref: ThemePreference, systemDark: boolean): "light
   return pref;
 }
 
-export function nextPreference(pref: ThemePreference): ThemePreference {
-  return pref === "light" ? "dark" : pref === "dark" ? "system" : "light";
+/**
+ * Cycle light → dark → system. From "system", jump to the opposite of what is
+ * currently shown so the first click always changes the theme visibly.
+ */
+export function nextPreference(pref: ThemePreference, systemDark: boolean): ThemePreference {
+  if (pref === "system") return systemDark ? "light" : "dark";
+  return pref === "light" ? "dark" : "system";
 }

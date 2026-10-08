@@ -126,8 +126,12 @@ describe("theme", () => {
   });
 
   it("cycles light → dark → system", () => {
-    expect(nextPreference("light")).toBe("dark");
-    expect(nextPreference("dark")).toBe("system");
-    expect(nextPreference("system")).toBe("light");
+    expect(nextPreference("light", false)).toBe("dark");
+    expect(nextPreference("dark", false)).toBe("system");
+  });
+
+  it("always changes the visible theme when leaving system mode", () => {
+    expect(nextPreference("system", false)).toBe("dark");
+    expect(nextPreference("system", true)).toBe("light");
   });
 });

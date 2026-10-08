@@ -48,7 +48,10 @@ export function ThemeToggle() {
     return () => mq.removeEventListener("change", onChange);
   }, [pref]);
 
-  const cycle = useCallback(() => apply(nextPreference(readPreference())), []);
+  const cycle = useCallback(
+    () => apply(nextPreference(readPreference(), window.matchMedia("(prefers-color-scheme: dark)").matches)),
+    [],
+  );
   const Icon = pref === "light" ? Sun : pref === "dark" ? Moon : Monitor;
 
   return (

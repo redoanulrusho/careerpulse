@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { FIELD_SLUGS } from "@/data/fields/slugs";
 import { collectFieldUrls, getAllFields, getAllSlugs, getField } from "@/lib/fields";
 import type { Field } from "@/lib/types";
 
@@ -21,6 +22,10 @@ describe("content data set", () => {
       expect(slug).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
       expect(getField(slug)?.slug).toBe(slug);
     }
+  });
+
+  it("keeps the proxy slug list in sync with the content", () => {
+    expect([...FIELD_SLUGS]).toEqual(getAllSlugs());
   });
 
   it("returns undefined for unknown slugs", () => {
