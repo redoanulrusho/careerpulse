@@ -15,17 +15,45 @@
       "In Bangladesh, banks, MFS providers and government digital services are investing in security operations after high-profile incidents and growing digital payments."
     ],
     "trendSources": [
-      { "label": "BLS — Information Security Analysts", "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm" },
-      { "label": "ISC2 — 2025 Cybersecurity Workforce Study", "url": "https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study" }
+      {
+        "label": "BLS — Information Security Analysts",
+        "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"
+      },
+      {
+        "label": "ISC2 — 2025 Cybersecurity Workforce Study",
+        "url": "https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study"
+      },
+      {
+        "label": "Reveal IT Talent Survey 2026 — cybersecurity engineers among hardest roles to fill (38%)",
+        "url": "https://www.revealbi.io/reveal-it-talent-survey-top-technology-roles-and-skills-for-2026"
+      }
     ]
   },
   "roles": [
-    { "title": "SOC Analyst", "description": "Monitors security alerts, investigates suspicious activity and escalates real incidents — the most common entry-level security job." },
-    { "title": "Penetration Tester / Ethical Hacker", "description": "Legally attacks systems and applications to find vulnerabilities and writes reports with fixes." },
-    { "title": "Cloud Security Engineer", "description": "Secures AWS/Azure/GCP environments: identity, network controls, misconfiguration detection and compliance." },
-    { "title": "Incident Responder / DFIR Analyst", "description": "Handles breaches end to end: containment, forensic analysis, recovery and lessons learned." },
-    { "title": "Application Security (AppSec) Engineer", "description": "Works with developers on secure code review, threat modelling and security testing in CI/CD pipelines." },
-    { "title": "GRC Analyst", "description": "Manages governance, risk and compliance — policies, audits, ISO 27001, PCI DSS and vendor risk." }
+    {
+      "title": "SOC Analyst",
+      "description": "Monitors security alerts, investigates suspicious activity and escalates real incidents — the most common entry-level security job."
+    },
+    {
+      "title": "Penetration Tester / Ethical Hacker",
+      "description": "Legally attacks systems and applications to find vulnerabilities and writes reports with fixes."
+    },
+    {
+      "title": "Cloud Security Engineer",
+      "description": "Secures AWS/Azure/GCP environments: identity, network controls, misconfiguration detection and compliance."
+    },
+    {
+      "title": "Incident Responder / DFIR Analyst",
+      "description": "Handles breaches end to end: containment, forensic analysis, recovery and lessons learned."
+    },
+    {
+      "title": "Application Security (AppSec) Engineer",
+      "description": "Works with developers on secure code review, threat modelling and security testing in CI/CD pipelines."
+    },
+    {
+      "title": "GRC Analyst",
+      "description": "Manages governance, risk and compliance — policies, audits, ISO 27001, PCI DSS and vendor risk."
+    }
   ],
   "skills": {
     "beginner": [
@@ -55,8 +83,26 @@
     ]
   },
   "stack": {
-    "languages": ["Python", "Bash", "PowerShell", "SQL", "KQL / SPL (SIEM query languages)"],
-    "tools": ["Splunk", "Microsoft Sentinel", "Wireshark", "Nmap", "Burp Suite", "Metasploit", "Kali Linux", "CrowdStrike / Defender EDR", "Nessus", "Elastic Security", "AWS/Azure security services"],
+    "languages": [
+      "Python",
+      "Bash",
+      "PowerShell",
+      "SQL",
+      "KQL / SPL (SIEM query languages)"
+    ],
+    "tools": [
+      "Splunk",
+      "Microsoft Sentinel",
+      "Wireshark",
+      "Nmap",
+      "Burp Suite",
+      "Metasploit",
+      "Kali Linux",
+      "CrowdStrike / Defender EDR",
+      "Nessus",
+      "Elastic Security",
+      "AWS/Azure security services"
+    ],
     "note": "Entry-level listings frequently mention CompTIA Security+, ISC2 CC or vendor SIEM experience; senior roles mention CISSP, OSCP or cloud security certifications."
   },
   "roadmap": [
@@ -98,35 +144,167 @@
     }
   ],
   "resources": [
-    { "title": "ISC2 Certified in Cybersecurity (free course + exam offer)", "provider": "ISC2", "url": "https://www.isc2.org/certifications/cc", "type": "course", "note": "Free training via One Million Certified program" },
-    { "title": "TryHackMe", "provider": "TryHackMe", "url": "https://tryhackme.com/", "type": "practice", "note": "Free rooms available" },
-    { "title": "PortSwigger Web Security Academy", "provider": "PortSwigger", "url": "https://portswigger.net/web-security", "type": "practice", "note": "Free" },
-    { "title": "OWASP Top 10", "provider": "OWASP", "url": "https://owasp.org/www-project-top-ten/", "type": "guide" },
-    { "title": "MITRE ATT&CK", "provider": "MITRE", "url": "https://attack.mitre.org/", "type": "docs" },
-    { "title": "picoCTF", "provider": "Carnegie Mellon University", "url": "https://picoctf.org/", "type": "practice", "note": "Free" },
-    { "title": "Professor Messer CompTIA Security+ videos", "provider": "Professor Messer", "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/", "type": "video", "note": "Free" },
-    { "title": "OverTheWire Wargames (Bandit)", "provider": "OverTheWire", "url": "https://overthewire.org/wargames/bandit/", "type": "practice", "note": "Free" },
-    { "title": "Cybersecurity training (free courses)", "provider": "Cisco Networking Academy", "url": "https://www.netacad.com/cybersecurity", "type": "course", "note": "Free intro courses" },
-    { "title": "NIST Cybersecurity Framework 2.0", "provider": "NIST", "url": "https://www.nist.gov/cyberframework", "type": "docs" }
+    {
+      "title": "ISC2 Certified in Cybersecurity (free course + exam offer)",
+      "provider": "ISC2",
+      "url": "https://www.isc2.org/certifications/cc",
+      "type": "course",
+      "note": "Free training via One Million Certified program"
+    },
+    {
+      "title": "TryHackMe",
+      "provider": "TryHackMe",
+      "url": "https://tryhackme.com/",
+      "type": "practice",
+      "note": "Free rooms available"
+    },
+    {
+      "title": "PortSwigger Web Security Academy",
+      "provider": "PortSwigger",
+      "url": "https://portswigger.net/web-security",
+      "type": "practice",
+      "note": "Free"
+    },
+    {
+      "title": "OWASP Top 10",
+      "provider": "OWASP",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "type": "guide"
+    },
+    {
+      "title": "MITRE ATT&CK",
+      "provider": "MITRE",
+      "url": "https://attack.mitre.org/",
+      "type": "docs"
+    },
+    {
+      "title": "picoCTF",
+      "provider": "Carnegie Mellon University",
+      "url": "https://picoctf.org/",
+      "type": "practice",
+      "note": "Free"
+    },
+    {
+      "title": "Professor Messer CompTIA Security+ videos",
+      "provider": "Professor Messer",
+      "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-plus-course/",
+      "type": "video",
+      "note": "Free"
+    },
+    {
+      "title": "OverTheWire Wargames (Bandit)",
+      "provider": "OverTheWire",
+      "url": "https://overthewire.org/wargames/bandit/",
+      "type": "practice",
+      "note": "Free"
+    },
+    {
+      "title": "Cybersecurity training (free courses)",
+      "provider": "Cisco Networking Academy",
+      "url": "https://www.netacad.com/cybersecurity",
+      "type": "course",
+      "note": "Free intro courses"
+    },
+    {
+      "title": "NIST Cybersecurity Framework 2.0",
+      "provider": "NIST",
+      "url": "https://www.nist.gov/cyberframework",
+      "type": "docs"
+    }
   ],
   "projects": [
-    { "title": "Home security lab", "level": "easy", "description": "Set up Kali Linux and a vulnerable VM (e.g. Metasploitable) in VirtualBox and document a safe, isolated testing environment.", "skills": ["Virtualisation", "Linux", "Networking"] },
-    { "title": "Phishing email analyser", "level": "easy", "description": "A Python script that parses email headers and links, flags suspicious signs and produces a short report.", "skills": ["Python", "Email security", "Threat indicators"] },
-    { "title": "SIEM detection lab", "level": "medium", "description": "Send Windows and Linux logs to Splunk or Elastic, simulate attacks with Atomic Red Team and write detections mapped to MITRE ATT&CK.", "skills": ["SIEM", "Detection engineering", "ATT&CK"] },
-    { "title": "Web app penetration test report", "level": "medium", "description": "Test OWASP Juice Shop, find and exploit vulnerabilities, and write a professional report with risk ratings and fixes.", "skills": ["Burp Suite", "OWASP Top 10", "Reporting"] },
-    { "title": "Cloud security posture scanner", "level": "hard", "description": "Build a tool that scans an AWS account (your own free-tier lab) for misconfigurations — public buckets, open security groups, weak IAM — and suggests fixes.", "skills": ["AWS IAM", "Python (boto3)", "Cloud security"] }
+    {
+      "title": "Home security lab",
+      "level": "easy",
+      "description": "Set up Kali Linux and a vulnerable VM (e.g. Metasploitable) in VirtualBox and document a safe, isolated testing environment.",
+      "skills": [
+        "Virtualisation",
+        "Linux",
+        "Networking"
+      ]
+    },
+    {
+      "title": "Phishing email analyser",
+      "level": "easy",
+      "description": "A Python script that parses email headers and links, flags suspicious signs and produces a short report.",
+      "skills": [
+        "Python",
+        "Email security",
+        "Threat indicators"
+      ]
+    },
+    {
+      "title": "SIEM detection lab",
+      "level": "medium",
+      "description": "Send Windows and Linux logs to Splunk or Elastic, simulate attacks with Atomic Red Team and write detections mapped to MITRE ATT&CK.",
+      "skills": [
+        "SIEM",
+        "Detection engineering",
+        "ATT&CK"
+      ]
+    },
+    {
+      "title": "Web app penetration test report",
+      "level": "medium",
+      "description": "Test OWASP Juice Shop, find and exploit vulnerabilities, and write a professional report with risk ratings and fixes.",
+      "skills": [
+        "Burp Suite",
+        "OWASP Top 10",
+        "Reporting"
+      ]
+    },
+    {
+      "title": "Cloud security posture scanner",
+      "level": "hard",
+      "description": "Build a tool that scans an AWS account (your own free-tier lab) for misconfigurations — public buckets, open security groups, weak IAM — and suggests fixes.",
+      "skills": [
+        "AWS IAM",
+        "Python (boto3)",
+        "Cloud security"
+      ]
+    }
   ],
   "interview": [
-    { "question": "What is the CIA triad?", "answer": "Confidentiality (only authorised access), Integrity (data is accurate and unaltered) and Availability (systems work when needed) — the core goals of security." },
-    { "question": "Difference between encryption and hashing?", "answer": "Encryption is reversible with a key and protects confidentiality. Hashing is one-way, producing a fixed-length digest used to verify integrity or store passwords (with salt)." },
-    { "question": "What is SQL injection and how do you prevent it?", "answer": "Inserting malicious SQL into input fields to manipulate a database. Prevent it with parameterised queries, input validation, least-privilege DB accounts and an ORM." },
-    { "question": "What happens when you type a URL into a browser?", "answer": "DNS resolves the domain to an IP, the browser opens a TCP connection, performs a TLS handshake for HTTPS, sends an HTTP request and renders the response." },
-    { "question": "What is a false positive in a SOC?", "answer": "An alert that flags benign activity as malicious. Too many waste analyst time, so detections are tuned to balance false positives and missed attacks." },
-    { "question": "Describe the incident response lifecycle.", "answer": "Preparation, detection and analysis, containment, eradication, recovery, and post-incident lessons learned (NIST)." },
-    { "question": "What is the principle of least privilege?", "answer": "Users and systems get only the minimum access needed to do their job, limiting damage if an account is compromised." },
-    { "question": "Symmetric vs asymmetric encryption?", "answer": "Symmetric uses one shared key (fast, e.g. AES). Asymmetric uses a public/private key pair (e.g. RSA, ECC) for key exchange and signatures; TLS uses both." },
-    { "question": "What is MITRE ATT&CK used for?", "answer": "A knowledge base of real attacker tactics and techniques, used to map detections, find coverage gaps and describe attacks consistently." },
-    { "question": "How would you secure a web login page?", "answer": "HTTPS, strong password hashing (bcrypt/Argon2), rate limiting and lockout, MFA, secure session cookies, CSRF protection and logging of failed attempts." }
+    {
+      "question": "What is the CIA triad?",
+      "answer": "Confidentiality (only authorised access), Integrity (data is accurate and unaltered) and Availability (systems work when needed) — the core goals of security."
+    },
+    {
+      "question": "Difference between encryption and hashing?",
+      "answer": "Encryption is reversible with a key and protects confidentiality. Hashing is one-way, producing a fixed-length digest used to verify integrity or store passwords (with salt)."
+    },
+    {
+      "question": "What is SQL injection and how do you prevent it?",
+      "answer": "Inserting malicious SQL into input fields to manipulate a database. Prevent it with parameterised queries, input validation, least-privilege DB accounts and an ORM."
+    },
+    {
+      "question": "What happens when you type a URL into a browser?",
+      "answer": "DNS resolves the domain to an IP, the browser opens a TCP connection, performs a TLS handshake for HTTPS, sends an HTTP request and renders the response."
+    },
+    {
+      "question": "What is a false positive in a SOC?",
+      "answer": "An alert that flags benign activity as malicious. Too many waste analyst time, so detections are tuned to balance false positives and missed attacks."
+    },
+    {
+      "question": "Describe the incident response lifecycle.",
+      "answer": "Preparation, detection and analysis, containment, eradication, recovery, and post-incident lessons learned (NIST)."
+    },
+    {
+      "question": "What is the principle of least privilege?",
+      "answer": "Users and systems get only the minimum access needed to do their job, limiting damage if an account is compromised."
+    },
+    {
+      "question": "Symmetric vs asymmetric encryption?",
+      "answer": "Symmetric uses one shared key (fast, e.g. AES). Asymmetric uses a public/private key pair (e.g. RSA, ECC) for key exchange and signatures; TLS uses both."
+    },
+    {
+      "question": "What is MITRE ATT&CK used for?",
+      "answer": "A knowledge base of real attacker tactics and techniques, used to map detections, find coverage gaps and describe attacks consistently."
+    },
+    {
+      "question": "How would you secure a web login page?",
+      "answer": "HTTPS, strong password hashing (bcrypt/Argon2), rate limiting and lockout, MFA, secure session cookies, CSRF protection and logging of failed attempts."
+    }
   ],
   "resumeBullets": [
     "Triaged an average of [N] SIEM alerts per shift, escalating [N] confirmed incidents and reducing mean time to detect by [X]%.",
@@ -141,7 +319,10 @@
       "maxBdt": 65903,
       "note": "Paylab IT Security Specialist range (10th–90th percentile, gross monthly). Experienced security leads at banks, MFS providers and multinationals earn above this range.",
       "sources": [
-        { "label": "Paylab — IT Security Specialist salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/it-security-specialist" }
+        {
+          "label": "Paylab — IT Security Specialist salary, Bangladesh",
+          "url": "https://www.paylab.com/bd/salaryinfo/information-technology/it-security-specialist"
+        }
       ]
     },
     "remote": {
@@ -149,7 +330,10 @@
       "maxUsd": 80000,
       "note": "Estimate. Remote security work from Bangladesh is common in pentesting, bug bounties and managed SOC services; certifications (OSCP, cloud security) and public write-ups push rates up. Arc's Bangladesh remote developer average is $41,465.",
       "sources": [
-        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+        {
+          "label": "Arc — Remote software engineer salaries in Bangladesh",
+          "url": "https://arc.dev/salaries/software-engineers-in-bangladesh"
+        }
       ]
     },
     "global": {
@@ -158,8 +342,14 @@
       "growth": "+21% (2025–35, much faster than average)",
       "note": "Specialised roles such as cloud security engineers and red teamers typically earn above this median.",
       "sources": [
-        { "label": "BLS — Information Security Analysts", "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm" },
-        { "label": "ISC2 — 2025 Cybersecurity Workforce Study", "url": "https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study" }
+        {
+          "label": "BLS — Information Security Analysts",
+          "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"
+        },
+        {
+          "label": "ISC2 — 2025 Cybersecurity Workforce Study",
+          "url": "https://www.isc2.org/Insights/2025/12/ISC2-publishes-2025-cybersecurity-workforce-study"
+        }
       ]
     },
     "demandNotes": {
