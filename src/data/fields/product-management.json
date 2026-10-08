@@ -1,0 +1,179 @@
+{
+  "slug": "product-management",
+  "name": "Product Management (Tech & AI)",
+  "icon": "Compass",
+  "tagline": "Decide what to build and why — and lead teams to ship products people love.",
+  "category": "design-product",
+  "difficulty": "intermediate",
+  "demand": "high",
+  "overview": {
+    "summary": "Product managers (PMs) sit between customers, business and engineering. They discover user problems, decide what to build next, write clear requirements, prioritise the roadmap and measure whether launches worked. PMs don't usually write code or design screens, but they must understand technology, data and design well enough to make good trade-offs. AI product managers are a fast-growing specialty: they decide where AI genuinely helps users, how to measure model quality, and how to manage risk.",
+    "whyTrending": [
+      "Every company adding AI features needs people who can turn powerful but unpredictable technology into useful, safe products — AI PM roles have grown quickly as a result.",
+      "BLS projects computer and information systems managers — the management category closest to senior tech PMs — to grow 16% from 2025 to 2035.",
+      "AI tools let PMs prototype ideas themselves (vibe-coding prototypes, AI-generated research summaries), raising expectations for technical, hands-on PMs.",
+      "In Bangladesh, the growth of fintech, e-commerce, edtech and SaaS startups created a local PM career path that barely existed a decade ago."
+    ],
+    "trendSources": [
+      { "label": "BLS — Computer and Information Systems Managers", "url": "https://www.bls.gov/ooh/management/computer-and-information-systems-managers.htm" },
+      { "label": "Levels.fyi — Product Manager pay", "url": "https://www.levels.fyi/t/product-manager" }
+    ]
+  },
+  "roles": [
+    { "title": "Associate Product Manager (APM)", "description": "Entry-level PM who owns small features, writes specs and learns the craft under a senior PM." },
+    { "title": "Product Manager", "description": "Owns a product area: discovery, roadmap, requirements, launch and success metrics." },
+    { "title": "AI Product Manager", "description": "Leads AI-powered features: use-case selection, data needs, evaluation metrics, safety and user trust." },
+    { "title": "Technical Product Manager", "description": "Owns platform, API or developer-facing products, working closely with engineering on architecture trade-offs." },
+    { "title": "Product Owner (Scrum)", "description": "Manages the backlog and acceptance criteria for an agile team, often in services companies." },
+    { "title": "Growth Product Manager", "description": "Focuses on acquisition, activation, retention and monetisation through experiments." }
+  ],
+  "skills": {
+    "beginner": [
+      "Understanding users: interviews, problem statements, jobs-to-be-done",
+      "Writing clear user stories and acceptance criteria",
+      "Basic agile/Scrum and Kanban",
+      "Spreadsheet skills and basic metrics (DAU, retention, conversion)",
+      "Communication and stakeholder updates",
+      "Wireframing basics in Figma or on paper"
+    ],
+    "intermediate": [
+      "Writing product requirement documents (PRDs)",
+      "Prioritisation frameworks (RICE, MoSCoW, Kano)",
+      "SQL and product analytics tools (Mixpanel, Amplitude, GA4)",
+      "A/B testing and experiment design",
+      "Roadmapping and OKRs",
+      "Technical fluency: APIs, databases, cloud, system basics",
+      "Go-to-market and launch planning"
+    ],
+    "advanced": [
+      "Product strategy and competitive positioning",
+      "AI product skills: evals, data flywheels, model trade-offs, responsible AI",
+      "Pricing and monetisation",
+      "Leading without authority across multiple teams",
+      "Building prototypes with AI coding tools",
+      "Executive communication and business cases"
+    ]
+  },
+  "stack": {
+    "languages": ["SQL (basic–intermediate)", "English — written communication", "Python (helpful for AI PMs)"],
+    "tools": ["Jira / Linear", "Notion / Confluence", "Figma / FigJam", "Mixpanel / Amplitude / GA4", "Google Sheets / Excel", "Miro", "Productboard", "LLM tools (ChatGPT, Claude, Gemini)", "Looker Studio / Power BI"],
+    "note": "PM listings rarely require coding, but SQL, analytics tools and technical fluency are frequent 'strong plus' items — especially for AI and technical PM roles."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Product thinking",
+      "goals": [
+        "Learn what PMs do through free courses and articles",
+        "Analyse 3 products you use: user, problem, business model, metrics",
+        "Practise writing problem statements and user stories",
+        "Learn agile/Scrum basics",
+        "Interview 5 people about a problem you want to solve"
+      ],
+      "milestone": "A product teardown of an app you use, published as a blog post."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Execution skills",
+      "goals": [
+        "Write a full PRD for a feature, with success metrics",
+        "Learn SQL basics and query product data",
+        "Design a simple A/B test",
+        "Wireframe your feature in Figma",
+        "Practise prioritisation with RICE on a 15-item backlog"
+      ],
+      "milestone": "A PRD + wireframes + metrics plan for a realistic feature."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Ship something",
+      "goals": [
+        "Build a no-code or AI-assisted prototype of your feature",
+        "Get 10 real users to try it and measure results",
+        "Learn AI product basics: where AI fits, evals, risks",
+        "Practise PM interviews: product sense, execution, metrics, behavioural",
+        "Network with PMs in local communities and on LinkedIn"
+      ],
+      "milestone": "A shipped mini-product with user data — the strongest proof of PM ability."
+    }
+  ],
+  "resources": [
+    { "title": "Digital Product Management (University of Virginia)", "provider": "Coursera", "url": "https://www.coursera.org/learn/uva-darden-digital-product-management", "type": "course", "note": "Free to audit" },
+    { "title": "Lenny's Newsletter (free posts)", "provider": "Lenny Rachitsky", "url": "https://www.lennysnewsletter.com/", "type": "guide", "note": "Many free posts" },
+    { "title": "Silicon Valley Product Group articles", "provider": "SVPG", "url": "https://www.svpg.com/articles/", "type": "guide", "note": "Free" },
+    { "title": "Product Manager roadmap", "provider": "roadmap.sh", "url": "https://roadmap.sh/product-manager", "type": "guide" },
+    { "title": "The Scrum Guide", "provider": "Scrum.org", "url": "https://scrumguides.org/scrum-guide.html", "type": "docs", "note": "Free" },
+    { "title": "Amplitude Academy", "provider": "Amplitude", "url": "https://academy.amplitude.com/", "type": "course", "note": "Free" },
+    { "title": "Google Analytics Academy / Skillshop", "provider": "Google", "url": "https://skillshop.withgoogle.com/", "type": "course", "note": "Free" },
+    { "title": "Reforge blog", "provider": "Reforge", "url": "https://www.reforge.com/blog", "type": "guide", "note": "Free articles" },
+    { "title": "Mind the Product articles", "provider": "Mind the Product", "url": "https://www.mindtheproduct.com/", "type": "guide", "note": "Free" },
+    { "title": "AI for Everyone", "provider": "DeepLearning.AI / Coursera", "url": "https://www.coursera.org/learn/ai-for-everyone", "type": "course", "note": "Free to audit" }
+  ],
+  "projects": [
+    { "title": "Product teardown", "level": "easy", "description": "Analyse a popular app (e.g. a food-delivery or MFS app): users, jobs-to-be-done, business model, key metrics and three improvement ideas.", "skills": ["Product sense", "Writing"] },
+    { "title": "PRD for a local problem", "level": "easy", "description": "Write a complete PRD for a feature such as 'split bills with friends' in a wallet app, including metrics and risks.", "skills": ["Requirements", "Metrics", "Prioritisation"] },
+    { "title": "Metrics dashboard and insights memo", "level": "medium", "description": "Use a public product dataset to define a North Star metric, build a dashboard and write a one-page memo with recommendations.", "skills": ["SQL", "Analytics", "Communication"] },
+    { "title": "No-code MVP with user testing", "level": "medium", "description": "Build an MVP with no-code or AI-assisted tools, recruit 10–20 users and report what you learned and what you'd change.", "skills": ["Discovery", "MVP", "User research"] },
+    { "title": "AI feature launch plan", "level": "hard", "description": "Design an AI feature end to end: use-case selection, evaluation metrics, safety guardrails, prototype, pilot plan, launch metrics and rollback criteria.", "skills": ["AI product management", "Evals", "Go-to-market"] }
+  ],
+  "interview": [
+    { "question": "What does a product manager do?", "answer": "Finds the most valuable problems to solve for users and the business, aligns the team on what to build and why, and makes sure what ships actually achieves the goal." },
+    { "question": "How do you prioritise features?", "answer": "Tie options to goals, estimate impact, confidence and effort (e.g. RICE), consider risks and dependencies, and communicate trade-offs transparently." },
+    { "question": "How would you improve [a familiar app]?", "answer": "Clarify the goal, pick a user segment, identify their biggest pain points, brainstorm solutions, prioritise one, and define how you'd measure success." },
+    { "question": "What is a North Star metric?", "answer": "The single metric that best captures the value users get from the product (e.g. weekly active riders), guiding teams toward long-term growth." },
+    { "question": "A key metric dropped 20% — what do you do?", "answer": "Check data accuracy, segment the drop (platform, region, version, channel), check recent releases and external events, form hypotheses and validate them with data." },
+    { "question": "How do you work with engineers who push back on a deadline?", "answer": "Understand their concerns, revisit scope together, cut to the minimum valuable version, and agree on trade-offs transparently with stakeholders." },
+    { "question": "What is an MVP?", "answer": "The smallest version of a product that lets you test your riskiest assumption with real users and learn quickly." },
+    { "question": "How do you decide whether to use AI for a feature?", "answer": "Use AI when the task is hard to solve with rules, tolerates some error, and has data to evaluate quality. Define success metrics, failure handling and cost before building." },
+    { "question": "How do you measure an AI feature's quality?", "answer": "Combine offline evals (accuracy, helpfulness, safety on a test set) with online metrics (adoption, task success, user feedback, escalation rate) and monitor over time." },
+    { "question": "Tell me about a time you influenced without authority.", "answer": "Use the STAR format: situation, task, the actions you took to build alignment (data, user evidence, listening), and the measurable result." }
+  ],
+  "resumeBullets": [
+    "Led discovery and launch of [feature], increasing [metric] by [X]% within [N] months for [N] users.",
+    "Defined and tracked a North Star metric and OKRs for a [N]-person team, improving retention from [X]% to [Y]%.",
+    "Prioritised a backlog of [N] items using RICE, shipping the top [N] that delivered [business result].",
+    "Ran [N] A/B experiments that increased conversion by [X]% and informed the [year] roadmap.",
+    "Launched an AI-powered [feature] with evaluation guardrails, reaching [X]% adoption and [Y]% task success."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 20171,
+      "maxBdt": 78222,
+      "note": "Paylab IT Product Manager range (10th–90th percentile, gross monthly). Senior PMs at well-funded startups and MNCs earn above this range.",
+      "sources": [
+        { "label": "Paylab — IT Product Manager salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/it-product-manager" }
+      ]
+    },
+    "remote": {
+      "minUsd": 25000,
+      "maxUsd": 80000,
+      "note": "Estimate. Remote PM roles hiring from South Asia are fewer than engineering roles and favour candidates with shipped products and strong English; technical/AI PMs earn toward the top.",
+      "sources": [
+        { "label": "Levels.fyi — Product Manager pay", "url": "https://www.levels.fyi/t/product-manager" }
+      ]
+    },
+    "global": {
+      "medianUsd": 175140,
+      "benchmark": "US median, Computer & Information Systems Managers (BLS, 2025) — closest category for senior tech PMs",
+      "growth": "+16% (2025–35, much faster than average)",
+      "note": "BLS has no product-manager category; this management benchmark reflects senior roles. Entry-level PM pay is considerably lower — check Levels.fyi for level-by-level data.",
+      "sources": [
+        { "label": "BLS — Computer and Information Systems Managers", "url": "https://www.bls.gov/ooh/management/computer-and-information-systems-managers.htm" },
+        { "label": "Levels.fyi — Product Manager pay", "url": "https://www.levels.fyi/t/product-manager" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Growing. Fintech, e-commerce, edtech and SaaS companies hire PMs and product owners; many PMs transition from engineering, design or business analysis.",
+      "remote": "Moderate. Fewer remote PM openings than engineering, but product owner and technical PM roles exist at offshore-friendly companies.",
+      "global": "High for experienced and AI-focused PMs; entry-level PM roles are competitive, so shipped side projects matter."
+    }
+  },
+  "startToday": [
+    "Pick one app you use daily and write down its users, problem and business model",
+    "Read the Scrum Guide (about 30 minutes)",
+    "Subscribe to one free product newsletter",
+    "Write three user stories for a feature you wish an app had",
+    "Start learning SQL with a free interactive course",
+    "Message one product manager on LinkedIn for a 15-minute chat"
+  ]
+}
