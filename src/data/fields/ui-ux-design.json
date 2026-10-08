@@ -1,0 +1,179 @@
+{
+  "slug": "ui-ux-design",
+  "name": "UI/UX & Product Design",
+  "icon": "Palette",
+  "tagline": "Design digital products that are easy, useful and delightful to use.",
+  "category": "design-product",
+  "difficulty": "beginner",
+  "demand": "high",
+  "overview": {
+    "summary": "UX (user experience) designers figure out what people need and how a product should work — through research, user flows, wireframes and usability testing. UI (user interface) designers make it look and feel right — layout, typography, colour, components and interaction. Product designers do both and work closely with product managers and engineers. In 2026, designers are also expected to design AI experiences (chat, agents, generated content) and to use AI tools to prototype faster.",
+    "whyTrending": [
+      "BLS projects web and digital interface designers to grow 6% from 2025 to 2035 with a 2025 US median of $104,000.",
+      "AI-powered products need new interaction patterns — conversational interfaces, trust and transparency cues, human review steps — which creates demand for designers who understand AI.",
+      "Design systems and accessibility are now standard expectations, and laws such as the European Accessibility Act (applying from June 2025) push companies to fix accessibility.",
+      "AI tools (Figma AI features, prototyping assistants) let designers move from idea to working prototype faster, raising the value of designers who can also think in product and code."
+    ],
+    "trendSources": [
+      { "label": "BLS — Web Developers and Digital Designers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" },
+      { "label": "Nielsen Norman Group — UX articles", "url": "https://www.nngroup.com/articles/" }
+    ]
+  },
+  "roles": [
+    { "title": "UX Designer", "description": "Researches user needs, maps journeys and creates wireframes and prototypes that solve real problems." },
+    { "title": "UI Designer", "description": "Designs the visual layer: layouts, typography, colour, iconography and component states." },
+    { "title": "Product Designer", "description": "Owns the end-to-end design of features, from problem framing to high-fidelity design and launch." },
+    { "title": "UX Researcher", "description": "Plans and runs interviews, usability tests and surveys, and turns findings into design decisions." },
+    { "title": "Design Systems Designer", "description": "Builds and maintains reusable component libraries, tokens and guidelines shared with engineering." },
+    { "title": "Conversation / AI Experience Designer", "description": "Designs how users interact with AI assistants and agents, including prompts, errors and trust signals." }
+  ],
+  "skills": {
+    "beginner": [
+      "Design principles: hierarchy, contrast, alignment, spacing",
+      "Typography and colour basics",
+      "Figma fundamentals: frames, auto layout, components",
+      "Wireframing and low-fidelity sketches",
+      "User personas and journey maps",
+      "Heuristic evaluation (Nielsen's 10 heuristics)"
+    ],
+    "intermediate": [
+      "User interviews and usability testing",
+      "Interactive prototyping in Figma",
+      "Responsive and mobile design",
+      "Accessibility (WCAG 2.2 contrast, focus, screen readers)",
+      "Information architecture and user flows",
+      "Design systems and design tokens",
+      "Writing UX case studies"
+    ],
+    "advanced": [
+      "Product thinking: metrics, prioritisation, business goals",
+      "Advanced research: diary studies, A/B tests, quantitative analysis",
+      "Designing AI and conversational experiences",
+      "Motion and micro-interactions",
+      "Design-to-code collaboration (HTML/CSS basics, dev handoff)",
+      "Facilitating workshops and design critiques"
+    ]
+  },
+  "stack": {
+    "languages": ["HTML & CSS (basic)", "Design tokens (JSON)", "English — clear UX writing"],
+    "tools": ["Figma", "FigJam / Miro", "Framer", "Maze / Useberry (testing)", "Adobe Illustrator & Photoshop", "Notion", "ProtoPie", "Webflow", "Hotjar / Microsoft Clarity"],
+    "note": "Figma is listed in nearly every UI/UX posting. A strong case-study portfolio matters more than any certificate."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Design foundations",
+      "goals": [
+        "Learn visual design basics: layout, type, colour, spacing",
+        "Complete Figma's beginner tutorials",
+        "Recreate 5 screens from apps you admire (pixel-perfect practice)",
+        "Read Nielsen's 10 usability heuristics and audit one app",
+        "Start a design inspiration board"
+      ],
+      "milestone": "Five polished UI recreations and a written heuristic audit."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "UX process",
+      "goals": [
+        "Interview 5 people about a real problem",
+        "Create personas, a journey map and user flows",
+        "Wireframe and prototype a solution in Figma",
+        "Run usability tests with 5 users and iterate",
+        "Check accessibility: contrast, touch targets, focus order"
+      ],
+      "milestone": "Your first complete UX case study, from research to tested prototype."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Portfolio and specialisation",
+      "goals": [
+        "Build a small design system with components and tokens",
+        "Design one AI-powered feature (e.g. a smart assistant flow)",
+        "Learn basic HTML/CSS to collaborate with developers",
+        "Publish 2–3 case studies on a portfolio site or Behance",
+        "Get feedback from designers on ADPList or local communities"
+      ],
+      "milestone": "A portfolio with 2–3 strong case studies, ready to send to employers."
+    }
+  ],
+  "resources": [
+    { "title": "Figma Learn (Design basics & tutorials)", "provider": "Figma", "url": "https://help.figma.com/hc/en-us/categories/360002051613", "type": "docs", "note": "Free" },
+    { "title": "Nielsen Norman Group articles", "provider": "NN/g", "url": "https://www.nngroup.com/articles/", "type": "guide", "note": "Free articles" },
+    { "title": "10 Usability Heuristics", "provider": "NN/g", "url": "https://www.nngroup.com/articles/ten-usability-heuristics/", "type": "guide" },
+    { "title": "Laws of UX", "provider": "Jon Yablonski", "url": "https://lawsofux.com/", "type": "guide", "note": "Free" },
+    { "title": "Google UX Design Professional Certificate", "provider": "Google / Coursera", "url": "https://www.coursera.org/professional-certificates/google-ux-design", "type": "course", "note": "Free to audit; financial aid available" },
+    { "title": "Material Design 3 guidelines", "provider": "Google", "url": "https://m3.material.io/", "type": "docs" },
+    { "title": "Apple Human Interface Guidelines", "provider": "Apple", "url": "https://developer.apple.com/design/human-interface-guidelines/", "type": "docs" },
+    { "title": "WCAG 2.2 Quick Reference", "provider": "W3C", "url": "https://www.w3.org/WAI/WCAG22/quickref/", "type": "docs" },
+    { "title": "Interaction Design Foundation — free literature", "provider": "IxDF", "url": "https://www.interaction-design.org/literature", "type": "guide", "note": "Free articles" },
+    { "title": "ADPList — free design mentorship", "provider": "ADPList", "url": "https://adplist.org/", "type": "practice", "note": "Free mentoring" }
+  ],
+  "projects": [
+    { "title": "App redesign with heuristic audit", "level": "easy", "description": "Audit a popular local app (e.g. a transport or utility app) against usability heuristics and redesign three key screens.", "skills": ["Heuristic evaluation", "UI design", "Figma"] },
+    { "title": "Landing page for a local business", "level": "easy", "description": "Design a responsive landing page for a café, tuition centre or shop, with mobile and desktop versions.", "skills": ["Visual design", "Responsive layout"] },
+    { "title": "End-to-end UX case study", "level": "medium", "description": "Research a real problem (e.g. finding reliable tutors), interview users, prototype a solution and test it with 5 people.", "skills": ["User research", "Prototyping", "Usability testing"] },
+    { "title": "Mini design system", "level": "medium", "description": "Create tokens, typography scale and 15+ components with variants and accessibility notes, documented in Figma.", "skills": ["Design systems", "Accessibility", "Documentation"] },
+    { "title": "AI assistant experience for a bank or health app", "level": "hard", "description": "Design a trustworthy AI assistant flow — onboarding, conversation, uncertainty states, human handoff and error recovery — and validate it with usability tests.", "skills": ["Conversation design", "AI UX", "Research"] }
+  ],
+  "interview": [
+    { "question": "Walk me through your design process.", "answer": "Understand the problem and users (research), define goals and constraints, explore ideas, prototype, test with real users, iterate, then hand off and measure results after launch." },
+    { "question": "UX vs UI?", "answer": "UX is how the product works and feels across the whole journey; UI is the visual and interactive layer on screen. Both are needed for a good product." },
+    { "question": "How do you handle feedback you disagree with?", "answer": "Ask questions to understand the concern, bring evidence (research, data, heuristics), propose testing alternatives, and focus on user and business goals rather than personal taste." },
+    { "question": "How do you design for accessibility?", "answer": "Follow WCAG: sufficient contrast, readable type, keyboard and screen-reader support, clear focus states, large touch targets, captions and not relying on colour alone." },
+    { "question": "How many users do you need for a usability test?", "answer": "About five users per round usually reveals most major usability problems; run several small rounds rather than one big one." },
+    { "question": "What is a design system and why use one?", "answer": "A shared library of components, tokens and guidelines that keeps products consistent, speeds up design and development, and makes accessibility easier to maintain." },
+    { "question": "How do you measure design success?", "answer": "Define metrics up front — task success, time on task, conversion, retention, support tickets, satisfaction (e.g. SUS) — and compare before and after." },
+    { "question": "How would you design for low-bandwidth users?", "answer": "Lightweight pages, compressed images, offline states, skeleton loaders, clear retry options and minimal steps to complete key tasks." },
+    { "question": "What makes a good portfolio case study?", "answer": "A clear problem, your specific role, process with key decisions and trade-offs, evidence from research/testing, final design and measurable outcomes." },
+    { "question": "How do you design AI features users can trust?", "answer": "Set expectations about what the AI can do, show sources or reasoning where helpful, let users edit/undo, handle uncertainty gracefully and provide a path to a human." }
+  ],
+  "resumeBullets": [
+    "Redesigned [flow] based on [N] user interviews and usability tests, increasing task completion from [X]% to [Y]%.",
+    "Built a design system of [N] components used across [N] products, reducing design-to-dev time by [X]%.",
+    "Improved accessibility to WCAG 2.2 AA across [N] screens, increasing usage by screen-reader users by [X]%.",
+    "Led discovery research with [N] participants that reshaped the roadmap for [feature/product].",
+    "Designed an AI assistant experience that resolved [X]% of user queries without human support while maintaining a [Y] satisfaction score."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 16416,
+      "maxBdt": 60677,
+      "note": "Paylab User Experience Expert range (10th–90th percentile, gross monthly). Web designers are listed lower at BDT 14,776–39,221; senior product designers at product companies and remote teams earn more.",
+      "sources": [
+        { "label": "Paylab — User Experience Expert salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/user-experience-expert" },
+        { "label": "Paylab — Web Designer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/web-designer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 18000,
+      "maxUsd": 60000,
+      "note": "Estimate. Remote UI/UX work from Bangladesh is common through freelancing platforms and agencies; product designers with strong case studies win full-time remote roles at the top of this range.",
+      "sources": [
+        { "label": "Levels.fyi — Product Designer pay", "url": "https://www.levels.fyi/t/product-designer" }
+      ]
+    },
+    "global": {
+      "medianUsd": 104000,
+      "benchmark": "US median, Web & Digital Interface Designers (BLS, 2025)",
+      "growth": "+6% (2025–35, faster than average)",
+      "note": "Product designers at large tech companies often earn significantly more; see Levels.fyi for company data.",
+      "sources": [
+        { "label": "BLS — Web Developers and Digital Designers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Growing. Software firms, startups, fintech and agencies hire UI/UX designers; many juniors start via freelancing on Fiverr, Upwork or Dribbble.",
+      "remote": "Good, but portfolio-driven and competitive. Specialising (fintech, SaaS dashboards, AI UX) helps you stand out.",
+      "global": "High for experienced product designers; entry-level hiring is tighter, so research skills and real case studies are key."
+    }
+  },
+  "startToday": [
+    "Create a free Figma account and finish its beginner tutorial",
+    "Read NN/g's '10 Usability Heuristics' article",
+    "Screenshot one app you use daily and list 5 usability problems",
+    "Recreate one screen of that app in Figma",
+    "Book a free mentor session on ADPList",
+    "Set up a Behance or Dribbble profile for your future case studies"
+  ]
+}
