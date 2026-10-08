@@ -1,0 +1,179 @@
+{
+  "slug": "mobile-development",
+  "name": "Mobile App Development",
+  "icon": "Smartphone",
+  "tagline": "Build fast, beautiful apps for Android and iOS — natively or cross-platform.",
+  "category": "software",
+  "difficulty": "beginner",
+  "demand": "high",
+  "overview": {
+    "summary": "Mobile developers build the apps people use every day on Android and iOS — banking, ride-sharing, food delivery, health, education and games. You can specialise natively (Kotlin for Android, Swift for iOS) or use cross-platform frameworks like Flutter and React Native to ship to both platforms from one codebase. Modern mobile work increasingly includes on-device AI, offline-first design, payments and accessibility.",
+    "whyTrending": [
+      "Smartphones are the main — often only — internet device for billions of people, including most users in Bangladesh, so businesses build 'mobile-first'.",
+      "Cross-platform tools matured: Flutter and React Native (with its New Architecture) power major production apps, and Compose Multiplatform for iOS reached stable in 2025, letting small teams target both platforms.",
+      "On-device AI (Apple Intelligence, Gemini Nano on Android, Core ML, LiteRT) opens a new wave of smart features that need mobile engineers who understand ML integration.",
+      "In Bangladesh, MFS apps (bKash, Nagad), ride-sharing, e-commerce and banking apps keep mobile developers in steady demand, and Paylab lists iOS developers among the better-paid IT roles."
+    ],
+    "trendSources": [
+      { "label": "Stack Overflow Developer Survey 2025", "url": "https://survey.stackoverflow.co/2025/" },
+      { "label": "Paylab — iOS Developer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/ios-developer" }
+    ]
+  },
+  "roles": [
+    { "title": "Android Developer", "description": "Builds native Android apps with Kotlin and Jetpack Compose." },
+    { "title": "iOS Developer", "description": "Builds native iPhone/iPad apps with Swift and SwiftUI." },
+    { "title": "Flutter Developer", "description": "Builds cross-platform apps for Android, iOS and web with Dart and Flutter." },
+    { "title": "React Native Developer", "description": "Builds cross-platform apps with TypeScript and React Native, often sharing logic with a web team." },
+    { "title": "Mobile QA / Automation Engineer", "description": "Tests apps across devices with automated UI tests (Espresso, XCTest, Maestro, Appium)." },
+    { "title": "Mobile Tech Lead", "description": "Owns app architecture, release process, performance and mentoring for a mobile team." }
+  ],
+  "skills": {
+    "beginner": [
+      "One language: Kotlin, Swift, Dart or TypeScript",
+      "Programming fundamentals and object-oriented basics",
+      "Layouts and UI components (Compose, SwiftUI, Flutter widgets)",
+      "Navigation between screens",
+      "Calling REST APIs and parsing JSON",
+      "Running apps on emulators and real devices"
+    ],
+    "intermediate": [
+      "State management (ViewModel, Provider/Riverpod/Bloc, Redux/Zustand)",
+      "Local storage and offline support (Room, Core Data/SwiftData, SQLite)",
+      "Architecture patterns: MVVM, clean architecture",
+      "Push notifications and background tasks",
+      "Authentication and secure storage",
+      "Publishing to Google Play and the App Store",
+      "Unit and UI testing"
+    ],
+    "advanced": [
+      "Performance profiling: startup time, memory, jank",
+      "Modularisation and large-codebase architecture",
+      "CI/CD for mobile (Fastlane, GitHub Actions, Codemagic)",
+      "On-device ML integration (Core ML, LiteRT/TensorFlow Lite, ML Kit)",
+      "Accessibility and localisation (including Bangla)",
+      "Mobile security: certificate pinning, obfuscation, secure payments"
+    ]
+  },
+  "stack": {
+    "languages": ["Kotlin", "Swift", "Dart", "TypeScript / JavaScript", "Java (legacy Android)"],
+    "tools": ["Android Studio", "Jetpack Compose", "Xcode", "SwiftUI", "Flutter", "React Native / Expo", "Firebase", "Fastlane", "Git", "Figma (handoff)"],
+    "note": "Native Kotlin/Swift roles pay well at product companies; Flutter is especially popular in Bangladesh and South Asia for agency and startup work."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Language and first app",
+      "goals": [
+        "Choose a path: Kotlin (Android), Swift (iOS — needs a Mac), Flutter or React Native",
+        "Learn the language basics with the official tutorials",
+        "Build a counter app and a to-do list app",
+        "Understand layouts, lists and navigation",
+        "Run your app on a real phone"
+      ],
+      "milestone": "A small to-do app running on your own phone."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Real-world features",
+      "goals": [
+        "Fetch data from a REST API with loading and error states",
+        "Add local storage for offline use",
+        "Use an architecture pattern (MVVM) and state management",
+        "Add authentication with Firebase or a custom backend",
+        "Polish UI with a design from Figma"
+      ],
+      "milestone": "A data-driven app with login, offline support and a clean architecture."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Ship to a store",
+      "goals": [
+        "Write unit tests and a few UI tests",
+        "Add push notifications and analytics/crash reporting",
+        "Prepare store listings: icon, screenshots, privacy policy",
+        "Publish to Google Play (or TestFlight for iOS)",
+        "Collect feedback from 10 real users and iterate"
+      ],
+      "milestone": "A published app on Google Play or TestFlight with real users."
+    }
+  ],
+  "resources": [
+    { "title": "Android Basics with Compose", "provider": "Google", "url": "https://developer.android.com/courses/android-basics-compose/course", "type": "course", "note": "Free" },
+    { "title": "Develop in Swift tutorials", "provider": "Apple", "url": "https://developer.apple.com/tutorials/develop-in-swift", "type": "course", "note": "Free" },
+    { "title": "SwiftUI tutorials", "provider": "Apple", "url": "https://developer.apple.com/tutorials/swiftui", "type": "docs" },
+    { "title": "Flutter — Get started", "provider": "Flutter", "url": "https://docs.flutter.dev/get-started", "type": "docs" },
+    { "title": "React Native docs", "provider": "Meta", "url": "https://reactnative.dev/docs/getting-started", "type": "docs" },
+    { "title": "Expo tutorial", "provider": "Expo", "url": "https://docs.expo.dev/tutorial/introduction/", "type": "course", "note": "Free" },
+    { "title": "Kotlin Koans", "provider": "JetBrains", "url": "https://kotlinlang.org/docs/koans.html", "type": "practice", "note": "Free" },
+    { "title": "100 Days of SwiftUI", "provider": "Hacking with Swift", "url": "https://www.hackingwithswift.com/100/swiftui", "type": "course", "note": "Free" },
+    { "title": "Firebase documentation", "provider": "Google", "url": "https://firebase.google.com/docs", "type": "docs" },
+    { "title": "Android Developer roadmap", "provider": "roadmap.sh", "url": "https://roadmap.sh/android", "type": "guide" }
+  ],
+  "projects": [
+    { "title": "Expense tracker", "level": "easy", "description": "Add, edit and categorise expenses in BDT, with monthly totals and local storage.", "skills": ["UI basics", "Local storage", "Lists"] },
+    { "title": "News or prayer-times reader", "level": "easy", "description": "Fetch and display data from a public API with pull-to-refresh, caching and dark mode.", "skills": ["REST APIs", "Caching", "Theming"] },
+    { "title": "Bus route & fare finder", "level": "medium", "description": "Show city bus routes on a map, search by stop, estimate fares and work offline.", "skills": ["Maps SDK", "Offline-first", "Search"] },
+    { "title": "Habit tracker with notifications and sync", "level": "medium", "description": "Daily habits with reminders, streaks, charts and cloud sync via Firebase.", "skills": ["Notifications", "Firebase", "Charts"] },
+    { "title": "On-device AI receipt scanner", "level": "hard", "description": "Scan receipts with the camera, extract totals using on-device OCR/ML, categorise spending and export reports — all with privacy-first local processing.", "skills": ["Camera APIs", "On-device ML", "Architecture"] }
+  ],
+  "interview": [
+    { "question": "Native vs cross-platform — how do you choose?", "answer": "Native gives the best performance and earliest access to platform APIs; cross-platform (Flutter/React Native) saves time with one codebase. Choose by team skills, performance needs, budget and platform-specific features." },
+    { "question": "Explain the Android activity lifecycle (or iOS app lifecycle).", "answer": "Android activities move through onCreate, onStart, onResume, onPause, onStop and onDestroy; you save state and release resources at the right points. iOS has similar scene states: active, inactive, background, suspended." },
+    { "question": "What is MVVM?", "answer": "Model–View–ViewModel separates UI (View) from presentation logic (ViewModel) and data (Model). The View observes ViewModel state, making code testable and lifecycle-safe." },
+    { "question": "How do you make an app work offline?", "answer": "Store data locally (Room/SQLite/SwiftData), show cached data first, queue user actions, and sync with the server when connectivity returns, resolving conflicts." },
+    { "question": "How do you avoid a frozen UI?", "answer": "Never do heavy work on the main thread — use coroutines, async/await, isolates or background threads for network, disk and computation." },
+    { "question": "What is state management in Flutter/React Native?", "answer": "How app data that affects the UI is stored and updated. Small apps can use local state; larger apps use Riverpod/Bloc (Flutter) or Redux/Zustand/React Query (RN) for predictable updates." },
+    { "question": "How do push notifications work?", "answer": "The app registers with FCM (Android) or APNs (iOS) to get a device token, your server sends messages to that service, and it delivers them to the device." },
+    { "question": "How do you store sensitive data securely?", "answer": "Use Android Keystore / EncryptedSharedPreferences or iOS Keychain, never hard-code secrets, and use HTTPS with proper certificate validation." },
+    { "question": "How would you reduce app startup time?", "answer": "Profile it, defer non-essential initialisation, lazy-load modules, reduce work in the first screen, and use baseline profiles (Android) or optimise launch tasks (iOS)." },
+    { "question": "How do you test mobile apps?", "answer": "Unit tests for logic, UI tests (Espresso/Compose tests, XCTest, Flutter integration tests or Maestro), and testing on a range of real devices and OS versions." }
+  ],
+  "resumeBullets": [
+    "Built and published [app] on Google Play/App Store with [N]+ downloads and a [X]-star rating.",
+    "Reduced app crash rate from [X]% to [Y]% by adding Crashlytics monitoring and fixing top [N] issues.",
+    "Cut cold-start time by [X]% through lazy initialisation and baseline profiles.",
+    "Implemented offline-first sync for [feature], enabling use in low-connectivity areas and increasing daily active users by [X]%.",
+    "Migrated [N] screens from [XML/UIKit] to [Jetpack Compose/SwiftUI], reducing UI code by [X]%."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 16942,
+      "maxBdt": 79837,
+      "note": "Combined Paylab ranges for Android Developer (BDT 16,942–73,707) and iOS Developer (BDT 18,958–79,837), 10th–90th percentile, gross monthly.",
+      "sources": [
+        { "label": "Paylab — Android Developer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/android-developer" },
+        { "label": "Paylab — iOS Developer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/ios-developer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 25000,
+      "maxUsd": 70000,
+      "note": "Arc reports Bangladesh-based remote app developers average $38,685 per year and senior developers $69,548.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 134040,
+      "benchmark": "US median, Software Developers, QA Analysts & Testers (BLS, 2025)",
+      "growth": "+10% (2025–35, much faster than average)",
+      "note": "Mobile engineers are counted within software developers by BLS.",
+      "sources": [
+        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High. Fintech/MFS, e-commerce, ride-sharing and agencies hire mobile developers; Flutter roles are especially common in local postings.",
+      "remote": "Good demand, especially for Flutter and React Native freelancers who can deliver both platforms; native iOS/Android specialists earn more.",
+      "global": "High and stable. Mobile remains the primary channel for consumer products worldwide."
+    }
+  },
+  "startToday": [
+    "Decide your path: Android (Kotlin), iOS (Swift), Flutter or React Native",
+    "Install Android Studio, Xcode or the Flutter SDK",
+    "Complete the first unit of the official beginner course for your path",
+    "Enable developer mode on your phone and run 'Hello World' on it",
+    "Sketch the screens of an app you want to build",
+    "Join a local Flutter, Android or iOS developer community group"
+  ]
+}
