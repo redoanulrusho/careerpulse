@@ -13,7 +13,8 @@
     "check-links": "node scripts/check-links.mjs",
     "screenshots": "node scripts/screenshots.mjs",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "build:demo": "node scripts/build-demo.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.53.0",
@@ -40,5 +41,8 @@
     "typescript": "^5",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.0.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

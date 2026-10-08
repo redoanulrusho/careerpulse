@@ -3,3 +3,4 @@ package-lock.json
 .next
 node_modules
 docs
+demo

@@ -39,7 +39,7 @@ async function check(url, attempt = 1) {
     await res.body?.cancel();
     return res.status;
   } catch (err) {
-    if (attempt < 2) return check(url, attempt + 1);
+    if (attempt < 3) return check(url, attempt + 1);
     return `error: ${err.cause?.code ?? err.message}`;
   }
 }

@@ -10,6 +10,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Tested with Vitest](https://img.shields.io/badge/tested_with-Vitest-6e9f18?logo=vitest&logoColor=white)](https://vitest.dev)
 
+**[Live demo](https://claude.ai/artifact/REtRnZWnPpk1JWvzbY6Bqz)** · [Features](#features) · [Tech stack](#tech-stack) · [Getting started](#getting-started)
+
 </div>
 
 CareerPulse helps students and career-switchers pick a tech career and start learning the same day. Each of the
@@ -20,16 +22,16 @@ its source.
 
 ## Screenshots
 
-| Home (light) | Home (dark) |
-| --- | --- |
+| Home (light)                                                      | Home (dark)                                                                             |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | ![Home page with hero and stats](docs/screenshots/home-light.png) | ![Career explorer with search and filters in dark mode](docs/screenshots/home-dark.png) |
 
-| Field detail: 30/60/90 roadmap | Field detail: salary & demand (dark) |
-| --- | --- |
+| Field detail: 30/60/90 roadmap                                                     | Field detail: salary & demand (dark)                                           |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | ![AI Agent Engineering roadmap with checklist](docs/screenshots/field-roadmap.png) | ![Cybersecurity salary and demand tab](docs/screenshots/field-salary-dark.png) |
 
-| Compare 3 fields | Mobile |
-| --- | --- |
+| Compare 3 fields                                               | Mobile                                                                                                                                                            |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Side-by-side comparison table](docs/screenshots/compare.png) | <img src="docs/screenshots/mobile-home.png" alt="Mobile home page" width="240"> <img src="docs/screenshots/mobile-field.png" alt="Mobile field page" width="240"> |
 
 ## Features
@@ -53,16 +55,16 @@ its source.
 
 ## Tech stack
 
-| Area | Choice |
-| --- | --- |
-| Framework | **Next.js 16** (App Router, Cache Components, static generation) |
-| UI | **React 19**, **TypeScript 5** (strict) |
-| Styling | **Tailwind CSS 4** with CSS-variable design tokens |
-| Icons | lucide-react |
-| Content | Typed JSON files (`src/data/fields/*.json`) validated by tests |
-| State | `useSyncExternalStore` + `localStorage` (no state library needed) |
-| Testing | **Vitest** + React Testing Library + jsdom (260+ tests) |
-| Quality | ESLint (next/core-web-vitals + TypeScript), link checker |
+| Area      | Choice                                                            |
+| --------- | ----------------------------------------------------------------- |
+| Framework | **Next.js 16** (App Router, Cache Components, static generation)  |
+| UI        | **React 19**, **TypeScript 5** (strict)                           |
+| Styling   | **Tailwind CSS 4** with CSS-variable design tokens                |
+| Icons     | lucide-react                                                      |
+| Content   | Typed JSON files (`src/data/fields/*.json`) validated by tests    |
+| State     | `useSyncExternalStore` + `localStorage` (no state library needed) |
+| Testing   | **Vitest** + React Testing Library + jsdom (260+ tests)           |
+| Quality   | ESLint (next/core-web-vitals + TypeScript), link checker          |
 
 ## Getting started
 
@@ -77,16 +79,18 @@ npm run dev          # http://localhost:3000
 
 ### Scripts
 
-| Command | What it does |
-| --- | --- |
-| `npm run dev` | Start the dev server |
-| `npm run build` | Production build (prerenders all 20 field pages) |
-| `npm start` | Serve the production build |
-| `npm test` | Run the Vitest suite once |
-| `npm run test:watch` | Run tests in watch mode |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | Generate route types and run `tsc --noEmit` |
-| `npm run check-links` | Check every URL cited in the content |
+| Command               | What it does                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------ |
+| `npm run dev`         | Start the dev server                                                                       |
+| `npm run build`       | Production build (prerenders all 20 field pages)                                           |
+| `npm start`           | Serve the production build                                                                 |
+| `npm test`            | Run the Vitest suite once                                                                  |
+| `npm run test:watch`  | Run tests in watch mode                                                                    |
+| `npm run lint`        | ESLint                                                                                     |
+| `npm run typecheck`   | Generate route types and run `tsc --noEmit`                                                |
+| `npm run check-links` | Check every URL cited in the content                                                       |
+| `npm run build:demo`  | Build the single-file demo (`demo/dist/`) from the same JSON content                       |
+| `npm run format`      | Format with Prettier (+ Tailwind class sorting)                                            |
 | `npm run screenshots` | Capture README screenshots from a running server (needs `npx playwright install chromium`) |
 
 ## Project structure
@@ -106,7 +110,8 @@ src/
 ├── hooks/                    # localStorage-backed stores (progress, compare tray)
 └── lib/                      # Pure, tested logic: filter, format, progress, compare, theme
 tests/                        # Vitest: data integrity, filters, lib, components
-scripts/                      # check-links.mjs, screenshots.mjs
+scripts/                      # check-links, screenshots, build-demo
+demo/                         # Single-file demo template + built output (demo/dist)
 docs/screenshots/             # README images
 ```
 
@@ -119,6 +124,16 @@ docs/screenshots/             # README images
   such as card summaries, checklist IDs and compare rows.
 - **Stable progress IDs.** Checklist IDs are built from the item text (`slug:section:slugified-text`), so reordering
   content keeps a user's progress.
+
+- **Real 404s.** Field pages stream, so `src/proxy.ts` rejects unknown slugs before rendering and returns a
+  proper 404 status.
+
+## Single-file demo
+
+`npm run build:demo` renders the whole app (all 20 fields, search, compare, progress, dark mode) into one
+dependency-free HTML file using the same JSON content. Open `demo/dist/careerpulse-demo-standalone.html`
+directly in a browser, or host it anywhere static (GitHub Pages, Netlify Drop). It is useful as a quick, shareable
+preview alongside the full Next.js app.
 
 ## Adding or editing a field
 
@@ -164,6 +179,10 @@ Or with the GitHub CLI: `gh repo create careerpulse --public --source=. --push`.
 Salaries change, so treat every figure as a starting point and check the linked source. Content was researched in
 October 2026.
 
+## Continuous integration
+
+`.github/workflows/ci.yml` runs lint, type-check, tests and a production build on every push and pull request.
+
 ## License
 
-MIT. Content is provided for educational purposes.
+[MIT](LICENSE). Content is provided for educational purposes.
