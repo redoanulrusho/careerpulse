@@ -1,0 +1,181 @@
+{
+  "slug": "ai-governance",
+  "name": "AI Governance & Responsible AI",
+  "icon": "Scale",
+  "tagline": "Make AI systems safe, fair, compliant and trustworthy — a fast-growing bridge between tech, law and policy.",
+  "category": "ai-data",
+  "difficulty": "intermediate",
+  "demand": "growing",
+  "overview": {
+    "summary": "AI governance professionals make sure organisations build and use AI responsibly: they assess risks (bias, privacy, security, misuse), set internal policies, run evaluations and red-teaming, document systems, and keep the company compliant with new laws like the EU AI Act. The field welcomes people from many backgrounds — computer science, data, law, policy, risk and compliance — and comes in technical flavours (evaluations, red-teaming, fairness testing) and non-technical ones (policy, audits, compliance programmes).",
+    "whyTrending": [
+      "The EU AI Act is being phased in: bans on certain AI practices applied from February 2025, general-purpose AI model obligations from August 2025, and most high-risk system rules are scheduled from August 2026 onward (with ongoing EU debate about simplifying or delaying some deadlines).",
+      "The IAPP AI Governance Profession Report 2025 found organisations rapidly creating AI-governance roles, and IAPP salary research reports a median of about $151,800 for AI-governance-focused professionals.",
+      "Standards such as the NIST AI Risk Management Framework and ISO/IEC 42001 (AI management systems) give companies a structure to follow — and they need people to implement and audit it.",
+      "As agents take real actions (payments, emails, code changes), companies need people who can evaluate safety, set guardrails and investigate incidents."
+    ],
+    "trendSources": [
+      { "label": "IAPP — AI Governance Profession Report", "url": "https://iapp.org/resources/article/ai-governance-profession-report" },
+      { "label": "EU AI Act — official text & timeline (European Commission)", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" },
+      { "label": "NIST AI Risk Management Framework", "url": "https://www.nist.gov/itl/ai-risk-management-framework" }
+    ]
+  },
+  "roles": [
+    { "title": "AI Governance Specialist", "description": "Builds and runs an organisation's AI governance programme: inventories, risk assessments, policies and approvals." },
+    { "title": "Responsible AI / AI Ethics Analyst", "description": "Evaluates AI systems for fairness, transparency and societal impact, and recommends mitigations." },
+    { "title": "AI Risk & Compliance Manager", "description": "Maps AI systems to regulations (EU AI Act, privacy laws), manages documentation and audit readiness." },
+    { "title": "AI Red Teamer / Safety Evaluator", "description": "Stress-tests models and agents for harmful outputs, jailbreaks, data leakage and unsafe actions." },
+    { "title": "AI Auditor", "description": "Independently assesses AI systems and controls against frameworks like ISO/IEC 42001 and the NIST AI RMF." },
+    { "title": "AI Policy Analyst", "description": "Works in government, think tanks or companies on AI policy, standards and public consultation." }
+  ],
+  "skills": {
+    "beginner": [
+      "How machine learning and LLMs work at a conceptual level",
+      "AI risk types: bias, privacy, security, misinformation, misuse",
+      "Data protection basics (e.g. GDPR principles, consent, minimisation)",
+      "Reading regulations and standards carefully",
+      "Clear writing for policies and reports",
+      "Spreadsheet-based risk registers"
+    ],
+    "intermediate": [
+      "EU AI Act risk categories and obligations",
+      "NIST AI RMF (Govern, Map, Measure, Manage) and ISO/IEC 42001",
+      "AI impact assessments and model documentation (model cards, datasheets)",
+      "Fairness metrics and bias testing basics",
+      "LLM evaluation and red-teaming techniques",
+      "Vendor and third-party AI risk assessment",
+      "Python basics for running evaluations (technical track)"
+    ],
+    "advanced": [
+      "Designing enterprise AI governance operating models",
+      "Agent safety: permissions, monitoring, incident response",
+      "Explainability methods (SHAP, LIME) and their limits",
+      "Privacy-enhancing technologies (differential privacy, federated learning)",
+      "AI incident investigation and reporting",
+      "Cross-jurisdiction compliance strategy"
+    ]
+  },
+  "stack": {
+    "languages": ["Python (technical roles)", "SQL (basic)", "Clear English policy writing"],
+    "tools": ["NIST AI RMF & Playbook", "ISO/IEC 42001", "EU AI Act text & guidance", "Fairlearn / AIF360", "Promptfoo / PyRIT / garak (red-teaming)", "Model cards & datasheets", "GRC platforms (OneTrust, ServiceNow)", "Excel / Sheets risk registers", "Jupyter"],
+    "note": "Non-technical roles emphasise frameworks, documentation and privacy certifications (e.g. IAPP AIGP, CIPP). Technical roles add Python, evaluations and red-teaming tools."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "AI and risk literacy",
+      "goals": [
+        "Complete a non-technical AI fundamentals course",
+        "Read the NIST AI RMF core functions",
+        "Learn the EU AI Act risk categories and key dates",
+        "Study 5 real AI incidents from the AI Incident Database",
+        "Write a one-page summary of the main AI risk types"
+      ],
+      "milestone": "A clear, sourced explainer on AI risks and regulation published on LinkedIn or a blog."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Frameworks in practice",
+      "goals": [
+        "Draft an AI acceptable-use policy for a fictional company",
+        "Create an AI system inventory and risk register template",
+        "Write a model card for an open-source model",
+        "Run a basic fairness analysis with Fairlearn on a public dataset (technical track)",
+        "Learn ISO/IEC 42001 structure"
+      ],
+      "milestone": "A governance toolkit: policy, inventory, risk register and model card."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Assessment and red-teaming",
+      "goals": [
+        "Conduct a full AI impact assessment of a real public AI product",
+        "Red-team a chatbot with structured test cases and document findings",
+        "Map a use case to EU AI Act obligations",
+        "Consider the IAPP AIGP certification",
+        "Join AI governance communities and attend a webinar"
+      ],
+      "milestone": "A portfolio with an impact assessment and red-team report — strong evidence for interviews."
+    }
+  ],
+  "resources": [
+    { "title": "NIST AI Risk Management Framework", "provider": "NIST", "url": "https://www.nist.gov/itl/ai-risk-management-framework", "type": "docs" },
+    { "title": "EU AI Act — regulatory framework overview", "provider": "European Commission", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "type": "docs" },
+    { "title": "EU AI Act Explorer", "provider": "Future of Life Institute", "url": "https://artificialintelligenceact.eu/", "type": "guide", "note": "Free" },
+    { "title": "AI Incident Database", "provider": "Responsible AI Collaborative", "url": "https://incidentdatabase.ai/", "type": "guide", "note": "Free" },
+    { "title": "OECD AI Policy Observatory", "provider": "OECD", "url": "https://oecd.ai/en/", "type": "guide" },
+    { "title": "AI for Everyone", "provider": "DeepLearning.AI / Coursera", "url": "https://www.coursera.org/learn/ai-for-everyone", "type": "course", "note": "Free to audit" },
+    { "title": "BlueDot Impact — AI Governance course", "provider": "BlueDot Impact", "url": "https://bluedot.org/", "type": "course", "note": "Free" },
+    { "title": "Fairlearn user guide", "provider": "Fairlearn", "url": "https://fairlearn.org/main/user_guide/index.html", "type": "docs", "note": "Open source" },
+    { "title": "OWASP Top 10 for LLM Applications", "provider": "OWASP", "url": "https://genai.owasp.org/llm-top-10/", "type": "guide" },
+    { "title": "IAPP AI Governance resources (AIGP)", "provider": "IAPP", "url": "https://iapp.org/certify/aigp/", "type": "guide" }
+  ],
+  "projects": [
+    { "title": "AI acceptable-use policy", "level": "easy", "description": "Write a practical AI usage policy for a Bangladeshi software firm or university: allowed tools, confidential data rules, review steps.", "skills": ["Policy writing", "Risk thinking"] },
+    { "title": "AI incident case studies", "level": "easy", "description": "Analyse five incidents from the AI Incident Database: what failed, who was harmed, and which controls would have prevented it.", "skills": ["Root-cause analysis", "Research"] },
+    { "title": "Model card and datasheet", "level": "medium", "description": "Document an open-source model and its training dataset: intended use, limitations, evaluation results and risks.", "skills": ["Documentation", "Evaluation"] },
+    { "title": "Fairness audit of a credit or hiring model", "level": "medium", "description": "Train a simple model on a public dataset, measure fairness across groups with Fairlearn, apply a mitigation and report trade-offs.", "skills": ["Fairness metrics", "Python", "Reporting"] },
+    { "title": "EU AI Act readiness assessment + red-team report", "level": "hard", "description": "Pick an AI product (e.g. a recruitment screener or customer-service agent), classify its risk under the EU AI Act, map obligations, red-team it with 50 test cases and deliver a remediation plan.", "skills": ["Regulatory mapping", "Red-teaming", "Governance"] }
+  ],
+  "interview": [
+    { "question": "What is AI governance?", "answer": "The policies, processes, roles and controls an organisation uses to ensure its AI systems are safe, fair, legal, secure and aligned with its values throughout their life cycle." },
+    { "question": "Summarise the EU AI Act's risk-based approach.", "answer": "It bans unacceptable-risk practices, imposes strict requirements on high-risk systems (risk management, data governance, documentation, human oversight), adds transparency duties for some systems such as chatbots and deepfakes, and has specific rules for general-purpose AI models." },
+    { "question": "What are the four functions of the NIST AI RMF?", "answer": "Govern (culture, policies, accountability), Map (context and risks), Measure (assess and track risks) and Manage (prioritise and act on risks)." },
+    { "question": "How would you detect bias in a model?", "answer": "Define relevant groups and harms, compare metrics like selection rate, false-positive and false-negative rates across groups, investigate data causes, and test mitigations while monitoring trade-offs." },
+    { "question": "What is AI red-teaming?", "answer": "Adversarial testing of AI systems to find harmful behaviours — jailbreaks, unsafe advice, data leakage, prompt injection — before attackers or users do." },
+    { "question": "What is a model card?", "answer": "A short document describing a model's purpose, training data, performance across conditions and groups, limitations and ethical considerations." },
+    { "question": "How do you govern third-party AI tools?", "answer": "Inventory them, assess vendor risk (data use, security, compliance), set contract terms, restrict sensitive data, and monitor usage and incidents." },
+    { "question": "What is 'human oversight' in practice?", "answer": "Designing processes where qualified people can understand, monitor, override or stop AI decisions — with enough time, information and authority to do so meaningfully." },
+    { "question": "How should an organisation respond to an AI incident?", "answer": "Contain the harm, investigate root cause, notify affected parties and regulators where required, fix and test, then update policies and controls." },
+    { "question": "Why is AI governance important for companies in Bangladesh?", "answer": "Firms serving EU and US clients must meet their AI and privacy rules; local regulation and data-protection frameworks are evolving; and trustworthy AI is a competitive advantage." }
+  ],
+  "resumeBullets": [
+    "Built an AI system inventory and risk register covering [N] AI use cases, enabling [EU AI Act / ISO 42001] readiness by [date].",
+    "Led AI impact assessments for [N] products, identifying [N] high-risk issues and agreeing mitigations with engineering.",
+    "Red-teamed [chatbot/agent] with [N] adversarial test cases, reducing policy-violating outputs by [X]% after fixes.",
+    "Drafted and rolled out an AI acceptable-use policy and training to [N] employees, achieving [X]% completion.",
+    "Conducted fairness testing on [model], reducing the selection-rate gap between groups from [X] to [Y] with minimal accuracy loss."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 16279,
+      "maxBdt": 51435,
+      "note": "Dedicated AI-governance roles are still rare in Bangladesh; this uses Paylab's IT Auditor range (10th–90th percentile, gross monthly) as the closest proxy. Data Protection Officers are listed at BDT 15,787–46,278.",
+      "sources": [
+        { "label": "Paylab — IT Auditor salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/it-auditor" },
+        { "label": "Paylab — Data Protection Officer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/data-protection-officer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 25000,
+      "maxUsd": 80000,
+      "note": "Estimate. Remote opportunities include AI evaluation/red-teaming contracts, research assistance for policy organisations, and compliance consulting; experienced governance professionals with certifications earn toward the top.",
+      "sources": [
+        { "label": "IAPP — AI Governance Profession Report", "url": "https://iapp.org/resources/article/ai-governance-profession-report" }
+      ]
+    },
+    "global": {
+      "medianUsd": 151800,
+      "benchmark": "Median for AI-governance-focused professionals (IAPP salary research, 2025–26)",
+      "growth": "Fast-growing new profession; BLS compliance officers +4% (2025–35)",
+      "note": "IAPP data is based mostly on experienced privacy/governance professionals in high-income countries. The broader US Compliance Officers median (BLS, 2025) is $80,730.",
+      "sources": [
+        { "label": "IAPP — AI Governance Profession Report", "url": "https://iapp.org/resources/article/ai-governance-profession-report" },
+        { "label": "BLS — Compliance Officers", "url": "https://www.bls.gov/ooh/business-and-financial/compliance-officers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Early stage. Software exporters serving EU clients, banks, telecoms and development organisations are starting to need AI policy and risk skills — an opportunity to be early.",
+      "remote": "Growing for AI evaluators and red-teamers; policy and governance roles often prefer experience in a specific jurisdiction.",
+      "global": "Fast-growing, driven by the EU AI Act, standards like ISO/IEC 42001 and enterprise AI adoption."
+    }
+  },
+  "startToday": [
+    "Read the European Commission's EU AI Act overview page",
+    "Skim the NIST AI RMF core functions (Govern, Map, Measure, Manage)",
+    "Browse 10 entries in the AI Incident Database",
+    "Enrol in 'AI for Everyone' or a BlueDot Impact course",
+    "Write down how your university or workplace currently uses AI tools",
+    "Draft three rules you think every organisation should follow for AI use"
+  ]
+}
