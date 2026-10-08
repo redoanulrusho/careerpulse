@@ -1,0 +1,178 @@
+{
+  "slug": "cloud-engineering",
+  "name": "Cloud Engineering",
+  "icon": "Cloud",
+  "tagline": "Design, build and run applications on AWS, Azure and Google Cloud — securely and cost-effectively.",
+  "category": "infra-security",
+  "difficulty": "intermediate",
+  "demand": "very-high",
+  "overview": {
+    "summary": "Cloud engineers design and operate the infrastructure that modern apps run on: virtual machines, containers, serverless functions, databases, networks and storage on platforms like Amazon Web Services (AWS), Microsoft Azure and Google Cloud Platform (GCP). They automate infrastructure with code, keep systems secure and available, and control costs. As AI workloads move to the cloud, cloud engineers also manage GPU capacity, data platforms and AI services.",
+    "whyTrending": [
+      "Robert Half's 2026 technology hiring analysis lists cloud engineering among the five pillars where tech hiring demand is concentrated.",
+      "AI adoption drives record cloud spending: companies need engineers to provision GPUs, data pipelines and managed AI services securely.",
+      "BLS counts cloud architects within computer network architects — a 2025 median of $134,050 with 8% projected growth (2025–35), much faster than average.",
+      "Many Bangladeshi companies and government services are migrating from on-premise servers to cloud or hybrid setups, and offshore firms manage cloud for foreign clients."
+    ],
+    "trendSources": [
+      { "label": "Reveal IT Talent Survey — Top technology roles and skills for 2026", "url": "https://www.revealbi.io/reveal-it-talent-survey-top-technology-roles-and-skills-for-2026" },
+      { "label": "BLS — Computer Network Architects (includes cloud architects)", "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm" }
+    ]
+  },
+  "roles": [
+    { "title": "Cloud Engineer", "description": "Builds and maintains cloud infrastructure: compute, storage, networking, IAM and monitoring." },
+    { "title": "Cloud Solutions Architect", "description": "Designs cloud systems for reliability, security, performance and cost, and guides teams on best practices." },
+    { "title": "Cloud Security Engineer", "description": "Secures identities, networks and data in the cloud and enforces compliance policies automatically." },
+    { "title": "FinOps / Cloud Cost Analyst", "description": "Tracks and optimises cloud spending with tagging, budgets, reserved capacity and rightsizing." },
+    { "title": "Cloud Support / Operations Engineer", "description": "Troubleshoots customer or internal cloud issues — a common entry point at cloud providers and MSPs." },
+    { "title": "AI Infrastructure Engineer", "description": "Provisions and optimises GPU clusters, model-serving platforms and managed AI services." }
+  ],
+  "skills": {
+    "beginner": [
+      "Linux administration and the command line",
+      "Networking: IP addressing, subnets, DNS, load balancers, HTTP/HTTPS",
+      "Core cloud services: compute (EC2/VMs), storage (S3/Blob), databases",
+      "Identity and access management (IAM) basics",
+      "Using the cloud console and CLI",
+      "Git and YAML/JSON"
+    ],
+    "intermediate": [
+      "Infrastructure as code with Terraform or CloudFormation/Bicep",
+      "Containers with Docker and managed Kubernetes (EKS/AKS/GKE)",
+      "Serverless (Lambda, Azure Functions, Cloud Run)",
+      "VPC design, private networking and VPNs",
+      "Monitoring and logging (CloudWatch, Azure Monitor, Prometheus)",
+      "Python or Bash automation",
+      "CI/CD pipelines for infrastructure"
+    ],
+    "advanced": [
+      "Multi-account / landing-zone architecture",
+      "High availability and disaster recovery design",
+      "Cloud security posture management and policy-as-code",
+      "Cost optimisation (FinOps) at scale",
+      "Multi-cloud and hybrid networking",
+      "GPU and AI workload infrastructure"
+    ]
+  },
+  "stack": {
+    "languages": ["Python", "Bash", "HCL (Terraform)", "YAML", "Go (tooling)", "PowerShell (Azure)"],
+    "tools": ["AWS", "Microsoft Azure", "Google Cloud", "Terraform", "Docker", "Kubernetes", "GitHub Actions", "Ansible", "CloudWatch / Azure Monitor", "Prometheus & Grafana"],
+    "note": "AWS appears in the most listings worldwide, with Azure strong in enterprise and government. Terraform is the most commonly requested infrastructure-as-code tool."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Linux, networking and cloud basics",
+      "goals": [
+        "Get comfortable with Linux commands, SSH and file permissions",
+        "Learn networking basics: IP, subnets, DNS, HTTP",
+        "Create a free-tier account on AWS, Azure or GCP and set a billing alarm",
+        "Launch a VM, host a static website on object storage, and use IAM users/roles",
+        "Start the AWS Cloud Practitioner or AZ-900 learning path"
+      ],
+      "milestone": "A static personal site hosted in the cloud with HTTPS and a custom domain."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Automation and containers",
+      "goals": [
+        "Write Terraform to create a VPC, VM and database",
+        "Containerise an app with Docker and deploy it to a managed container service",
+        "Build a CI/CD pipeline with GitHub Actions",
+        "Set up monitoring dashboards and alerts",
+        "Complete the Cloud Resume Challenge"
+      ],
+      "milestone": "The Cloud Resume Challenge finished and deployed via infrastructure as code."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Architecture and certification",
+      "goals": [
+        "Learn the AWS Well-Architected Framework (or Azure equivalent)",
+        "Deploy a three-tier app with autoscaling and a load balancer",
+        "Practise security: least-privilege IAM, encryption, secrets management",
+        "Book an associate-level exam (AWS Solutions Architect Associate or AZ-104)",
+        "Write a blog post explaining your architecture and costs"
+      ],
+      "milestone": "Associate-level certification booked or earned, plus a production-style project."
+    }
+  ],
+  "resources": [
+    { "title": "AWS Skill Builder (free digital training)", "provider": "AWS", "url": "https://skillbuilder.aws/", "type": "course", "note": "Free tier of courses" },
+    { "title": "Microsoft Learn — Azure Fundamentals (AZ-900) path", "provider": "Microsoft", "url": "https://learn.microsoft.com/en-us/training/courses/az-900t00", "type": "course", "note": "Free" },
+    { "title": "Google Cloud Skills Boost", "provider": "Google Cloud", "url": "https://www.cloudskillsboost.google/", "type": "course", "note": "Free labs and credits programs" },
+    { "title": "The Cloud Resume Challenge", "provider": "Forrest Brazeal", "url": "https://cloudresumechallenge.dev/", "type": "practice", "note": "Free challenge" },
+    { "title": "Terraform tutorials", "provider": "HashiCorp", "url": "https://developer.hashicorp.com/terraform/tutorials", "type": "docs", "note": "Free" },
+    { "title": "AWS Well-Architected Framework", "provider": "AWS", "url": "https://aws.amazon.com/architecture/well-architected/", "type": "guide" },
+    { "title": "freeCodeCamp — AWS Certified Cloud Practitioner course", "provider": "freeCodeCamp (YouTube)", "url": "https://www.youtube.com/watch?v=NhDYbskXRgc", "type": "video", "note": "Free" },
+    { "title": "Linux Journey", "provider": "Linux Journey", "url": "https://linuxjourney.com/", "type": "course", "note": "Free" },
+    { "title": "roadmap.sh — DevOps & cloud roadmaps", "provider": "roadmap.sh", "url": "https://roadmap.sh/aws", "type": "guide" },
+    { "title": "AWS Free Tier", "provider": "AWS", "url": "https://aws.amazon.com/free/", "type": "practice", "note": "Set a billing alarm first" }
+  ],
+  "projects": [
+    { "title": "Static portfolio site on the cloud", "level": "easy", "description": "Host your CV site on S3 + CloudFront (or Azure Static Web Apps) with HTTPS and a custom domain.", "skills": ["Object storage", "CDN", "DNS"] },
+    { "title": "Serverless visitor counter", "level": "easy", "description": "Add an API (Lambda/Functions + a NoSQL table) that counts site visitors — the core of the Cloud Resume Challenge.", "skills": ["Serverless", "API Gateway", "NoSQL"] },
+    { "title": "Terraform three-tier web app", "level": "medium", "description": "Provision a VPC, load balancer, autoscaling app servers and a managed database entirely with Terraform.", "skills": ["Terraform", "Networking", "Autoscaling"] },
+    { "title": "Cloud cost dashboard", "level": "medium", "description": "Pull billing data, tag resources by project and build a dashboard that flags idle or oversized resources.", "skills": ["FinOps", "Python", "Billing APIs"] },
+    { "title": "Multi-region, highly available platform", "level": "hard", "description": "Deploy a containerised app across two regions on Kubernetes with automated failover, backups, secrets management and a disaster-recovery runbook.", "skills": ["Kubernetes", "HA/DR", "Security", "IaC"] }
+  ],
+  "interview": [
+    { "question": "IaaS vs PaaS vs SaaS?", "answer": "IaaS gives raw infrastructure (VMs, networks); PaaS gives a managed platform to deploy code (App Service, Cloud Run); SaaS is finished software (Gmail, Salesforce). Each step up means less to manage but less control." },
+    { "question": "What is a VPC and a subnet?", "answer": "A VPC is your private, isolated network in the cloud. Subnets divide it into IP ranges; public subnets route to the internet, private subnets do not." },
+    { "question": "What is infrastructure as code and why use it?", "answer": "Defining infrastructure in version-controlled files (e.g. Terraform). It makes environments repeatable, reviewable, testable and easy to recreate." },
+    { "question": "How do you make an application highly available?", "answer": "Run multiple instances across availability zones behind a load balancer, use managed databases with replicas, health checks, autoscaling and automated failover." },
+    { "question": "Vertical vs horizontal scaling?", "answer": "Vertical adds more CPU/RAM to one machine; horizontal adds more machines. Horizontal scaling is preferred for resilience and elasticity." },
+    { "question": "How do you secure an S3 bucket / storage account?", "answer": "Block public access, use least-privilege IAM policies, enable encryption and versioning, turn on access logging and use private endpoints where possible." },
+    { "question": "What is a security group vs a network ACL?", "answer": "Security groups are stateful firewalls attached to resources; network ACLs are stateless rules applied at the subnet level." },
+    { "question": "How would you reduce a cloud bill?", "answer": "Rightsize instances, shut down idle resources, use autoscaling, reserved or savings plans for steady workloads, spot instances for flexible jobs, and storage lifecycle policies." },
+    { "question": "What is the difference between RTO and RPO?", "answer": "RTO is how quickly you must restore service after a failure; RPO is how much data loss (in time) is acceptable. They drive backup and DR design." },
+    { "question": "When would you choose serverless over containers?", "answer": "Serverless suits spiky, event-driven workloads with little ops overhead; containers suit long-running services, custom runtimes or steady high traffic where cost and control matter." }
+  ],
+  "resumeBullets": [
+    "Migrated [N] on-premise services to [AWS/Azure] using Terraform, reducing infrastructure cost by [X]% and deployment time from [X] days to [Y] minutes.",
+    "Designed a multi-AZ architecture that raised availability from [X]% to [99.9X]% for an application serving [N] users.",
+    "Implemented automated cost controls and rightsizing that saved [amount] per month across [N] accounts.",
+    "Built CI/CD pipelines with [GitHub Actions] for infrastructure changes, eliminating manual console changes across [N] environments.",
+    "Enforced least-privilege IAM and encryption policies, resolving [N] critical findings from a cloud security audit."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 18536,
+      "maxBdt": 70174,
+      "note": "Paylab Cloud Engineer range (10th–90th percentile, gross monthly). Certified architects at offshore firms and MNCs typically earn above this range.",
+      "sources": [
+        { "label": "Paylab — Cloud Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/cloud-engineer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 30000,
+      "maxUsd": 85000,
+      "note": "Estimate. Arc reports $43,605 average for Bangladesh-based remote DevOps engineers (the closest category) and $69,548 for senior developers; certified architects earn toward the top.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 134050,
+      "benchmark": "US median, Computer Network Architects incl. cloud architects (BLS, 2025)",
+      "growth": "+8% (2025–35, much faster than average)",
+      "note": "Entry-level cloud support roles earn less; senior cloud architects at large tech firms earn substantially more.",
+      "sources": [
+        { "label": "BLS — Computer Network Architects", "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High at offshore software companies, telecoms, banks and cloud partners/resellers. AWS and Azure certifications are valued in local hiring.",
+      "remote": "High. Cloud work is naturally remote-friendly; DevOps/cloud contractors with Terraform and Kubernetes are in steady demand.",
+      "global": "Very high. Cloud engineering is one of the core tech hiring pillars for 2026, boosted by AI infrastructure needs."
+    }
+  },
+  "startToday": [
+    "Create a free-tier cloud account and immediately set a $5 billing alarm",
+    "Read the Cloud Resume Challenge page and pick your cloud provider",
+    "Start AWS Cloud Practitioner Essentials or Microsoft's AZ-900 path",
+    "Complete the first lessons of Linux Journey",
+    "Install the cloud CLI and Terraform on your computer",
+    "Write down one app you would like to deploy to the cloud by day 60"
+  ]
+}
