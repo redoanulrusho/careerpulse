@@ -34,7 +34,7 @@ export function FieldTabs({ panels }: { panels: TabPanel[] }) {
     const tab = tabRefs.current[id];
     if (tab) {
       if (focus) tab.focus();
-      tab.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+      tab.scrollIntoView?.({ block: "nearest", inline: "center", behavior: "smooth" });
     }
   }, []);
 
