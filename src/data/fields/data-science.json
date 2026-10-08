@@ -1,0 +1,180 @@
+{
+  "slug": "data-science",
+  "name": "Data Science & Analytics",
+  "icon": "ChartColumn",
+  "tagline": "Turn raw data into insights, forecasts and decisions that move a business.",
+  "category": "ai-data",
+  "difficulty": "intermediate",
+  "demand": "very-high",
+  "overview": {
+    "summary": "Data scientists and analysts collect, clean and analyse data to answer questions like 'Why did sales drop?', 'Which customers will leave?' or 'What should we stock next month?'. Analysts focus on SQL, dashboards and clear business storytelling; data scientists add statistics, experiments (A/B tests) and predictive models. Both roles exist in almost every industry — banking, telecom, e-commerce, health, garments, NGOs and government.",
+    "whyTrending": [
+      "The US Bureau of Labor Statistics projects data scientist jobs to grow 35% from 2025 to 2035 — one of the fastest rates of any occupation.",
+      "Big data specialists top the WEF Future of Jobs Report 2025 list of fastest-growing jobs.",
+      "AI tools made analysis faster, so companies now expect analysts to answer more questions, automate reporting and work with AI-generated insights — raising demand for people who can judge whether the numbers are right.",
+      "In Bangladesh, telecom operators, MFS providers (bKash, Nagad), banks and e-commerce firms run data teams for churn, credit and fraud analytics."
+    ],
+    "trendSources": [
+      { "label": "BLS — Data Scientists", "url": "https://www.bls.gov/ooh/math/data-scientists.htm" },
+      { "label": "WEF Future of Jobs Report 2025 (press release)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" }
+    ]
+  },
+  "roles": [
+    { "title": "Data Analyst", "description": "Writes SQL, builds dashboards and reports, and explains trends to business teams." },
+    { "title": "Data Scientist", "description": "Uses statistics and machine learning to predict outcomes, segment customers and design experiments." },
+    { "title": "Business Intelligence (BI) Developer", "description": "Builds the data models and dashboards (Power BI, Tableau, Looker) that managers use every day." },
+    { "title": "Product Analyst", "description": "Measures how people use an app or website, runs A/B tests and recommends product changes." },
+    { "title": "Analytics Engineer", "description": "Transforms raw warehouse data into clean, tested, documented tables using tools like dbt." },
+    { "title": "Decision Scientist / Quant Analyst", "description": "Applies causal inference, forecasting and optimisation to pricing, supply chain or risk decisions." }
+  ],
+  "skills": {
+    "beginner": [
+      "Excel / Google Sheets: formulas, pivot tables, charts",
+      "SQL: SELECT, WHERE, GROUP BY, JOIN",
+      "Descriptive statistics: mean, median, variance, distributions",
+      "Python basics with pandas",
+      "Data cleaning: missing values, duplicates, types",
+      "Clear charts and storytelling with data"
+    ],
+    "intermediate": [
+      "Advanced SQL: window functions, CTEs, query optimisation",
+      "Power BI or Tableau dashboards with data models",
+      "Hypothesis testing and A/B testing",
+      "Regression and classification with scikit-learn",
+      "Data visualisation libraries (Matplotlib, Seaborn, Plotly)",
+      "Working with cloud warehouses (BigQuery, Snowflake)",
+      "Git and reproducible notebooks"
+    ],
+    "advanced": [
+      "Causal inference and experiment design at scale",
+      "Time-series forecasting",
+      "Customer segmentation, churn and lifetime-value modelling",
+      "dbt and analytics engineering practices",
+      "Communicating uncertainty to executives",
+      "Using LLMs for text analytics and automated insights"
+    ]
+  },
+  "stack": {
+    "languages": ["SQL", "Python", "R", "DAX (Power BI)"],
+    "tools": ["Excel", "Power BI", "Tableau", "Looker / Looker Studio", "pandas", "scikit-learn", "Jupyter", "BigQuery", "Snowflake", "dbt", "Git"],
+    "note": "SQL is the single most requested skill in analytics listings, followed by Python and one BI tool (Power BI is especially common in Bangladesh and South Asia)."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "SQL and spreadsheets",
+      "goals": [
+        "Master Excel pivot tables, lookups and charts",
+        "Learn SQL up to JOINs and GROUP BY on a free practice platform",
+        "Review basic statistics and distributions",
+        "Analyse one public dataset end to end in a spreadsheet",
+        "Write a one-page insight summary for a non-technical reader"
+      ],
+      "milestone": "A short report answering a real question with SQL and charts."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Python and dashboards",
+      "goals": [
+        "Learn pandas for cleaning and analysis",
+        "Build an interactive Power BI or Tableau Public dashboard",
+        "Learn window functions and CTEs in SQL",
+        "Run and interpret a simple A/B test",
+        "Publish your work on GitHub and Tableau Public / Power BI gallery"
+      ],
+      "milestone": "A live dashboard plus a notebook-based analysis in your portfolio."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Modelling and storytelling",
+      "goals": [
+        "Train a churn or sales-forecast model with scikit-learn",
+        "Explain model results with feature importance",
+        "Learn the basics of dbt or a cloud warehouse",
+        "Present one project as a 5-slide business story",
+        "Practise SQL interview questions daily"
+      ],
+      "milestone": "Three polished portfolio projects: one SQL, one dashboard, one predictive model."
+    }
+  ],
+  "resources": [
+    { "title": "Google Data Analytics Professional Certificate", "provider": "Google / Coursera", "url": "https://www.coursera.org/professional-certificates/google-data-analytics", "type": "course", "note": "Free to audit; financial aid available" },
+    { "title": "SQLBolt interactive lessons", "provider": "SQLBolt", "url": "https://sqlbolt.com/", "type": "practice", "note": "Free" },
+    { "title": "Mode SQL Tutorial", "provider": "Mode / ThoughtSpot", "url": "https://mode.com/sql-tutorial/", "type": "course", "note": "Free" },
+    { "title": "Kaggle Learn: Python, pandas, Data Visualization", "provider": "Kaggle", "url": "https://www.kaggle.com/learn", "type": "practice", "note": "Free" },
+    { "title": "Microsoft Learn — Power BI training", "provider": "Microsoft", "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi", "type": "course", "note": "Free" },
+    { "title": "Tableau Free Training Videos", "provider": "Tableau", "url": "https://www.tableau.com/learn/training", "type": "video", "note": "Free" },
+    { "title": "Python for Data Analysis (3rd ed., open access)", "provider": "Wes McKinney", "url": "https://wesmckinney.com/book/", "type": "book", "note": "Free online" },
+    { "title": "OpenIntro Statistics", "provider": "OpenIntro", "url": "https://www.openintro.org/book/os/", "type": "book", "note": "Free PDF" },
+    { "title": "Data Analysis with Python certification", "provider": "freeCodeCamp", "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/", "type": "course", "note": "Free" },
+    { "title": "StrataScratch / LeetCode SQL practice", "provider": "LeetCode", "url": "https://leetcode.com/studyplan/top-sql-50/", "type": "practice", "note": "Free tier" }
+  ],
+  "projects": [
+    { "title": "Personal expense or mobile-data usage dashboard", "level": "easy", "description": "Track 2–3 months of your own spending or app usage and build a dashboard with monthly trends and insights.", "skills": ["Excel", "Charts", "Storytelling"] },
+    { "title": "Bangladesh public data explorer", "level": "easy", "description": "Analyse an open dataset (e.g. World Bank indicators for Bangladesh, BBS census tables) and publish a Tableau Public story.", "skills": ["Data cleaning", "Tableau/Power BI"] },
+    { "title": "E-commerce SQL analysis", "level": "medium", "description": "Use a public e-commerce dataset to answer 10 business questions with SQL (retention, top products, cohort revenue).", "skills": ["Advanced SQL", "Cohort analysis"] },
+    { "title": "Telecom churn prediction", "level": "medium", "description": "Build a churn model, explain top drivers, and estimate the revenue saved by a targeted retention campaign.", "skills": ["scikit-learn", "Feature importance", "Business impact"] },
+    { "title": "A/B test analysis and experiment platform", "level": "hard", "description": "Simulate or use real experiment data, compute significance and power, handle multiple metrics, and build a reusable analysis report generator.", "skills": ["Statistics", "Python", "Experiment design"] }
+  ],
+  "interview": [
+    { "question": "What is the difference between WHERE and HAVING?", "answer": "WHERE filters rows before grouping; HAVING filters groups after GROUP BY, usually on aggregated values." },
+    { "question": "Explain a p-value in plain language.", "answer": "The probability of seeing results at least as extreme as yours if there were really no effect. A small p-value suggests the observed difference is unlikely to be pure chance." },
+    { "question": "How would you design an A/B test?", "answer": "Define one primary metric and hypothesis, compute required sample size, randomise users, run for a full business cycle, avoid peeking, then check significance and practical impact." },
+    { "question": "What is a window function?", "answer": "A SQL function that computes a value across related rows without collapsing them — e.g. ROW_NUMBER, running totals or moving averages using OVER (PARTITION BY ... ORDER BY ...)." },
+    { "question": "How do you handle missing data?", "answer": "First understand why it's missing. Then drop, impute (mean/median/model-based), or flag it, depending on the amount and whether the missingness is random." },
+    { "question": "Correlation vs causation?", "answer": "Correlation means two variables move together; causation means one changes the other. Experiments or causal methods are needed to claim causation." },
+    { "question": "How would you explain a model to a non-technical manager?", "answer": "Focus on the decision it supports, how accurate it is in business terms, the top drivers, and its limits — avoid jargon and show examples." },
+    { "question": "What is overfitting and how do you detect it?", "answer": "When a model memorises training data and fails on new data. Detect it with a large gap between training and validation scores; fix with simpler models, regularisation or more data." },
+    { "question": "Which chart would you use to show change over time?", "answer": "A line chart for continuous time series; a bar chart for a few discrete periods. Avoid pie charts for trends." },
+    { "question": "Revenue dropped 10% last week. How do you investigate?", "answer": "Check data quality first, then break the metric down by segment (region, channel, product, new vs returning), compare to seasonality, and look for product, pricing or external changes." }
+  ],
+  "resumeBullets": [
+    "Built a [Power BI/Tableau] dashboard used by [N] managers weekly, replacing [X] hours of manual reporting.",
+    "Analysed [N] million transactions with SQL to identify [insight], leading to [business result, e.g. 8% revenue lift].",
+    "Developed a churn model with [X] AUC that targeted retention offers to the top [Y]% at-risk customers, saving an estimated [amount].",
+    "Designed and analysed [N] A/B tests, informing product changes that increased conversion by [X]%.",
+    "Automated a monthly KPI pipeline in Python, cutting report preparation from [X] days to [Y] hours with zero manual errors."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 17193,
+      "maxBdt": 62823,
+      "note": "Paylab Data Scientist range (10th–90th percentile, gross monthly). Business Intelligence Specialists are listed at BDT 16,485–57,681. Senior data scientists at large telecoms, banks and MNCs can earn above this range.",
+      "sources": [
+        { "label": "Paylab — Data Scientist salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/data-scientist" },
+        { "label": "Paylab — Business Intelligence Specialist salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/business-intelligence-specialist" }
+      ]
+    },
+    "remote": {
+      "minUsd": 25000,
+      "maxUsd": 70000,
+      "note": "Estimate. Arc reports an average of $42,875 per year for Bangladesh-based remote data scientists; remote analyst roles usually pay less, senior data scientists more.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 120230,
+      "benchmark": "US median, Data Scientists (BLS, 2025)",
+      "growth": "+35% (2025–35, much faster than average)",
+      "note": "Data analysts typically earn less than data scientists; product and decision scientists at tech firms often earn more.",
+      "sources": [
+        { "label": "BLS — Data Scientists", "url": "https://www.bls.gov/ooh/math/data-scientists.htm" },
+        { "label": "Levels.fyi — Data Scientist pay", "url": "https://www.levels.fyi/t/data-scientist" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High for data analysts and BI roles in telecom, banking, MFS, e-commerce, pharma and development organisations. Power BI + SQL is the most common combination in local postings.",
+      "remote": "High but competitive. Analysts with strong English communication, SQL and a domain specialty (e-commerce, marketing, finance) win remote contracts most easily.",
+      "global": "Very high. BLS projects 35% growth for data scientists, about 24,800 openings per year in the US alone."
+    }
+  },
+  "startToday": [
+    "Complete the first two SQLBolt lessons (about 30 minutes)",
+    "Download Power BI Desktop (free) or create a Tableau Public account",
+    "Find one dataset you care about on Kaggle or data.worldbank.org",
+    "Write down three questions you want to answer with that dataset",
+    "Create a GitHub repository for your analytics portfolio",
+    "Follow a daily SQL practice habit: one problem per day"
+  ]
+}
