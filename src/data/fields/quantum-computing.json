@@ -1,0 +1,179 @@
+{
+  "slug": "quantum-computing",
+  "name": "Quantum Computing",
+  "icon": "Atom",
+  "tagline": "Program a new kind of computer that uses quantum physics to tackle problems classical machines can't.",
+  "category": "emerging",
+  "difficulty": "advanced",
+  "demand": "emerging",
+  "overview": {
+    "summary": "Quantum computers use qubits, which can exist in superpositions and become entangled, to run algorithms that may one day solve certain problems — chemistry simulation, optimisation, cryptography — far faster than classical computers. Today's machines are still small and noisy, so most work is research, building better hardware and error correction, writing software tools, and finding early useful applications. It is a long-term career bet: demand is real but concentrated in research labs, hardware companies, big tech and governments, and most roles require strong maths and physics (often a master's or PhD).",
+    "whyTrending": [
+      "The global pure-play quantum workforce grew to roughly 16,500 people in 2025, and industry trackers report steady hiring growth into 2026, especially for error-correction and hardware engineers.",
+      "Major progress in quantum error correction (from Google, IBM, Quantinuum and others) moved the industry closer to fault-tolerant machines, and companies publish multi-year roadmaps toward them.",
+      "Post-quantum cryptography is urgent now: NIST published its first post-quantum encryption standards in 2024, and organisations must migrate systems — creating demand even outside quantum hardware companies.",
+      "2025 was declared the International Year of Quantum Science and Technology by the United Nations, increasing public funding and education programmes worldwide."
+    ],
+    "trendSources": [
+      { "label": "The Quantum Insider — Quantum computing jobs and salaries in 2026", "url": "https://thequantuminsider.com/2026/05/29/quantum-computing-jobs-and-salaries-in-2026/" },
+      { "label": "NIST — Post-quantum cryptography standards", "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" },
+      { "label": "International Year of Quantum (IYQ 2025)", "url": "https://quantum2025.org/" }
+    ]
+  },
+  "roles": [
+    { "title": "Quantum Software Engineer", "description": "Builds compilers, SDKs, simulators and tools that let developers program quantum hardware." },
+    { "title": "Quantum Algorithm Researcher", "description": "Designs and analyses algorithms for chemistry, optimisation, machine learning or cryptography." },
+    { "title": "Quantum Error Correction Engineer", "description": "Develops codes and real-time decoders that protect fragile qubits from noise — one of the most in-demand specialties." },
+    { "title": "Quantum Hardware / Control Engineer", "description": "Designs and operates qubit hardware, cryogenics, microwave/laser control electronics and FPGA systems." },
+    { "title": "Quantum Applications Scientist", "description": "Works with industry partners (pharma, finance, energy) to find problems where quantum methods could help." },
+    { "title": "Post-Quantum Cryptography Engineer", "description": "Migrates software and infrastructure to quantum-resistant encryption — a security role that exists today." }
+  ],
+  "skills": {
+    "beginner": [
+      "Linear algebra: vectors, matrices, complex numbers, eigenvalues",
+      "Probability and basic statistics",
+      "Python programming with NumPy",
+      "Qubits, superposition, measurement and the Bloch sphere",
+      "Quantum gates and simple circuits",
+      "Running circuits on simulators"
+    ],
+    "intermediate": [
+      "Qiskit, Cirq or PennyLane programming",
+      "Entanglement, teleportation and basic protocols",
+      "Core algorithms: Deutsch–Jozsa, Grover, Quantum Fourier Transform, phase estimation",
+      "Variational algorithms (VQE, QAOA)",
+      "Noise, decoherence and error mitigation",
+      "Running jobs on real cloud quantum hardware"
+    ],
+    "advanced": [
+      "Quantum error correction (surface codes, decoders)",
+      "Shor's algorithm and quantum complexity theory",
+      "Hamiltonian simulation for chemistry and materials",
+      "Quantum compilation and circuit optimisation",
+      "Hardware physics: superconducting, trapped-ion, neutral-atom or photonic qubits",
+      "Post-quantum cryptography (ML-KEM, ML-DSA) implementation"
+    ]
+  },
+  "stack": {
+    "languages": ["Python", "C++", "Rust", "Julia", "OpenQASM", "Q# (Microsoft)"],
+    "tools": ["Qiskit (IBM)", "Cirq (Google)", "PennyLane (Xanadu)", "CUDA-Q (NVIDIA)", "Amazon Braket", "Azure Quantum", "IBM Quantum Platform", "NumPy / SciPy", "Jupyter", "FPGA toolchains (hardware roles)"],
+    "note": "Qiskit is the most frequently named SDK in job tags; Python is universal, while C++/Rust appear for performance-critical compilers, simulators and decoders."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Maths and quantum basics",
+      "goals": [
+        "Refresh linear algebra and complex numbers",
+        "Learn qubits, gates, measurement and the Bloch sphere",
+        "Install Qiskit and run your first circuit on a simulator",
+        "Complete the first modules of IBM Quantum Learning",
+        "Build and explain a Bell-state (entanglement) circuit"
+      ],
+      "milestone": "A notebook of basic circuits with clear explanations of what each does."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Algorithms",
+      "goals": [
+        "Implement Deutsch–Jozsa, Bernstein–Vazirani and Grover's algorithm",
+        "Learn the Quantum Fourier Transform and phase estimation",
+        "Run circuits on real IBM quantum hardware and compare to simulation",
+        "Study noise and simple error-mitigation techniques",
+        "Try PennyLane for a variational algorithm"
+      ],
+      "milestone": "Implementations of four classic algorithms with simulator vs hardware comparisons."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Applications and community",
+      "goals": [
+        "Run VQE to estimate the ground-state energy of a small molecule",
+        "Solve a small optimisation problem with QAOA",
+        "Learn the basics of quantum error correction",
+        "Contribute a small fix or tutorial to an open-source quantum project",
+        "Join a quantum hackathon or challenge (e.g. IBM Quantum challenges, QHack)"
+      ],
+      "milestone": "A VQE/QAOA project, an open-source contribution and a hackathon entry."
+    }
+  ],
+  "resources": [
+    { "title": "IBM Quantum Learning", "provider": "IBM", "url": "https://quantum.cloud.ibm.com/learning", "type": "course", "note": "Free" },
+    { "title": "Qiskit documentation", "provider": "IBM", "url": "https://docs.quantum.ibm.com/", "type": "docs" },
+    { "title": "PennyLane Codebook & demos", "provider": "Xanadu", "url": "https://pennylane.ai/codebook", "type": "practice", "note": "Free" },
+    { "title": "Cirq documentation", "provider": "Google Quantum AI", "url": "https://quantumai.google/cirq", "type": "docs" },
+    { "title": "Quantum Country", "provider": "Andy Matuschak & Michael Nielsen", "url": "https://quantum.country/", "type": "book", "note": "Free" },
+    { "title": "Introduction to Quantum Information (KAIST)", "provider": "Coursera", "url": "https://www.coursera.org/learn/introduction-to-quantum-information", "type": "course", "note": "Free to audit" },
+    { "title": "MIT OpenCourseWare — Quantum Information Science", "provider": "MIT OCW", "url": "https://ocw.mit.edu/courses/8-370x-quantum-information-science-i-spring-2018/", "type": "course", "note": "Free" },
+    { "title": "Microsoft Azure Quantum Katas", "provider": "Microsoft", "url": "https://quantum.microsoft.com/en-us/tools/quantum-katas", "type": "practice", "note": "Free" },
+    { "title": "Essence of Linear Algebra", "provider": "3Blue1Brown (YouTube)", "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab", "type": "video", "note": "Free" },
+    { "title": "NIST Post-Quantum Cryptography project", "provider": "NIST", "url": "https://csrc.nist.gov/projects/post-quantum-cryptography", "type": "docs" }
+  ],
+  "projects": [
+    { "title": "Quantum random number generator", "level": "easy", "description": "Use superposition and measurement to generate random numbers on a simulator and real hardware; test their randomness.", "skills": ["Qiskit", "Measurement", "Statistics"] },
+    { "title": "Interactive Bloch-sphere visualiser", "level": "easy", "description": "A small web or notebook tool that shows how single-qubit gates rotate a state on the Bloch sphere.", "skills": ["Linear algebra", "Visualisation"] },
+    { "title": "Grover search demo", "level": "medium", "description": "Implement Grover's algorithm for a small search problem, analyse success probability and compare simulator vs hardware noise.", "skills": ["Algorithms", "Noise analysis"] },
+    { "title": "Molecule energy with VQE", "level": "medium", "description": "Estimate the ground-state energy of H₂ or LiH with VQE and compare against classical results.", "skills": ["VQE", "Quantum chemistry", "Optimisation"] },
+    { "title": "Error-correction simulation or PQC migration tool", "level": "hard", "description": "Simulate a repetition/surface code with a decoder and plot logical error rates — or build a scanner that finds non-quantum-safe crypto in a codebase and suggests ML-KEM/ML-DSA replacements.", "skills": ["Error correction", "Simulation", "Cryptography"] }
+  ],
+  "interview": [
+    { "question": "What is a qubit?", "answer": "The basic unit of quantum information. Unlike a bit (0 or 1), a qubit can be in a superposition α|0⟩ + β|1⟩; measurement gives 0 or 1 with probabilities |α|² and |β|²." },
+    { "question": "What is entanglement?", "answer": "A correlation between qubits where the state of the system cannot be described as separate individual states; measuring one affects the outcomes of the other." },
+    { "question": "What does a Hadamard gate do?", "answer": "It maps |0⟩ to an equal superposition (|0⟩+|1⟩)/√2 and |1⟩ to (|0⟩−|1⟩)/√2 — commonly used to create superposition." },
+    { "question": "Why are today's quantum computers called 'NISQ'?", "answer": "Noisy Intermediate-Scale Quantum: they have tens to hundreds (or a few thousand) of qubits with significant error rates and no full error correction." },
+    { "question": "What speed-up does Grover's algorithm give?", "answer": "A quadratic speed-up for unstructured search: about √N steps instead of N." },
+    { "question": "Why is Shor's algorithm important?", "answer": "It factors large numbers efficiently on a fault-tolerant quantum computer, which would break RSA and similar public-key cryptography — driving the move to post-quantum cryptography." },
+    { "question": "What is decoherence?", "answer": "The loss of quantum information as qubits interact with their environment, which limits how long and how deep circuits can run." },
+    { "question": "What is a variational quantum algorithm?", "answer": "A hybrid method where a parameterised quantum circuit is evaluated on hardware and a classical optimiser tunes the parameters, e.g. VQE and QAOA." },
+    { "question": "What is quantum error correction?", "answer": "Encoding one logical qubit into many physical qubits and repeatedly measuring error syndromes so errors can be detected and corrected without destroying the information." },
+    { "question": "What is post-quantum cryptography?", "answer": "Classical cryptographic algorithms believed to resist quantum attacks, such as NIST's ML-KEM (key exchange) and ML-DSA (signatures)." }
+  ],
+  "resumeBullets": [
+    "Implemented [N] quantum algorithms in Qiskit/PennyLane and benchmarked them on [hardware], documenting noise effects and mitigation results.",
+    "Estimated the ground-state energy of [molecule] with VQE to within [X] mHa of the classical reference.",
+    "Contributed [feature/fix/tutorial] to [open-source quantum project], merged and used by [N] users.",
+    "Simulated a distance-[d] surface code and decoder, showing logical error suppression below [threshold].",
+    "Placed [rank] in [IBM Quantum Challenge / QHack / hackathon] among [N] teams."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 18345,
+      "maxBdt": 100918,
+      "note": "There are almost no dedicated quantum-computing jobs in Bangladesh; quantum work is mostly academic research. This uses Paylab's Software Engineer range (10th–90th percentile, gross monthly) as a reference for the software skills involved.",
+      "sources": [
+        { "label": "Paylab — Software Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/software-engineer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 30000,
+      "maxUsd": 100000,
+      "note": "Estimate. Fully remote quantum roles are limited; open-source software, PQC migration and some research-engineering roles hire remotely, usually requiring a strong publication or open-source track record.",
+      "sources": [
+        { "label": "The Quantum Insider — Quantum computing jobs and salaries in 2026", "url": "https://thequantuminsider.com/2026/05/29/quantum-computing-jobs-and-salaries-in-2026/" }
+      ]
+    },
+    "global": {
+      "medianUsd": 140300,
+      "benchmark": "US median, Computer & Information Research Scientists (BLS, 2025)",
+      "growth": "+22% (2025–35, much faster than average)",
+      "note": "BLS has no quantum-specific category. Industry trackers report a median of roughly $124k for Qiskit-tagged roles in 2026, with senior hardware and error-correction specialists earning more.",
+      "sources": [
+        { "label": "BLS — Computer and Information Research Scientists", "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm" },
+        { "label": "The Quantum Insider — Quantum computing jobs and salaries in 2026", "url": "https://thequantuminsider.com/2026/05/29/quantum-computing-jobs-and-salaries-in-2026/" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Very limited — mainly university research. Best local path: strong CS/physics/maths degree, research experience and applying to master's/PhD programmes abroad.",
+      "remote": "Limited but real for open-source contributors, PQC engineers and research software engineers.",
+      "global": "Emerging and specialised. Hiring is concentrated in the US, Europe, Canada, Australia, Japan and Singapore at hardware companies, big tech and national labs."
+    }
+  },
+  "startToday": [
+    "Create a free IBM Quantum Platform account",
+    "Watch the first 3 episodes of 3Blue1Brown's 'Essence of Linear Algebra'",
+    "Install Qiskit (pip install qiskit) or use it in a hosted notebook",
+    "Build and run a one-qubit circuit with a Hadamard gate",
+    "Read the first essay on quantum.country",
+    "Find a professor or research group near you working on quantum topics"
+  ]
+}
