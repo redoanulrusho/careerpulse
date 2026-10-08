@@ -1,0 +1,179 @@
+{
+  "slug": "fintech-engineering",
+  "name": "Fintech Engineering",
+  "icon": "Wallet",
+  "tagline": "Build secure payment, banking and lending systems that move money reliably at scale.",
+  "category": "software",
+  "difficulty": "intermediate",
+  "demand": "high",
+  "overview": {
+    "summary": "Fintech engineers build the software behind digital money: mobile wallets, payment gateways, online banking, lending and credit scoring, remittances, stock and insurance platforms. The work combines strong back-end engineering with extra rules: transactions must never be lost or duplicated, systems must be secure and auditable, and regulation (KYC, anti-money-laundering, data protection) shapes the design. Bangladesh is a strong market for this field thanks to mobile financial services (MFS) like bKash and Nagad, and the move toward digital banking.",
+    "whyTrending": [
+      "Fintech engineers rank second among the fastest-growing jobs in the WEF Future of Jobs Report 2025.",
+      "Real-time payments, open banking APIs and stablecoin-based settlement are changing how money moves, and banks need engineers to modernise legacy systems.",
+      "AI is being applied to fraud detection, credit scoring and customer support — creating hybrid fintech + data roles.",
+      "Bangladesh's MFS ecosystem serves tens of millions of accounts, and Bangladesh Bank has introduced a digital-bank licensing framework, creating local demand for payment and banking engineers."
+    ],
+    "trendSources": [
+      { "label": "WEF Future of Jobs Report 2025 (press release)", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" },
+      { "label": "Bangladesh Bank — Mobile Financial Services statistics", "url": "https://www.bb.org.bd/en/index.php/financialactivity/mfsdata" }
+    ]
+  },
+  "roles": [
+    { "title": "Payments Engineer", "description": "Builds payment flows, gateway integrations, reconciliation and settlement systems." },
+    { "title": "Core Banking / Ledger Engineer", "description": "Works on double-entry ledgers, accounts and transaction processing that must be exact and auditable." },
+    { "title": "Fraud & Risk Engineer", "description": "Builds rule engines and ML models that detect fraud and money laundering in real time." },
+    { "title": "Fintech Mobile Developer", "description": "Builds secure wallet and banking apps with biometrics, PINs and smooth payment UX." },
+    { "title": "Open Banking / API Engineer", "description": "Designs secure APIs for partners, merchants and third-party apps, with strong authentication and rate limiting." },
+    { "title": "Quant / Trading Systems Developer", "description": "Builds low-latency trading, pricing and risk systems for brokers and investment firms." }
+  ],
+  "skills": {
+    "beginner": [
+      "A back-end language: Java, Kotlin, Go, Python or C#",
+      "SQL and relational databases",
+      "REST APIs and JSON",
+      "Basic finance concepts: accounts, balances, interest, fees",
+      "Git and testing basics",
+      "Security basics: HTTPS, hashing, authentication"
+    ],
+    "intermediate": [
+      "Database transactions, isolation levels and locking",
+      "Double-entry bookkeeping and ledger design",
+      "Idempotency keys and safe retries",
+      "Payment gateway integration (cards, MFS, bank transfers)",
+      "Message queues (Kafka, RabbitMQ) and event-driven design",
+      "OAuth 2.0 / OpenID Connect",
+      "Spring Boot or a comparable framework"
+    ],
+    "advanced": [
+      "Distributed transactions, sagas and exactly-once processing",
+      "Reconciliation and settlement systems",
+      "PCI DSS compliance and secure architecture",
+      "Fraud detection with rules + machine learning",
+      "High availability and disaster recovery for financial systems",
+      "Regulatory requirements: KYC/AML, audit trails, data residency"
+    ]
+  },
+  "stack": {
+    "languages": ["Java", "Kotlin", "Go", "Python", "SQL", "TypeScript", "C# (.NET in banks)"],
+    "tools": ["Spring Boot", "PostgreSQL / Oracle", "Kafka", "Redis", "Docker & Kubernetes", "Stripe / payment gateway APIs", "Keycloak / OAuth providers", "Grafana / Prometheus", "AWS / Azure", "Kotlin/Swift for wallet apps"],
+    "note": "Java + Spring Boot dominates banking and MFS listings in Bangladesh and globally; Go and Kotlin are common at newer fintechs. Oracle and core-banking platforms appear in traditional bank roles."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "Back-end and finance basics",
+      "goals": [
+        "Get solid in one back-end language (Java/Spring Boot recommended)",
+        "Learn SQL, transactions and ACID properties",
+        "Understand how payments work: cards, MFS, bank transfers, settlement",
+        "Learn double-entry bookkeeping basics",
+        "Build a simple REST API with authentication"
+      ],
+      "milestone": "A REST API for a simple wallet with deposits, withdrawals and balance checks."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Correctness and payments",
+      "goals": [
+        "Implement a double-entry ledger with immutable transactions",
+        "Add idempotency keys so retries never double-charge",
+        "Integrate a payment gateway sandbox (e.g. Stripe test mode or a local gateway sandbox)",
+        "Use a message queue for asynchronous notifications",
+        "Write tests for concurrency (simultaneous transfers)"
+      ],
+      "milestone": "A wallet service that stays correct under concurrent transfers and retries, proven by tests."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Security, fraud and scale",
+      "goals": [
+        "Add OAuth 2.0, audit logs and role-based access",
+        "Build a simple fraud rule engine (velocity checks, limits)",
+        "Implement daily reconciliation against a mock bank statement",
+        "Learn PCI DSS and KYC/AML basics",
+        "Deploy with Docker and monitoring dashboards"
+      ],
+      "milestone": "A fintech portfolio project with ledger, payments, fraud rules, reconciliation and a design doc."
+    }
+  ],
+  "resources": [
+    { "title": "Spring Boot guides", "provider": "Spring", "url": "https://spring.io/guides", "type": "docs" },
+    { "title": "Stripe documentation (payments concepts & test mode)", "provider": "Stripe", "url": "https://docs.stripe.com/", "type": "docs" },
+    { "title": "Modern Treasury Journal — payments & ledgers explained", "provider": "Modern Treasury", "url": "https://www.moderntreasury.com/journal", "type": "guide", "note": "Free articles" },
+    { "title": "Designing Data-Intensive Applications (concepts)", "provider": "Martin Kleppmann", "url": "https://dataintensive.net/", "type": "book" },
+    { "title": "PostgreSQL docs — Transaction isolation", "provider": "PostgreSQL", "url": "https://www.postgresql.org/docs/current/transaction-iso.html", "type": "docs" },
+    { "title": "PCI Security Standards — Document library", "provider": "PCI SSC", "url": "https://www.pcisecuritystandards.org/document_library/", "type": "docs" },
+    { "title": "OAuth 2.0 simplified", "provider": "Aaron Parecki", "url": "https://www.oauth.com/", "type": "guide", "note": "Free" },
+    { "title": "FinTech: Finance Industry Transformation and Regulation (HKUST)", "provider": "Coursera", "url": "https://www.coursera.org/specializations/fintech", "type": "course", "note": "Free to audit" },
+    { "title": "Bangladesh Bank — Payment Systems", "provider": "Bangladesh Bank", "url": "https://www.bb.org.bd/en/index.php/financialactivity/mfsdata", "type": "guide" },
+    { "title": "System Design Primer", "provider": "donnemartin (GitHub)", "url": "https://github.com/donnemartin/system-design-primer", "type": "guide", "note": "Free" }
+  ],
+  "projects": [
+    { "title": "Personal finance tracker API", "level": "easy", "description": "A REST API for income/expense tracking with categories, monthly summaries and CSV export.", "skills": ["REST", "SQL", "Auth"] },
+    { "title": "Loan EMI and interest calculator", "level": "easy", "description": "A web tool that calculates loan schedules (flat vs reducing balance) with clear explanations — a common local need.", "skills": ["Financial maths", "Front end"] },
+    { "title": "Double-entry wallet service", "level": "medium", "description": "A wallet with accounts, transfers and an immutable double-entry ledger that stays consistent under concurrent requests.", "skills": ["Transactions", "Ledger design", "Concurrency testing"] },
+    { "title": "Payment gateway integration with webhooks", "level": "medium", "description": "Accept payments in a sandbox, handle webhooks idempotently, and reconcile payment status with orders.", "skills": ["Payments", "Idempotency", "Webhooks"] },
+    { "title": "Real-time fraud detection pipeline", "level": "hard", "description": "Stream transactions through Kafka, apply rule-based and ML fraud scoring, block or flag suspicious transfers and show alerts in a dashboard.", "skills": ["Kafka", "ML scoring", "Event-driven architecture"] }
+  ],
+  "interview": [
+    { "question": "Why should you never store money as a floating-point number?", "answer": "Floats can't represent many decimal values exactly, causing rounding errors. Store amounts as integers in the smallest unit (e.g. paisa/cents) or use a decimal type." },
+    { "question": "What is idempotency and why does it matter in payments?", "answer": "Repeating the same request has the same effect as doing it once. With idempotency keys, network retries won't charge a customer twice." },
+    { "question": "Explain double-entry bookkeeping.", "answer": "Every transaction records equal debits and credits across at least two accounts, so the books always balance and every movement is traceable." },
+    { "question": "What are ACID properties?", "answer": "Atomicity (all or nothing), Consistency (valid state), Isolation (concurrent transactions don't interfere) and Durability (committed data survives failures)." },
+    { "question": "How would you prevent double spending in a wallet?", "answer": "Use database transactions with row-level locks or optimistic concurrency on the balance, check funds inside the transaction, and use idempotency keys for requests." },
+    { "question": "What is reconciliation?", "answer": "Comparing your internal records with external statements (bank, gateway, MFS) to find and resolve mismatches such as missing or duplicate transactions." },
+    { "question": "What is KYC and AML?", "answer": "Know Your Customer verifies identity; Anti-Money Laundering monitors transactions for suspicious patterns and reports them to authorities as required by law." },
+    { "question": "How do you handle a payment where the gateway times out?", "answer": "Don't assume failure. Mark it pending, query the gateway status or wait for a webhook, and only then confirm or reverse — never blindly retry without idempotency." },
+    { "question": "What is PCI DSS?", "answer": "The Payment Card Industry Data Security Standard — security requirements for any system that stores, processes or transmits card data. Tokenisation reduces scope." },
+    { "question": "What is the saga pattern?", "answer": "A way to manage distributed transactions as a series of local transactions with compensating actions to undo steps if a later step fails." }
+  ],
+  "resumeBullets": [
+    "Built a double-entry ledger service processing [N] transactions/day with zero balance discrepancies over [period].",
+    "Integrated [N] payment providers with idempotent webhooks, reducing failed/duplicate payments by [X]%.",
+    "Developed a real-time fraud rule engine that flagged [X]% of fraudulent transactions with a [Y]% false-positive rate.",
+    "Automated daily reconciliation across [N] bank and MFS partners, cutting manual effort by [X] hours per week.",
+    "Improved payment API p99 latency from [X] ms to [Y] ms while maintaining [99.9X]% availability."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 18408,
+      "maxBdt": 66026,
+      "note": "Paylab Java Programmer range (10th–90th percentile, gross monthly), reflecting the Java-heavy banking and MFS stack. Senior engineers at large MFS providers and fintechs earn above this range.",
+      "sources": [
+        { "label": "Paylab — Java Programmer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/java-programmer" },
+        { "label": "Levels.fyi — Software Engineer pay in Bangladesh", "url": "https://www.levels.fyi/t/software-engineer/locations/bangladesh" }
+      ]
+    },
+    "remote": {
+      "minUsd": 30000,
+      "maxUsd": 80000,
+      "note": "Estimate. Arc reports $41,569 average for Bangladesh-based remote back-end developers; payments and ledger experience is a valued specialty that pushes offers higher.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 134040,
+      "benchmark": "US median, Software Developers, QA Analysts & Testers (BLS, 2025)",
+      "growth": "+10% (2025–35); fintech engineers are #2 on WEF's fastest-growing list",
+      "note": "Engineers at major financial institutions and trading firms often earn significantly above the general software median.",
+      "sources": [
+        { "label": "BLS — Software Developers, QA Analysts and Testers", "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "High. MFS providers, banks, payment gateways, digital-lending and insurance-tech firms actively hire; Java/Spring Boot and security knowledge are common requirements.",
+      "remote": "Good. Global fintechs hire remote back-end engineers, though some regulated roles require local presence or specific clearances.",
+      "global": "Very high growth according to the WEF; payments modernisation and AI-driven risk keep demand strong."
+    }
+  },
+  "startToday": [
+    "Pick Java + Spring Boot (or your strongest back-end language) for fintech practice",
+    "Read how double-entry bookkeeping works (15 minutes)",
+    "Create a Stripe test account to explore payment flows safely",
+    "Write down how money moves when you send money with an MFS app",
+    "Start a 'wallet-service' repo with a simple accounts table",
+    "Read Bangladesh Bank's latest MFS statistics to understand the market"
+  ]
+}
