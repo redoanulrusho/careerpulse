@@ -157,7 +157,7 @@
     },
     "global": {
       "medianUsd": 134040,
-      "benchmark": "US median, Software Developers (BLS, 2025)",
+      "benchmark": "US median, Software Developers, QA Analysts & Testers (BLS, 2025)",
       "growth": "+10% (2025–35, much faster than average)",
       "note": "BLS has no separate 'AI engineer' category. Specialist AI engineers at tech companies usually earn well above this median; check Levels.fyi for company-level data.",
       "sources": [

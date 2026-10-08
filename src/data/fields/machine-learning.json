@@ -157,7 +157,7 @@
       "medianUsd": 140300,
       "benchmark": "US median, Computer & Information Research Scientists (BLS, 2025)",
       "growth": "+22% (2025–35, much faster than average)",
-      "note": "Applied ML engineers in industry are often classified as software developers ($134,040 median); research-heavy roles align with this category.",
+      "note": "Applied ML engineers in industry are often classified as software developers (BLS combined software developers, QA analysts & testers median: $134,040); research-heavy roles align with this category.",
       "sources": [
         { "label": "BLS — Computer and Information Research Scientists", "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-and-information-research-scientists.htm" },
         { "label": "Levels.fyi — ML/AI software engineer pay", "url": "https://www.levels.fyi/t/software-engineer/focus/ml-ai" }

@@ -155,7 +155,7 @@
     },
     "global": {
       "medianUsd": 134040,
-      "benchmark": "US median, Software Developers (BLS, 2025) — DevOps/SRE are usually classed here",
+      "benchmark": "US median, Software Developers, QA Analysts & Testers (BLS, 2025) — DevOps/SRE are usually classed here",
       "growth": "+10% (2025–35, much faster than average)",
       "note": "Network and computer systems administrators, a more ops-focused category, have a lower $99,130 median.",
       "sources": [
