@@ -1,0 +1,180 @@
+{
+  "slug": "embedded-iot",
+  "name": "Embedded Systems & IoT",
+  "icon": "CircuitBoard",
+  "tagline": "Program the chips inside everyday devices and connect them to the internet and AI.",
+  "category": "software",
+  "difficulty": "intermediate",
+  "demand": "high",
+  "overview": {
+    "summary": "Embedded engineers write software that runs directly on hardware — microcontrollers and processors inside phones, cars, medical devices, smart meters, wearables and factory machines. IoT (Internet of Things) engineers connect those devices to networks and the cloud so they can be monitored and controlled remotely. The field also includes chip design and verification (VLSI). A fast-growing area is edge AI: running machine-learning models directly on small devices for privacy, speed and low power.",
+    "whyTrending": [
+      "Global investment in semiconductors and electronics manufacturing (driven by AI chips, EVs and supply-chain diversification) increases demand for embedded and chip engineers.",
+      "Edge AI lets devices run models locally — cameras, wearables and industrial sensors increasingly need engineers who can deploy ML on constrained hardware.",
+      "BLS reports a 2025 US median of $161,740 for computer hardware engineers, one of the highest-paid engineering occupations, with 9% projected growth (2025–35).",
+      "Bangladesh has a growing chip-design and electronics sector — semiconductor design-services firms in Dhaka and local electronics manufacturers — creating niche but well-paid opportunities, with IC Design Engineers among the higher Paylab salary bands."
+    ],
+    "trendSources": [
+      { "label": "BLS — Computer Hardware Engineers", "url": "https://www.bls.gov/ooh/architecture-and-engineering/computer-hardware-engineers.htm" },
+      { "label": "Paylab — IC Design Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/ic-design-engineer" }
+    ]
+  },
+  "roles": [
+    { "title": "Embedded Software Engineer", "description": "Writes firmware in C/C++ for microcontrollers: drivers, real-time tasks, power management and communication protocols." },
+    { "title": "IoT Engineer", "description": "Builds connected-device systems: device firmware, wireless connectivity, cloud ingestion and dashboards." },
+    { "title": "Embedded Linux Engineer", "description": "Customises Linux for devices (Yocto, Buildroot), writes kernel drivers and manages updates." },
+    { "title": "ASIC / FPGA Design & Verification Engineer", "description": "Designs and verifies digital chips and FPGA logic using Verilog/SystemVerilog and UVM." },
+    { "title": "Edge AI Engineer", "description": "Optimises and deploys ML models on microcontrollers, NPUs and edge devices." },
+    { "title": "Firmware Test / Validation Engineer", "description": "Builds hardware-in-the-loop tests and validates devices against specifications and standards." }
+  ],
+  "skills": {
+    "beginner": [
+      "C programming: pointers, memory, bit manipulation",
+      "Digital electronics: logic, voltage, current, resistors, transistors",
+      "Microcontroller basics with Arduino or ESP32",
+      "GPIO, timers, interrupts",
+      "Reading datasheets and schematics",
+      "Using a multimeter and basic soldering"
+    ],
+    "intermediate": [
+      "Communication protocols: UART, I2C, SPI, CAN",
+      "RTOS concepts with FreeRTOS or Zephyr",
+      "STM32 / ARM Cortex-M development",
+      "Wireless: Wi-Fi, BLE, LoRa, cellular IoT",
+      "MQTT and cloud IoT platforms",
+      "Debugging with JTAG/SWD, logic analysers and oscilloscopes",
+      "Embedded C++"
+    ],
+    "advanced": [
+      "Embedded Linux, device trees and kernel drivers",
+      "Low-power design and battery optimisation",
+      "Secure boot, firmware signing and over-the-air updates",
+      "Edge AI with TensorFlow Lite Micro / LiteRT, Edge Impulse",
+      "Functional safety standards (ISO 26262, IEC 61508)",
+      "Verilog/SystemVerilog and FPGA development"
+    ]
+  },
+  "stack": {
+    "languages": ["C", "C++", "Python (testing & tooling)", "Rust (growing)", "Verilog / SystemVerilog", "Assembly (ARM)"],
+    "tools": ["STM32CubeIDE", "ESP-IDF", "Arduino", "FreeRTOS", "Zephyr RTOS", "Yocto / Buildroot", "MQTT", "AWS IoT Core / Azure IoT Hub", "Edge Impulse", "Logic analyser & oscilloscope", "Git"],
+    "note": "C is required in almost every embedded listing; C++ and Python are close behind. Rust is appearing in security-sensitive firmware roles. Chip-design roles focus on SystemVerilog, UVM and EDA tools."
+  },
+  "roadmap": [
+    {
+      "range": "Days 1–30",
+      "title": "C and microcontrollers",
+      "goals": [
+        "Strengthen C: pointers, structs, bit operations, memory layout",
+        "Get an Arduino or ESP32 board and blink an LED",
+        "Read sensors (temperature, light, motion) and print values",
+        "Learn interrupts and timers",
+        "Read one full datasheet section for a sensor you use"
+      ],
+      "milestone": "A sensor-reading device that logs data reliably using interrupts."
+    },
+    {
+      "range": "Days 31–60",
+      "title": "Protocols, RTOS and connectivity",
+      "goals": [
+        "Communicate with sensors over I2C and SPI",
+        "Move to an STM32 or ESP-IDF project in plain C (no Arduino layer)",
+        "Use FreeRTOS tasks, queues and semaphores",
+        "Send sensor data to the cloud over MQTT",
+        "Debug with a hardware debugger"
+      ],
+      "milestone": "A connected IoT device sending data to a live dashboard."
+    },
+    {
+      "range": "Days 61–90",
+      "title": "Production-grade and edge AI",
+      "goals": [
+        "Add low-power sleep modes and measure battery life",
+        "Implement over-the-air firmware updates",
+        "Deploy a small ML model (e.g. keyword spotting) with Edge Impulse or LiteRT Micro",
+        "Write unit tests for firmware logic",
+        "Document the hardware, firmware architecture and test results"
+      ],
+      "milestone": "A low-power IoT device with OTA updates and an on-device ML feature."
+    }
+  ],
+  "resources": [
+    { "title": "Embedded Systems — Shape the World", "provider": "UT Austin (edX)", "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/", "type": "book", "note": "Free e-book" },
+    { "title": "ESP-IDF Programming Guide", "provider": "Espressif", "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html", "type": "docs" },
+    { "title": "FreeRTOS documentation", "provider": "FreeRTOS", "url": "https://www.freertos.org/Documentation/00-Overview", "type": "docs" },
+    { "title": "Zephyr Project documentation", "provider": "Linux Foundation", "url": "https://docs.zephyrproject.org/latest/", "type": "docs" },
+    { "title": "Interrupt blog (embedded best practices)", "provider": "Memfault", "url": "https://interrupt.memfault.com/", "type": "guide", "note": "Free" },
+    { "title": "Edge Impulse documentation", "provider": "Edge Impulse", "url": "https://docs.edgeimpulse.com/", "type": "docs", "note": "Free tier" },
+    { "title": "Arduino documentation", "provider": "Arduino", "url": "https://docs.arduino.cc/learn/", "type": "docs" },
+    { "title": "Nand2Tetris", "provider": "Nisan & Schocken", "url": "https://www.nand2tetris.org/", "type": "course", "note": "Free" },
+    { "title": "HDLBits Verilog practice", "provider": "HDLBits", "url": "https://hdlbits.01xz.net/wiki/Main_Page", "type": "practice", "note": "Free" },
+    { "title": "Bootlin embedded Linux training materials", "provider": "Bootlin", "url": "https://bootlin.com/docs/", "type": "course", "note": "Free slides & labs" }
+  ],
+  "projects": [
+    { "title": "Smart room monitor", "level": "easy", "description": "ESP32 device that measures temperature, humidity and air quality and shows it on a small display and phone dashboard.", "skills": ["Sensors", "Wi-Fi", "Dashboards"] },
+    { "title": "Bit-banged protocol driver", "level": "easy", "description": "Write your own I2C or SPI driver for a sensor in plain C and compare it to the hardware peripheral.", "skills": ["C", "Protocols", "Datasheets"] },
+    { "title": "Irrigation controller with soil sensors", "level": "medium", "description": "Low-power LoRa or Wi-Fi nodes measure soil moisture and control a water pump, with alerts and scheduling — useful for small farms.", "skills": ["Low power", "LoRa/MQTT", "RTOS"] },
+    { "title": "Smart energy meter with anomaly alerts", "level": "medium", "description": "Measure household current/voltage, send data over MQTT, and detect unusual consumption in the cloud.", "skills": ["Analog sensing", "MQTT", "Data analysis"] },
+    { "title": "Edge-AI device with secure OTA", "level": "hard", "description": "A battery-powered device that runs on-device keyword spotting or anomaly detection, supports signed OTA updates and secure boot, with documented power measurements.", "skills": ["Edge AI", "Security", "Power optimisation"] }
+  ],
+  "interview": [
+    { "question": "What does the 'volatile' keyword do in C?", "answer": "It tells the compiler a variable may change outside the program's control (hardware registers, ISRs), so it must not optimise away reads/writes." },
+    { "question": "What is an interrupt and an ISR?", "answer": "An interrupt is a hardware/software signal that pauses normal execution; the Interrupt Service Routine handles it. ISRs should be short and defer heavy work." },
+    { "question": "I2C vs SPI vs UART?", "answer": "UART is simple asynchronous point-to-point serial. I2C uses two wires and addresses for many devices at moderate speed. SPI uses more wires but is faster and full-duplex." },
+    { "question": "What is an RTOS and when do you need one?", "answer": "A real-time operating system schedules tasks with predictable timing. Use it when you have multiple concurrent tasks with deadlines; simple devices can use a super-loop." },
+    { "question": "What is a race condition and how do you prevent it in firmware?", "answer": "When shared data is accessed concurrently and the result depends on timing. Prevent it with critical sections, disabling interrupts briefly, mutexes or atomic operations." },
+    { "question": "Stack vs heap in embedded systems?", "answer": "The stack holds local variables and call frames; the heap holds dynamic allocations. Many embedded systems avoid heap allocation to prevent fragmentation and unpredictable timing." },
+    { "question": "How do you reduce power consumption?", "answer": "Use sleep modes, lower clock speeds, turn off unused peripherals, use interrupts instead of polling, and batch radio transmissions." },
+    { "question": "What is a watchdog timer?", "answer": "A hardware timer that resets the system if software stops 'kicking' it, recovering from hangs." },
+    { "question": "How would you debug a device that randomly resets?", "answer": "Check reset-cause registers, power supply stability, watchdog, stack overflow, hard-fault handlers and logs; reproduce under controlled conditions." },
+    { "question": "What is MQTT?", "answer": "A lightweight publish–subscribe messaging protocol for IoT. Devices publish to topics on a broker, and subscribers receive messages, with QoS levels for reliability." }
+  ],
+  "resumeBullets": [
+    "Developed firmware in C for [MCU] handling [N] sensors over I2C/SPI with [X]% reduction in power consumption.",
+    "Built an IoT pipeline sending data from [N] devices via MQTT to [cloud platform], with real-time dashboards and alerts.",
+    "Implemented secure OTA firmware updates for [N] devices with zero bricked units across [N] releases.",
+    "Deployed an on-device ML model on [hardware] achieving [X]% accuracy at [Y] ms inference and [Z] mW.",
+    "Reduced field failures by [X]% through hardware-in-the-loop testing and watchdog/fault handling improvements."
+  ],
+  "salary": {
+    "bangladesh": {
+      "minBdt": 14743,
+      "maxBdt": 51701,
+      "note": "Paylab Microcontroller Programmer range (10th–90th percentile, gross monthly). Chip-design roles are higher: IC Design Engineers are listed at BDT 22,595–85,704.",
+      "sources": [
+        { "label": "Paylab — Microcontroller Programmer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/microcontroller-programmer" },
+        { "label": "Paylab — IC Design Engineer salary, Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/information-technology/ic-design-engineer" }
+      ]
+    },
+    "remote": {
+      "minUsd": 20000,
+      "maxUsd": 70000,
+      "note": "Estimate. Hardware work is often on-site, but firmware, IoT cloud, FPGA verification and design-services contracts are frequently done remotely or via offshore design centres.",
+      "sources": [
+        { "label": "Arc — Remote software engineer salaries in Bangladesh", "url": "https://arc.dev/salaries/software-engineers-in-bangladesh" }
+      ]
+    },
+    "global": {
+      "medianUsd": 161740,
+      "benchmark": "US median, Computer Hardware Engineers (BLS, 2025)",
+      "growth": "+9% (2025–35, much faster than average)",
+      "note": "Embedded software engineers may be classed as software developers ($134,040 combined median) or electrical engineers ($125,040).",
+      "sources": [
+        { "label": "BLS — Computer Hardware Engineers", "url": "https://www.bls.gov/ooh/architecture-and-engineering/computer-hardware-engineers.htm" },
+        { "label": "BLS — Electrical and Electronics Engineers", "url": "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm" }
+      ]
+    },
+    "demandNotes": {
+      "bangladesh": "Moderate and specialised: electronics manufacturers, semiconductor design-services firms, telecom and IoT start-ups hire EEE/CSE graduates with strong C and hardware skills.",
+      "remote": "Moderate. Firmware and IoT-cloud contracts exist; chip verification is often done at offshore design centres.",
+      "global": "High. Semiconductor investment, EVs, medical devices and edge AI keep embedded engineers in demand."
+    }
+  },
+  "startToday": [
+    "Order an ESP32 or Arduino starter kit (or use the free Wokwi online simulator)",
+    "Blink an LED and read a button input",
+    "Review C pointers and bit manipulation for 30 minutes",
+    "Download the datasheet for one sensor and read its key specs",
+    "Try the first project of Nand2Tetris to understand how computers work",
+    "Join a local electronics or robotics community"
+  ]
+}
