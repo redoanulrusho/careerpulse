@@ -46,6 +46,24 @@ export function notConfiguredResult(at: string): SourceResult {
   return { jobs: [], status: "not-configured", fetchedAt: null, attemptedAt: at };
 }
 
+/**
+ * Combines a fresh result with the previous one so a failed refresh never wipes
+ * good data: on failure we keep the last good jobs and mark them "stale".
+ * Missing credentials are respected immediately (old Adzuna jobs are not kept).
+ */
+export function mergeSourceResult(previous: SourceResult | undefined, next: SourceResult): SourceResult {
+  if (next.status !== "error") return next;
+  const hasGoodData = previous && (previous.status === "ok" || previous.status === "stale") && previous.fetchedAt;
+  if (!hasGoodData) return next;
+  return {
+    jobs: previous.jobs,
+    status: "stale",
+    fetchedAt: previous.fetchedAt,
+    attemptedAt: next.attemptedAt,
+    error: next.error,
+  };
+}
+
 function byNewest(a: Job, b: Job) {
   return (b.postedAt ?? "").localeCompare(a.postedAt ?? "");
 }
@@ -95,10 +113,23 @@ export async function refreshAllJobs(
   const delay = options.adzunaDelayMs ?? ADZUNA_DELAY_MS;
   const at = now().toISOString();
 
+  // Previous snapshot, used to keep last good results when a source fails.
+  let previous: JobsSnapshot | null = null;
+  try {
+    previous = await store.read();
+  } catch {
+    previous = null;
+  }
+
   let feed: RemotiveJob[] | null = null;
   let remotiveError: string | undefined;
   try {
     feed = await fetchRemotiveFeed(fetchImpl);
+    // A successful response with zero jobs is almost certainly an outage, not real data.
+    if (feed.length === 0) {
+      feed = null;
+      remotiveError = "Remotive: empty feed";
+    }
   } catch (err) {
     remotiveError = err instanceof Error ? err.message : "Remotive: unknown error";
   }
@@ -133,11 +164,17 @@ export async function refreshAllJobs(
       global = errors.length === countries.length ? failedResult(errors.join("; "), at) : okResult(jobs, at);
     }
 
-    fields[slug] = { remote, global };
-    counts[slug] = { remote: remote.jobs.length, global: global.jobs.length };
+    const before = previous?.fields[slug];
+    const merged: FieldJobs = {
+      remote: mergeSourceResult(before?.remote, remote),
+      global: mergeSourceResult(before?.global, global),
+    };
+    fields[slug] = merged;
+    counts[slug] = { remote: merged.remote.jobs.length, global: merged.global.jobs.length };
   }
 
   const snapshot: JobsSnapshot = { version: 1, updatedAt: at, fields };
+  // If this write fails it throws and the previous snapshot stays in place, so visitors keep the last good data.
   await store.write(snapshot);
 
   const adzunaStatus: RefreshSummary["adzuna"]["status"] = !credentials
