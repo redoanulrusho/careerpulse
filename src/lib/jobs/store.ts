@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { FetchLike, JobsSnapshot } from "./types";
+import type { Env, FetchLike, JobsSnapshot } from "./types";
 
 /*
  * Where the daily snapshot lives. Visitors only ever read from here, so they
@@ -107,7 +107,7 @@ export function createMemoryStore(initial: JobsSnapshot | null = null): JobStore
 }
 
 /** Picks Redis when its credentials are present, otherwise the local file store. */
-export function getJobStore(env: NodeJS.ProcessEnv = process.env): JobStore {
+export function getJobStore(env: Env = process.env): JobStore {
   const url = env.KV_REST_API_URL || env.UPSTASH_REDIS_REST_URL;
   const token = env.KV_REST_API_TOKEN || env.UPSTASH_REDIS_REST_TOKEN;
   if (url && token) return createRedisStore({ url, token });

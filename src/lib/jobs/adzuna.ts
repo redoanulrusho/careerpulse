@@ -1,5 +1,5 @@
 import { fetchJson, JobFetchError } from "./http";
-import type { FetchLike, Job } from "./types";
+import type { Env, FetchLike, Job } from "./types";
 
 /*
  * Adzuna Jobs API — https://developer.adzuna.com/docs/search
@@ -39,7 +39,7 @@ export interface AdzunaCredentials {
 }
 
 /** Reads credentials from the environment; returns null when either is missing. */
-export function adzunaCredentialsFromEnv(env: NodeJS.ProcessEnv = process.env): AdzunaCredentials | null {
+export function adzunaCredentialsFromEnv(env: Env = process.env): AdzunaCredentials | null {
   const appId = env.ADZUNA_APP_ID?.trim();
   const appKey = env.ADZUNA_APP_KEY?.trim();
   // Treat the .env.example placeholders as "not configured".

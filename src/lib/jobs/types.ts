@@ -46,3 +46,6 @@ export interface JobsSnapshot {
 }
 
 export type FetchLike = (input: string, init?: RequestInit) => Promise<Response>;
+
+/** Environment variables as a plain string map (process.env or a test object). */
+export type Env = Record<string, string | undefined>;

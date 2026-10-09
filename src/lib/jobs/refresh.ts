@@ -9,7 +9,7 @@ import {
 import { sleep } from "./http";
 import { fetchRemotiveFeed, remotiveJobsForField, type RemotiveJob } from "./remotive";
 import type { JobStore } from "./store";
-import type { FetchLike, FieldJobs, Job, JobsSnapshot, SourceResult } from "./types";
+import type { Env, FetchLike, FieldJobs, Job, JobsSnapshot, SourceResult } from "./types";
 
 /** Max jobs kept per field and source. */
 export const JOBS_PER_SOURCE = 10;
@@ -21,7 +21,7 @@ export interface RefreshOptions {
   store: JobStore;
   slugs: FieldSlug[];
   fetchImpl?: FetchLike;
-  env?: NodeJS.ProcessEnv;
+  env?: Env;
   now?: () => Date;
   adzunaDelayMs?: number;
 }
