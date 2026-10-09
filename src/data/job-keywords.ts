@@ -4,7 +4,7 @@ export type FieldSlug = (typeof FIELD_SLUGS)[number];
 
 export interface JobKeywords {
   /**
-   * Phrases matched (case-insensitive, whole words) against job titles and tags
+   * Phrases matched (case-insensitive, whole words) against job titles
    * from the Remotive feed. Keep them specific: short words like "AI" or "data"
    * on their own match far too much.
    */

@@ -49,6 +49,7 @@ export const TAB_IDS = [
   "interview",
   "resume",
   "salary",
+  "jobs",
   "start",
 ] as const;
 
@@ -65,5 +66,6 @@ export const TAB_LABEL: Record<TabId, string> = {
   interview: "Interview Q&A",
   resume: "Resume bullets",
   salary: "Salary & demand",
+  jobs: "Live jobs",
   start: "Start today",
 };

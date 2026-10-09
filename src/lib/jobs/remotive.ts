@@ -64,11 +64,15 @@ export async function fetchRemotiveFeed(fetchImpl?: FetchLike): Promise<Remotive
   return jobs.map((j) => normalizeRemotiveJob(j as RawRemotiveJob)).filter((j): j is RemotiveJob => j !== null);
 }
 
-/** Picks the jobs relevant to one field by matching its keywords against title and tags. */
+/**
+ * Picks the jobs relevant to one field by matching its keywords against the job title.
+ * Tags are deliberately ignored: many postings carry long catch-all tag lists
+ * (".NET, Android, C#, data science…"), which made unrelated jobs match every field.
+ */
 export function remotiveJobsForField(feed: RemotiveJob[], keywords: string[], limit = 10): Job[] {
   const matches = buildKeywordMatcher(keywords);
   return feed
-    .filter((job) => matches(job.title) || job.tags.some((tag) => matches(tag)))
+    .filter((job) => matches(job.title))
     .sort((a, b) => (b.postedAt ?? "").localeCompare(a.postedAt ?? ""))
     .slice(0, limit)
     .map((job) => ({
