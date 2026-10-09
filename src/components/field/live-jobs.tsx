@@ -1,5 +1,16 @@
-import { AlertTriangle, Building2, CalendarDays, Clock, ExternalLink, Globe, Laptop, MapPin } from "lucide-react";
+import {
+  AlertTriangle,
+  Building2,
+  CalendarDays,
+  Clock,
+  ExternalLink,
+  Globe,
+  Laptop,
+  MapPin,
+  Search,
+} from "lucide-react";
 import type { ReactNode } from "react";
+import { bdjobsSearchUrl, JOB_KEYWORDS, type FieldSlug } from "@/data/job-keywords";
 import { getLiveJobsSnapshot } from "@/lib/jobs/read";
 import { formatJobDate, formatUpdatedAt } from "@/lib/jobs/format";
 import type { Job, SourceResult } from "@/lib/jobs/types";
@@ -132,6 +143,36 @@ function SourceColumn({
   );
 }
 
+/** Bangladesh: link to Bdjobs' own search page instead of scraping it. */
+function BdjobsCard({ field }: { field: Field }) {
+  const keywords = JOB_KEYWORDS[field.slug as FieldSlug];
+  if (!keywords) return null;
+  return (
+    <div className="border-line bg-surface mt-6 flex flex-col gap-4 rounded-2xl border p-5 sm:flex-row sm:items-center">
+      <div className="flex-1">
+        <h3 className="flex items-center gap-2 font-semibold">
+          <MapPin className="text-accent size-4" aria-hidden="true" />
+          Jobs in Bangladesh
+        </h3>
+        <p className="text-muted mt-1 text-sm">
+          Search Bangladesh&apos;s largest job site for &ldquo;{keywords.bdjobsQuery}&rdquo; roles. Opens Bdjobs in a
+          new tab.
+        </p>
+      </div>
+      <a
+        href={bdjobsSearchUrl(field.slug as FieldSlug)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-accent text-accent-fg inline-flex shrink-0 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium hover:opacity-90"
+      >
+        <Search className="size-4" aria-hidden="true" />
+        Search on Bdjobs
+        <span className="sr-only"> for {keywords.bdjobsQuery} jobs (opens in a new tab)</span>
+      </a>
+    </div>
+  );
+}
+
 export async function LiveJobsSection({ field }: { field: Field }) {
   const snapshot = await getLiveJobsSnapshot();
   const jobs = snapshot?.fields[field.slug];
@@ -201,6 +242,7 @@ export async function LiveJobsSection({ field }: { field: Field }) {
           emptyHint="No matching jobs were posted in the last 30 days. Check back tomorrow."
         />
       </div>
+      <BdjobsCard field={field} />
     </section>
   );
 }
