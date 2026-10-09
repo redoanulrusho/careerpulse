@@ -39,8 +39,12 @@ its source.
 - **20 researched career fields.** AI agents, ML, data science, data engineering, cybersecurity, cloud, DevOps/SRE,
   full-stack web, mobile, UI/UX, product management, prompt/context engineering, AI governance, fintech,
   embedded/IoT, green tech, robotics, AR/VR, blockchain and quantum computing.
-- **11 tabs per field.** Overview & trends · Job roles · Skills · Languages & tools · 30/60/90 roadmap · Free resources ·
-  Projects · Interview Q&A · Resume bullets · Salary & demand · Start today.
+- **12 tabs per field.** Overview & trends · Job roles · Skills · Languages & tools · 30/60/90 roadmap · Free resources ·
+  Projects · Interview Q&A · Resume bullets · Salary & demand · Live jobs · Start today.
+- **Live jobs.** Real openings for each field, refreshed once a day by a Vercel Cron job: remote jobs from
+  [Remotive](https://remotive.com) and global jobs from [Adzuna](https://www.adzuna.com), plus a "Search on Bdjobs"
+  link for Bangladesh. Visitors read a cached snapshot, so they never wait on the job APIs, and a failed refresh keeps
+  the last good results on screen. See [Live jobs](#live-jobs).
 - **Search and filters.** Instant search across names, roles, skills and tools (e.g. "Kubernetes" or "Figma"), with
   filters for difficulty, demand, salary and category, plus five sort orders.
 - **Progress tracking.** Tick skills, roadmap goals and "start today" tasks. Progress is saved in `localStorage`,
@@ -63,8 +67,9 @@ its source.
 | Icons     | lucide-react                                                      |
 | Content   | Typed JSON files (`src/data/fields/*.json`) validated by tests    |
 | State     | `useSyncExternalStore` + `localStorage` (no state library needed) |
-| Testing   | **Vitest** + React Testing Library + jsdom (260+ tests)           |
+| Testing   | **Vitest** + React Testing Library + jsdom (~300 tests)           |
 | Quality   | ESLint (next/core-web-vitals + TypeScript), link checker          |
+| Jobs data | Remotive + Adzuna APIs, Vercel Cron, Upstash Redis snapshot       |
 
 ## Getting started
 
@@ -99,7 +104,8 @@ npm run dev          # http://localhost:3000
 src/
 ├── app/                      # Next.js App Router
 │   ├── page.tsx              # Home: hero + explorer (search/filter/sort)
-│   ├── fields/[slug]/page.tsx# Field detail with 11 tabs (statically generated)
+│   ├── fields/[slug]/page.tsx# Field detail with 12 tabs (statically generated)
+│   ├── api/cron/refresh-jobs/# Daily Vercel Cron route that refreshes live jobs
 │   ├── compare/page.tsx      # Side-by-side comparison (URL-driven)
 │   ├── progress/page.tsx     # Progress dashboard
 │   ├── layout.tsx            # Header, footer, theme bootstrap
@@ -107,9 +113,11 @@ src/
 ├── components/               # UI components (cards, explorer, tabs, sections…)
 │   └── field/                # Detail-page sections, tabs, checklist items
 ├── data/fields/              # 20 career fields as JSON + typed index
+├── data/job-keywords.ts      # Per-field job search keywords (Remotive, Adzuna, Bdjobs)
 ├── hooks/                    # localStorage-backed stores (progress, compare tray)
 └── lib/                      # Pure, tested logic: filter, format, progress, compare, theme
-tests/                        # Vitest: data integrity, filters, lib, components
+    └── jobs/                 # Job fetchers, refresh, snapshot store, cron auth
+tests/                        # Vitest: data integrity, filters, lib, components, live jobs, cron route
 scripts/                      # check-links, screenshots, build-demo
 demo/                         # Single-file demo template + built output (demo/dist)
 docs/screenshots/             # README images
@@ -128,9 +136,77 @@ docs/screenshots/             # README images
 - **Real 404s.** Field pages stream, so `src/proxy.ts` rejects unknown slugs before rendering and returns a
   proper 404 status.
 
+## Live jobs
+
+The **Live jobs** tab on every field page lists recent openings from two sources, plus a link for Bangladesh:
+
+| Source                                             | What it adds                   | Key needed | Terms we follow                                                                                                                                                                |
+| -------------------------------------------------- | ------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Remotive](https://remotive.com/api-documentation) | Remote jobs                    | No         | Link to the original Remotive posting and credit Remotive as the source; at most a few requests a day (we make **one**); no sign-up walls. Jobs appear 24 hours after posting. |
+| [Adzuna](https://developer.adzuna.com/)            | Global jobs (default: UK + US) | Yes        | Every job shows a linked "Jobs by Adzuna" label (min. 116×23 px) and links to Adzuna's `redirect_url`; stays inside the free limits (25/min, 250/day).                         |
+| [Bdjobs](https://bdjobs.com)                       | Bangladesh                     | No         | A "Search on Bdjobs" link opens Bdjobs' own search pre-filled with the field's keywords. **Nothing is scraped.**                                                               |
+
+### How it works
+
+```
+Vercel Cron (06:00 UTC daily)
+  └─▶ GET /api/cron/refresh-jobs        (checks Authorization: Bearer $CRON_SECRET)
+        ├─ Remotive: 1 request for the whole feed, filtered locally by each field's title keywords
+        ├─ Adzuna:   1 title search per field per country (2.6 s apart, under 25 requests/min)
+        ├─ merge with the previous snapshot: failed sources keep their last good jobs ("stale")
+        ├─ save snapshot to Upstash Redis (or .data/live-jobs.json locally)
+        └─ revalidateTag("live-jobs")
+Field page ─▶ reads the cached snapshot ("use cache", tagged) ─▶ never calls the job APIs
+```
+
+- **Keywords** live in [`src/data/job-keywords.ts`](src/data/job-keywords.ts): title phrases for Remotive matching,
+  one Adzuna title query, and one Bdjobs search phrase per field.
+- **Error handling:** every network, HTTP, timeout and bad-JSON failure becomes a short error without secrets. If a
+  source fails, its previous jobs stay visible with a "last good results from …" note. An empty Remotive response
+  counts as a failure. If saving the snapshot fails, the old snapshot is untouched. The tab always shows
+  "Last updated", plus a friendly message when a field has no matches.
+- **Budget:** with the default `ADZUNA_COUNTRIES=gb,us`, a refresh makes 1 Remotive request and 40 Adzuna requests.
+- **Limits:** Remotive's free public feed currently returns only its ~20 most recent jobs (search parameters are
+  ignored), so many fields show "no matching remote jobs" on a given day. Adzuna's free key is meant for personal and
+  evaluation use: commercial use beyond a 14-day trial needs a licence from Adzuna.
+
+### Setup
+
+1. **Get keys** (see the table below) and copy the env template:
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   | Variable                               | Required             | Where to get it                                                                                                                                                                                                                          |
+   | -------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`      | For global jobs      | Free account at [developer.adzuna.com/signup](https://developer.adzuna.com/signup), then the dashboard's API access details                                                                                                              |
+   | `ADZUNA_COUNTRIES`                     | No (default `gb,us`) | Any of `at au be br ca ch de es fr gb in it mx nl nz pl sg us za`                                                                                                                                                                        |
+   | `CRON_SECRET`                          | In production        | Any random string of 16+ characters (see `.env.example` for a one-line generator)                                                                                                                                                        |
+   | `KV_REST_API_URL`, `KV_REST_API_TOKEN` | In production        | Vercel dashboard → Storage / Marketplace → **Upstash Redis** → connect to the project (injected automatically). `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` from [console.upstash.com](https://console.upstash.com) also work. |
+
+   Without Adzuna keys the app still works: remote jobs and the Bdjobs link show, and global jobs show a
+   "switched off" note. `.env.local` is gitignored; never commit real keys.
+
+2. **Run a refresh locally.** In development the cron route doesn't need the secret, and the snapshot is saved to
+   `.data/live-jobs.json` (gitignored):
+
+   ```bash
+   npm run dev
+   curl http://localhost:3000/api/cron/refresh-jobs      # returns a JSON summary
+   ```
+
+   Please don't run it more than a few times a day; Remotive asks for at most about 4 requests per day.
+
+3. **Deploy on Vercel.** Add the variables above in _Project → Settings → Environment Variables_, connect Upstash
+   Redis, and deploy. `vercel.json` registers the daily cron (Hobby plans allow once a day, and Vercel may run it any
+   time within the scheduled hour). Trigger the first refresh from _Settings → Cron Jobs → Run_, or with
+   `curl -H "Authorization: Bearer $CRON_SECRET" https://<your-domain>/api/cron/refresh-jobs`.
+
 ## Single-file demo
 
-`npm run build:demo` renders the whole app (all 20 fields, search, compare, progress, dark mode) into one
+`npm run build:demo` renders the app (all 20 fields, search, compare, progress, dark mode; Live jobs needs a server,
+so it is not included) into one
 dependency-free HTML file using the same JSON content. Open `demo/dist/careerpulse-demo-standalone.html`
 directly in a browser, or host it anywhere static (GitHub Pages, Netlify Drop). It is useful as a quick, shareable
 preview alongside the full Next.js app.
@@ -144,9 +220,10 @@ preview alongside the full Next.js app.
 
 ## Deploying
 
-The app is fully static apart from client-side state, so it runs anywhere that supports Next.js:
+The app is static apart from client-side state and the daily jobs refresh, so it runs anywhere that supports Next.js:
 
-- **Vercel:** import the GitHub repo. No configuration is needed.
+- **Vercel:** import the GitHub repo. The core app needs no configuration; for Live jobs, add the environment
+  variables and Upstash Redis described in [Live jobs → Setup](#setup).
 - **Any Node host:** `npm run build && npm start`.
 
 Set `NEXT_PUBLIC_SITE_URL` to your production URL so Open Graph metadata uses the right domain.

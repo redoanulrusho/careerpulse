@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
@@ -7,6 +7,7 @@ import { CategoryBadge, DemandBadge, DifficultyBadge } from "@/components/badges
 import { FieldIcon } from "@/components/field-icon";
 import { FieldProgress } from "@/components/field/field-progress";
 import { FieldTabs, type TabPanel } from "@/components/field/field-tabs";
+import { LiveJobsFallback, LiveJobsSection } from "@/components/field/live-jobs";
 import {
   InterviewSection,
   OverviewSection,
@@ -50,6 +51,11 @@ const SECTIONS: Record<TabId, (props: { field: Field }) => ReactNode> = {
   interview: InterviewSection,
   resume: ResumeSection,
   salary: SalarySection,
+  jobs: ({ field }) => (
+    <Suspense fallback={<LiveJobsFallback />}>
+      <LiveJobsSection field={field} />
+    </Suspense>
+  ),
   start: StartTodaySection,
 };
 
