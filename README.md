@@ -76,7 +76,7 @@ its source.
 Requirements: **Node.js 20.9+** (developed on Node 24) and npm.
 
 ```bash
-git clone https://github.com/<your-username>/careerpulse.git
+git clone https://github.com/redoanulrusho/careerpulse.git
 cd careerpulse
 npm install
 npm run dev          # http://localhost:3000
@@ -235,7 +235,7 @@ git init                      # skip if the folder is already a repo
 git add -A
 git commit -m "Initial commit: CareerPulse"
 git branch -M main
-git remote add origin https://github.com/<your-username>/careerpulse.git
+git remote add origin https://github.com/redoanulrusho/careerpulse.git
 git push -u origin main
 ```
 
