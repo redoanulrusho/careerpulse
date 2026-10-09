@@ -42,7 +42,9 @@ export interface AdzunaCredentials {
 export function adzunaCredentialsFromEnv(env: NodeJS.ProcessEnv = process.env): AdzunaCredentials | null {
   const appId = env.ADZUNA_APP_ID?.trim();
   const appKey = env.ADZUNA_APP_KEY?.trim();
-  return appId && appKey ? { appId, appKey } : null;
+  // Treat the .env.example placeholders as "not configured".
+  const isPlaceholder = (v: string) => v.startsWith("your-");
+  return appId && appKey && !isPlaceholder(appId) && !isPlaceholder(appKey) ? { appId, appKey } : null;
 }
 
 /** Parses ADZUNA_COUNTRIES (e.g. "gb,us"), keeping only supported codes. Defaults to gb + us. */
