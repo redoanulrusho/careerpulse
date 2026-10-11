@@ -4,3 +4,6 @@ package-lock.json
 node_modules
 docs
 demo
+
+# Google Search Console verification file: must stay byte-for-byte as Google issued it
+public/google*.html
