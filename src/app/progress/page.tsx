@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { ProgressDashboard, type ProgressRow } from "@/components/progress-dashboard";
 import { getAllFields } from "@/lib/fields";
 import { getChecklistIds } from "@/lib/progress";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "My progress",
-  description: "Your saved learning progress across CareerPulse career fields.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Track your tech career learning progress",
+  description:
+    "Track roadmap checklists across all 20 CareerPulse tech career fields. Progress is saved privately in your browser — no sign-up needed.",
+  path: "/progress",
+});
 
 export default function ProgressPage() {
   const rows: ProgressRow[] = getAllFields().map((f) => {

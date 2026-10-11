@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -13,6 +14,15 @@ import { FieldIcon } from "@/components/field-icon";
 import { sortFields } from "@/lib/filter";
 import { formatUsdCompact } from "@/lib/format";
 import { getAllFields, getFieldSummaries } from "@/lib/fields";
+import { pageMetadata } from "@/lib/site";
+
+export const metadata: Metadata = pageMetadata({
+  title: "CareerPulse — Roadmaps for 20 trending tech careers",
+  description:
+    "Explore 20 in-demand tech careers with 30/60/90-day roadmaps, free resources, interview prep, live jobs and salary data for Bangladesh, remote and global markets.",
+  path: "/",
+  absoluteTitle: true,
+});
 import { getChecklistIds } from "@/lib/progress";
 
 const FEATURES = [

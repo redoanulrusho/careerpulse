@@ -3,11 +3,14 @@ import { Suspense } from "react";
 import { CompareView } from "@/components/compare-view";
 import { toCompareData } from "@/lib/compare-data";
 import { getAllFields } from "@/lib/fields";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Compare career fields",
-  description: "Compare 2–3 tech career fields side by side: salary, demand, difficulty, skills and tools.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Compare tech career fields side by side",
+  description:
+    "Compare 2–3 tech careers side by side — salaries in Bangladesh, remote and global markets, demand, difficulty, skills and tools.",
+  path: "/compare",
+});
 
 export default function ComparePage() {
   const all = getAllFields().map(toCompareData);

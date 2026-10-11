@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
@@ -16,7 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
   title: {
     default: "CareerPulse — Roadmaps for 20 trending tech careers",
     template: "%s · CareerPulse",
@@ -34,8 +36,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CareerPulse — Roadmaps for 20 trending tech careers",
     description: "Roadmaps, free resources, projects, interview prep and salary data for 20 trending tech fields.",
+    siteName: SITE_NAME,
     type: "website",
+    locale: "en_US",
   },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {

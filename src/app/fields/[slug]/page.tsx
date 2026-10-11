@@ -24,6 +24,7 @@ import {
 import { TAB_LABEL, type TabId } from "@/lib/constants";
 import { getAllFields, getAllSlugs, getField } from "@/lib/fields";
 import { getChecklistIds } from "@/lib/progress";
+import { pageMetadata } from "@/lib/site";
 import type { Field } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -34,10 +35,11 @@ export async function generateMetadata({ params }: PageProps<"/fields/[slug]">):
   const { slug } = await params;
   const field = getField(slug);
   if (!field) return {};
-  return {
-    title: `${field.name} career roadmap`,
-    description: `${field.tagline} Roadmap, skills, free resources, projects, interview questions and salary data.`,
-  };
+  return pageMetadata({
+    title: `${field.name} career roadmap & salaries`,
+    description: `${field.tagline} 30/60/90-day roadmap, free resources, interview Q&A, live jobs and salaries.`,
+    path: `/fields/${field.slug}`,
+  });
 }
 
 const SECTIONS: Record<TabId, (props: { field: Field }) => ReactNode> = {

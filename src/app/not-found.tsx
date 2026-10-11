@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Compass } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description: "This page doesn't exist. Browse roadmaps for 20 trending tech careers on CareerPulse.",
+  robots: { index: false },
+};
 
 export default function NotFound() {
   return (

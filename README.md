@@ -10,7 +10,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Tested with Vitest](https://img.shields.io/badge/tested_with-Vitest-6e9f18?logo=vitest&logoColor=white)](https://vitest.dev)
 
-**[Live demo](https://claude.ai/artifact/REtRnZWnPpk1JWvzbY6Bqz)** · [Features](#features) · [Tech stack](#tech-stack) · [Getting started](#getting-started)
+**[Live demo](https://careerpulse-beta.vercel.app)** · [Features](#features) · [Tech stack](#tech-stack) · [Getting started](#getting-started)
 
 </div>
 
@@ -226,7 +226,8 @@ The app is static apart from client-side state and the daily jobs refresh, so it
   variables and Upstash Redis described in [Live jobs → Setup](#setup).
 - **Any Node host:** `npm run build && npm start`.
 
-Set `NEXT_PUBLIC_SITE_URL` to your production URL so Open Graph metadata uses the right domain.
+The canonical URL, sitemap and robots.txt default to `https://careerpulse-beta.vercel.app`. Set
+`NEXT_PUBLIC_SITE_URL` to override it (e.g. for your own fork or a custom domain).
 
 ## Push to GitHub
 
